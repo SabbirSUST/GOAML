@@ -1,0 +1,140 @@
+﻿.panel-heading {
+height: 40px;
+}
+
+.panel-title {
+position: relative;
+float: left;
+}
+.searchInput {
+    width: 100%;
+	border-width: 0;
+	font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+    -ms-opacity: 0.5;
+    opacity: 0.5;
+}
+
+.searchBoxBtn {
+    margin-left: -40px;
+    /* IE-8.0*/
+    -ms-border-top-left-radius: initial;
+    -ms-border-bottom-left-radius: initial;
+    /* end here */
+    border-top-left-radius: initial;
+    border-bottom-left-radius: initial;
+}
+
+.row {
+    margin-bottom: 2px !important;
+}
+
+
+.dropdown-menu>li
+{              
+    position:relative;
+    -webkit-user-select: none; /* Chrome/Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+    /* Rules below not implemented in browsers yet */
+    -o-user-select: none;
+    user-select: none;
+    cursor:pointer;
+}
+
+.dropdown-menu .sub-menu {
+    left: 100%;
+    position: absolute;
+    top: 0;
+    display:none;
+    margin-top: -1px;
+    -ms-border-top-left-radius:0;
+    border-top-left-radius:0;
+    -ms-border-bottom-left-radius:0;
+    border-bottom-left-radius:0;
+    border-left-color:#fff;
+    -webkit-box-shadow:none;
+    -ms-box-shadow:none;
+    box-shadow:none;
+}
+
+.right-caret:after,.left-caret:after
+{             
+    content:"";
+    border-bottom: 5px solid transparent;
+    border-top: 5px solid transparent;
+    display: inline-block;
+    height: 0;
+    vertical-align: middle;
+    width: 0;
+                margin-left:5px;
+}
+.right-caret:after{
+    border-left: 5px solid #ffaf46;
+}
+
+.left-caret:after {
+    border-right: 5px solid #ffaf46;
+}
+
+.col-modified-1 {
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+}
+.col-modified-2 {
+    padding-left: 2px !important;
+}
+ .modified-width1 {
+      width: 3.33333%;
+ }
+
+ .fade {
+  opacity: 0;
+  -webkit-transition: opacity 0.15s linear;
+  -moz-transition: opacity 0.15s linear;
+  -o-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+}
+.fade.in {
+  opacity: 1;
+}
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  background: red;
+  cursor: inherit;
+  display: block;
+}
+
+input[readonly] {
+  background-color: white !important;
+  cursor: text !important;
+}
+
+.body-content {
+    min-height: 580px !important;
+}
+
+/*#cssmenu ul li {
+    width: 140px !important;
+}*/
+#cssmenu ul ul li {
+    transition: all 0.45s ease !important;
+}
+
+.input-group[class*="col-"] {
+    float: left !important;
+}

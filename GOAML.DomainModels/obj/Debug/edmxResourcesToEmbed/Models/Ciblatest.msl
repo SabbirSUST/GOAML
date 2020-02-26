@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="cibLatestModelStoreContainer" CdmEntityContainer="cibLatestEntities">
+    <EntitySetMapping Name="CODE_CONTRACT_TYPE">
+      <EntityTypeMapping TypeName="cibLatestModel.CODE_CONTRACT_TYPE">
+        <MappingFragment StoreEntitySet="CODE_CONTRACT_TYPE">
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="type" ColumnName="type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CODE_COUNTRY">
+      <EntityTypeMapping TypeName="cibLatestModel.CODE_COUNTRY">
+        <MappingFragment StoreEntitySet="CODE_COUNTRY">
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CODE_LEGALFORM">
+      <EntityTypeMapping TypeName="cibLatestModel.CODE_LEGALFORM">
+        <MappingFragment StoreEntitySet="CODE_LEGALFORM">
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CODE_OWNER_DOCUMENT_TYPE">
+      <EntityTypeMapping TypeName="cibLatestModel.CODE_OWNER_DOCUMENT_TYPE">
+        <MappingFragment StoreEntitySet="CODE_OWNER_DOCUMENT_TYPE">
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CODE_SECTORTYPE">
+      <EntityTypeMapping TypeName="cibLatestModel.CODE_SECTORTYPE">
+        <MappingFragment StoreEntitySet="CODE_SECTORTYPE">
+          <ScalarProperty Name="sectorId" ColumnName="sectorId" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CODE_SHAREHOLDER_TYPE">
+      <EntityTypeMapping TypeName="cibLatestModel.CODE_SHAREHOLDER_TYPE">
+        <MappingFragment StoreEntitySet="CODE_SHAREHOLDER_TYPE">
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONTRACT_DETAILS">
+      <EntityTypeMapping TypeName="cibLatestModel.CONTRACT_DETAILS">
+        <MappingFragment StoreEntitySet="CONTRACT_DETAILS">
+          <ScalarProperty Name="accountingPeriod" ColumnName="accountingPeriod" />
+          <ScalarProperty Name="contractNature" ColumnName="contractNature" />
+          <ScalarProperty Name="fiContCode" ColumnName="fiContCode" />
+          <ScalarProperty Name="fiSubCode" ColumnName="fiSubCode" />
+          <ScalarProperty Name="sanctionLimit" ColumnName="sanctionLimit" />
+          <ScalarProperty Name="totOutstandingAmount" ColumnName="totOutstandingAmount" />
+          <ScalarProperty Name="totalDisAmount" ColumnName="totalDisAmount" />
+          <ScalarProperty Name="instalmentNo" ColumnName="instalmentNo" />
+          <ScalarProperty Name="paymentPeriodicity" ColumnName="paymentPeriodicity" />
+          <ScalarProperty Name="paymentMethod" ColumnName="paymentMethod" />
+          <ScalarProperty Name="InstalmentAmount" ColumnName="InstalmentAmount" />
+          <ScalarProperty Name="nextInstalmentExpDate" ColumnName="nextInstalmentExpDate" />
+          <ScalarProperty Name="nextInstalmentExpAmount" ColumnName="nextInstalmentExpAmount" />
+          <ScalarProperty Name="remainingInstalmentNo" ColumnName="remainingInstalmentNo" />
+          <ScalarProperty Name="remainingAmount" ColumnName="remainingAmount" />
+          <ScalarProperty Name="overdueNotPaidNo" ColumnName="overdueNotPaidNo" />
+          <ScalarProperty Name="overdueNotPaidAmount" ColumnName="overdueNotPaidAmount" />
+          <ScalarProperty Name="noOfDaysPaymentDelay" ColumnName="noOfDaysPaymentDelay" />
+          <ScalarProperty Name="leasedGoodType" ColumnName="leasedGoodType" />
+          <ScalarProperty Name="leasedGoodValue" ColumnName="leasedGoodValue" />
+          <ScalarProperty Name="regNo" ColumnName="regNo" />
+          <ScalarProperty Name="manufactureDate" ColumnName="manufactureDate" />
+          <ScalarProperty Name="dueForRecovery" ColumnName="dueForRecovery" />
+          <ScalarProperty Name="recoveryDuringPeriod" ColumnName="recoveryDuringPeriod" />
+          <ScalarProperty Name="cumRecovery" ColumnName="cumRecovery" />
+          <ScalarProperty Name="lawsuiteDate" ColumnName="lawsuiteDate" />
+          <ScalarProperty Name="classificationDate" ColumnName="classificationDate" />
+          <ScalarProperty Name="rescheduledTimesNo" ColumnName="rescheduledTimesNo" />
+          <ScalarProperty Name="lastRescheduleDate" ColumnName="lastRescheduleDate" />
+          <ScalarProperty Name="ecoPurposeCode" ColumnName="ecoPurposeCode" />
+          <ScalarProperty Name="sme" ColumnName="sme" />
+          <ScalarProperty Name="enterpriseType" ColumnName="enterpriseType" />
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+          <ScalarProperty Name="upadateDate" ColumnName="upadateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONTRACT_GENERAL_INFO">
+      <EntityTypeMapping TypeName="cibLatestModel.CONTRACT_GENERAL_INFO">
+        <MappingFragment StoreEntitySet="CONTRACT_GENERAL_INFO">
+          <ScalarProperty Name="accountingPeriod" ColumnName="accountingPeriod" />
+          <ScalarProperty Name="recType" ColumnName="recType" />
+          <ScalarProperty Name="contractNature" ColumnName="contractNature" />
+          <ScalarProperty Name="fiCode" ColumnName="fiCode" />
+          <ScalarProperty Name="branch" ColumnName="branch" />
+          <ScalarProperty Name="fiSubCode" ColumnName="fiSubCode" />
+          <ScalarProperty Name="fiContCode" ColumnName="fiContCode" />
+          <ScalarProperty Name="contType" ColumnName="contType" />
+          <ScalarProperty Name="contPhase" ColumnName="contPhase" />
+          <ScalarProperty Name="contStatus" ColumnName="contStatus" />
+          <ScalarProperty Name="curr" ColumnName="curr" />
+          <ScalarProperty Name="contStartDate" ColumnName="contStartDate" />
+          <ScalarProperty Name="contRequestDate" ColumnName="contRequestDate" />
+          <ScalarProperty Name="contPlannedEndDate" ColumnName="contPlannedEndDate" />
+          <ScalarProperty Name="contActualEndDate" ColumnName="contActualEndDate" />
+          <ScalarProperty Name="defaultStatus" ColumnName="defaultStatus" />
+          <ScalarProperty Name="lastPaymentDate" ColumnName="lastPaymentDate" />
+          <ScalarProperty Name="isSubsidized" ColumnName="isSubsidized" />
+          <ScalarProperty Name="isPreFinanced" ColumnName="isPreFinanced" />
+          <ScalarProperty Name="isReOrganized" ColumnName="isReOrganized" />
+          <ScalarProperty Name="thirdPartyGuaranteeType" ColumnName="thirdPartyGuaranteeType" />
+          <ScalarProperty Name="SecurityType" ColumnName="SecurityType" />
+          <ScalarProperty Name="thirdPartyGuaranteeAmount" ColumnName="thirdPartyGuaranteeAmount" />
+          <ScalarProperty Name="SecurityAmount" ColumnName="SecurityAmount" />
+          <ScalarProperty Name="classificationbasis" ColumnName="classificationbasis" />
+          <ScalarProperty Name="filler" ColumnName="filler" />
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="isGuaranted" ColumnName="isGuaranted" />
+          <ScalarProperty Name="hasCoBorrower" ColumnName="hasCoBorrower" />
+          <ScalarProperty Name="isRejected" ColumnName="isRejected" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LINK_SUBJECT_CONTRACT">
+      <EntityTypeMapping TypeName="cibLatestModel.LINK_SUBJECT_CONTRACT">
+        <MappingFragment StoreEntitySet="LINK_SUBJECT_CONTRACT">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="recType" ColumnName="recType" />
+          <ScalarProperty Name="fiCode" ColumnName="fiCode" />
+          <ScalarProperty Name="branch" ColumnName="branch" />
+          <ScalarProperty Name="linkType" ColumnName="linkType" />
+          <ScalarProperty Name="fiSubjectCodeBorrower" ColumnName="fiSubjectCodeBorrower" />
+          <ScalarProperty Name="fiSubjectCodeLinked" ColumnName="fiSubjectCodeLinked" />
+          <ScalarProperty Name="fiContCode" ColumnName="fiContCode" />
+          <ScalarProperty Name="filler" ColumnName="filler" />
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="accountingPeriod" ColumnName="accountingPeriod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LINK_SUBJECT_SUBJECT">
+      <EntityTypeMapping TypeName="cibLatestModel.LINK_SUBJECT_SUBJECT">
+        <MappingFragment StoreEntitySet="LINK_SUBJECT_SUBJECT">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="recType" ColumnName="recType" />
+          <ScalarProperty Name="fiCode" ColumnName="fiCode" />
+          <ScalarProperty Name="branch" ColumnName="branch" />
+          <ScalarProperty Name="fiSubCodeBusiness" ColumnName="fiSubCodeBusiness" />
+          <ScalarProperty Name="role" ColumnName="role" />
+          <ScalarProperty Name="fiSubCodeOwner" ColumnName="fiSubCodeOwner" />
+          <ScalarProperty Name="filler" ColumnName="filler" />
+          <ScalarProperty Name="link_O_CODE" ColumnName="link_O_CODE" />
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="accountingPeriod" ColumnName="accountingPeriod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SUBJECT_INFORMATION">
+      <EntityTypeMapping TypeName="cibLatestModel.SUBJECT_INFORMATION">
+        <MappingFragment StoreEntitySet="SUBJECT_INFORMATION">
+          <ScalarProperty Name="accountingPeriod" ColumnName="accountingPeriod" />
+          <ScalarProperty Name="recType" ColumnName="recType" />
+          <ScalarProperty Name="fiCode" ColumnName="fiCode" />
+          <ScalarProperty Name="branch" ColumnName="branch" />
+          <ScalarProperty Name="fiSubCode" ColumnName="fiSubCode" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="subName" ColumnName="subName" />
+          <ScalarProperty Name="tradeName" ColumnName="tradeName" />
+          <ScalarProperty Name="sectorType" ColumnName="sectorType" />
+          <ScalarProperty Name="sectorCode" ColumnName="sectorCode" />
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="parAdd" ColumnName="parAdd" />
+          <ScalarProperty Name="parPost" ColumnName="parPost" />
+          <ScalarProperty Name="parDist" ColumnName="parDist" />
+          <ScalarProperty Name="parCountry" ColumnName="parCountry" />
+          <ScalarProperty Name="presentAdd" ColumnName="presentAdd" />
+          <ScalarProperty Name="presentPost" ColumnName="presentPost" />
+          <ScalarProperty Name="presentDist" ColumnName="presentDist" />
+          <ScalarProperty Name="presentCountry" ColumnName="presentCountry" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="legalForm" ColumnName="legalForm" />
+          <ScalarProperty Name="owTitle" ColumnName="owTitle" />
+          <ScalarProperty Name="owName" ColumnName="owName" />
+          <ScalarProperty Name="fatherTitle" ColumnName="fatherTitle" />
+          <ScalarProperty Name="fatherName" ColumnName="fatherName" />
+          <ScalarProperty Name="motherTitle" ColumnName="motherTitle" />
+          <ScalarProperty Name="mothrName" ColumnName="mothrName" />
+          <ScalarProperty Name="husTitle" ColumnName="husTitle" />
+          <ScalarProperty Name="husName" ColumnName="husName" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="owBirthDate" ColumnName="owBirthDate" />
+          <ScalarProperty Name="owBirthPlace" ColumnName="owBirthPlace" />
+          <ScalarProperty Name="owBirthCountry" ColumnName="owBirthCountry" />
+          <ScalarProperty Name="isNIDAvailable" ColumnName="isNIDAvailable" />
+          <ScalarProperty Name="owTIN" ColumnName="owTIN" />
+          <ScalarProperty Name="FactoryAdd" ColumnName="FactoryAdd" />
+          <ScalarProperty Name="FactoryPost" ColumnName="FactoryPost" />
+          <ScalarProperty Name="FactoryDist" ColumnName="FactoryDist" />
+          <ScalarProperty Name="FactoryCountry" ColumnName="FactoryCountry" />
+          <ScalarProperty Name="owDocType" ColumnName="owDocType" />
+          <ScalarProperty Name="owDocNo" ColumnName="owDocNo" />
+          <ScalarProperty Name="owDocIssueDate" ColumnName="owDocIssueDate" />
+          <ScalarProperty Name="owDocIssueCountry" ColumnName="owDocIssueCountry" />
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="isImportedFromDBF" ColumnName="isImportedFromDBF" />
+          <ScalarProperty Name="isBorrower" ColumnName="isBorrower" />
+          <ScalarProperty Name="isOwner" ColumnName="isOwner" />
+          <ScalarProperty Name="isGuarantor" ColumnName="isGuarantor" />
+          <ScalarProperty Name="isCoBorrower" ColumnName="isCoBorrower" />
+          <ScalarProperty Name="isRejected" ColumnName="isRejected" />
+          <ScalarProperty Name="NID" ColumnName="NID" />
+          <ScalarProperty Name="businessAdd" ColumnName="businessAdd" />
+          <ScalarProperty Name="businessPost" ColumnName="businessPost" />
+          <ScalarProperty Name="businessDist" ColumnName="businessDist" />
+          <ScalarProperty Name="businessCountry" ColumnName="businessCountry" />
+          <ScalarProperty Name="rjscNumber" ColumnName="rjscNumber" />
+          <ScalarProperty Name="rjscDate" ColumnName="rjscDate" />
+          <ScalarProperty Name="crgScore" ColumnName="crgScore" />
+          <ScalarProperty Name="creditRating" ColumnName="creditRating" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CODE_CONTRACT_PHASE">
+      <EntityTypeMapping TypeName="cibLatestModel.CODE_CONTRACT_PHASE">
+        <MappingFragment StoreEntitySet="CODE_CONTRACT_PHASE">
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CODE_CONTRACT_STATUS">
+      <EntityTypeMapping TypeName="cibLatestModel.CODE_CONTRACT_STATUS">
+        <MappingFragment StoreEntitySet="CODE_CONTRACT_STATUS">
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CODE_CURRENCY">
+      <EntityTypeMapping TypeName="cibLatestModel.CODE_CURRENCY">
+        <MappingFragment StoreEntitySet="CODE_CURRENCY">
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CODE_ECO_PURPOSE_CODE">
+      <EntityTypeMapping TypeName="cibLatestModel.CODE_ECO_PURPOSE_CODE">
+        <MappingFragment StoreEntitySet="CODE_ECO_PURPOSE_CODE">
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CODE_ENTERPRISE_TYPE">
+      <EntityTypeMapping TypeName="cibLatestModel.CODE_ENTERPRISE_TYPE">
+        <MappingFragment StoreEntitySet="CODE_ENTERPRISE_TYPE">
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CODE_INSTALMENT_TYPE">
+      <EntityTypeMapping TypeName="cibLatestModel.CODE_INSTALMENT_TYPE">
+        <MappingFragment StoreEntitySet="CODE_INSTALMENT_TYPE">
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CODE_LEASED_GOODS_TYPE">
+      <EntityTypeMapping TypeName="cibLatestModel.CODE_LEASED_GOODS_TYPE">
+        <MappingFragment StoreEntitySet="CODE_LEASED_GOODS_TYPE">
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CODE_NEW_OR_USED_GOODS_FLAG">
+      <EntityTypeMapping TypeName="cibLatestModel.CODE_NEW_OR_USED_GOODS_FLAG">
+        <MappingFragment StoreEntitySet="CODE_NEW_OR_USED_GOODS_FLAG">
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CODE_PAYMENT_METHOD">
+      <EntityTypeMapping TypeName="cibLatestModel.CODE_PAYMENT_METHOD">
+        <MappingFragment StoreEntitySet="CODE_PAYMENT_METHOD">
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CODE_PAYMENT_PERIODICITY">
+      <EntityTypeMapping TypeName="cibLatestModel.CODE_PAYMENT_PERIODICITY">
+        <MappingFragment StoreEntitySet="CODE_PAYMENT_PERIODICITY">
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="noOfDays" ColumnName="noOfDays" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CODE_PERSONAL_GUARANTEE_TYPE">
+      <EntityTypeMapping TypeName="cibLatestModel.CODE_PERSONAL_GUARANTEE_TYPE">
+        <MappingFragment StoreEntitySet="CODE_PERSONAL_GUARANTEE_TYPE">
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CODE_PREFINANCE_LOAN_FLAG">
+      <EntityTypeMapping TypeName="cibLatestModel.CODE_PREFINANCE_LOAN_FLAG">
+        <MappingFragment StoreEntitySet="CODE_PREFINANCE_LOAN_FLAG">
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CODE_REAL_GUARANTEE_TYPE">
+      <EntityTypeMapping TypeName="cibLatestModel.CODE_REAL_GUARANTEE_TYPE">
+        <MappingFragment StoreEntitySet="CODE_REAL_GUARANTEE_TYPE">
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CODE_REORGANIZED_CREDIT_FLAG">
+      <EntityTypeMapping TypeName="cibLatestModel.CODE_REORGANIZED_CREDIT_FLAG">
+        <MappingFragment StoreEntitySet="CODE_REORGANIZED_CREDIT_FLAG">
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CODE_SUBSIDIZED_CREDIT_FLAG">
+      <EntityTypeMapping TypeName="cibLatestModel.CODE_SUBSIDIZED_CREDIT_FLAG">
+        <MappingFragment StoreEntitySet="CODE_SUBSIDIZED_CREDIT_FLAG">
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ERROR_REPORTED">
+      <EntityTypeMapping TypeName="cibLatestModel.ERROR_REPORTED">
+        <MappingFragment StoreEntitySet="ERROR_REPORTED">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ErrorFile" ColumnName="ErrorFile" />
+          <ScalarProperty Name="FISubjectCode" ColumnName="FISubjectCode" />
+          <ScalarProperty Name="FISecondarySubjectCode" ColumnName="FISecondarySubjectCode" />
+          <ScalarProperty Name="FIContractCode" ColumnName="FIContractCode" />
+          <ScalarProperty Name="ErrorType" ColumnName="ErrorType" />
+          <ScalarProperty Name="ErrorCode" ColumnName="ErrorCode" />
+          <ScalarProperty Name="WrongValue" ColumnName="WrongValue" />
+          <ScalarProperty Name="ErrorDescription" ColumnName="ErrorDescription" />
+          <ScalarProperty Name="AccountingPeriod" ColumnName="AccountingPeriod" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FILLERs">
+      <EntityTypeMapping TypeName="cibLatestModel.FILLER">
+        <MappingFragment StoreEntitySet="FILLER">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="SubjectHeader" ColumnName="SubjectHeader" />
+          <ScalarProperty Name="SubjectPersonal" ColumnName="SubjectPersonal" />
+          <ScalarProperty Name="SubjectIndividual" ColumnName="SubjectIndividual" />
+          <ScalarProperty Name="SubjectCompany" ColumnName="SubjectCompany" />
+          <ScalarProperty Name="LinkSubjectOwner" ColumnName="LinkSubjectOwner" />
+          <ScalarProperty Name="SubjectFooter" ColumnName="SubjectFooter" />
+          <ScalarProperty Name="ContractHeader" ColumnName="ContractHeader" />
+          <ScalarProperty Name="ContractGeneral" ColumnName="ContractGeneral" />
+          <ScalarProperty Name="ContractInstalment" ColumnName="ContractInstalment" />
+          <ScalarProperty Name="ContractCard" ColumnName="ContractCard" />
+          <ScalarProperty Name="ContractNonInstlment" ColumnName="ContractNonInstlment" />
+          <ScalarProperty Name="ContractSubInfo" ColumnName="ContractSubInfo" />
+          <ScalarProperty Name="LinkContractSubject" ColumnName="LinkContractSubject" />
+          <ScalarProperty Name="ContractFooter" ColumnName="ContractFooter" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OWNER_INFO">
+      <EntityTypeMapping TypeName="cibLatestModel.OWNER_INFO">
+        <MappingFragment StoreEntitySet="OWNER_INFO">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="owenerId" ColumnName="owenerId" />
+          <ScalarProperty Name="ownedComapy" ColumnName="ownedComapy" />
+          <ScalarProperty Name="role" ColumnName="role" />
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

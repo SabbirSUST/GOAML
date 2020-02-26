@@ -1,0 +1,571 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="cibLatestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'cibLatest.dbo.CODE_CONTRACT_PHASE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CODE_CONTRACT_PHASE">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="description" Type="char" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'cibLatest.dbo.CODE_CONTRACT_STATUS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CODE_CONTRACT_STATUS">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="description" Type="char" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CODE_CONTRACT_TYPE">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="description" Type="char" MaxLength="70" />
+    <Property Name="type" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="CODE_COUNTRY">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="description" Type="char" MaxLength="70" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'cibLatest.dbo.CODE_CURRENCY' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CODE_CURRENCY">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="description" Type="char" MaxLength="30" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'cibLatest.dbo.CODE_ECO_PURPOSE_CODE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CODE_ECO_PURPOSE_CODE">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="description" Type="char" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'cibLatest.dbo.CODE_ENTERPRISE_TYPE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CODE_ENTERPRISE_TYPE">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="description" Type="char" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'cibLatest.dbo.CODE_INSTALMENT_TYPE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CODE_INSTALMENT_TYPE">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="description" Type="char" MaxLength="30" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'cibLatest.dbo.CODE_LEASED_GOODS_TYPE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CODE_LEASED_GOODS_TYPE">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="description" Type="char" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CODE_LEGALFORM">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="description" Type="char" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'cibLatest.dbo.CODE_NEW_OR_USED_GOODS_FLAG' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CODE_NEW_OR_USED_GOODS_FLAG">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="description" Type="char" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="CODE_OWNER_DOCUMENT_TYPE">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="description" Type="char" MaxLength="70" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'cibLatest.dbo.CODE_PAYMENT_METHOD' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CODE_PAYMENT_METHOD">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="description" Type="char" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'cibLatest.dbo.CODE_PAYMENT_PERIODICITY' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CODE_PAYMENT_PERIODICITY">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="description" Type="char" MaxLength="50" />
+    <Property Name="noOfDays" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'cibLatest.dbo.CODE_PERSONAL_GUARANTEE_TYPE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CODE_PERSONAL_GUARANTEE_TYPE">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="description" Type="char" MaxLength="70" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'cibLatest.dbo.CODE_PREFINANCE_LOAN_FLAG' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CODE_PREFINANCE_LOAN_FLAG">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="description" Type="char" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'cibLatest.dbo.CODE_REAL_GUARANTEE_TYPE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CODE_REAL_GUARANTEE_TYPE">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="description" Type="char" MaxLength="80" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'cibLatest.dbo.CODE_REORGANIZED_CREDIT_FLAG' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CODE_REORGANIZED_CREDIT_FLAG">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="description" Type="char" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CODE_SECTORTYPE">
+    <Key>
+      <PropertyRef Name="sectorId" />
+    </Key>
+    <Property Name="sectorId" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="description" Type="char" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CODE_SHAREHOLDER_TYPE">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="description" Type="char" MaxLength="70" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'cibLatest.dbo.CODE_SUBSIDIZED_CREDIT_FLAG' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CODE_SUBSIDIZED_CREDIT_FLAG">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="description" Type="char" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CONTRACT_DETAILS">
+    <Key>
+      <PropertyRef Name="accountingPeriod" />
+      <PropertyRef Name="fiContCode" />
+    </Key>
+    <Property Name="accountingPeriod" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="contractNature" Type="char" MaxLength="1" />
+    <Property Name="fiContCode" Type="char" MaxLength="16" Nullable="false" />
+    <Property Name="fiSubCode" Type="char" MaxLength="16" />
+    <Property Name="sanctionLimit" Type="char" MaxLength="12" />
+    <Property Name="totOutstandingAmount" Type="char" MaxLength="12" />
+    <Property Name="totalDisAmount" Type="char" MaxLength="12" />
+    <Property Name="instalmentNo" Type="char" MaxLength="3" />
+    <Property Name="paymentPeriodicity" Type="char" MaxLength="1" />
+    <Property Name="paymentMethod" Type="char" MaxLength="3" />
+    <Property Name="InstalmentAmount" Type="char" MaxLength="12" />
+    <Property Name="nextInstalmentExpDate" Type="char" MaxLength="8" />
+    <Property Name="nextInstalmentExpAmount" Type="char" MaxLength="12" />
+    <Property Name="remainingInstalmentNo" Type="char" MaxLength="3" />
+    <Property Name="remainingAmount" Type="char" MaxLength="12" />
+    <Property Name="overdueNotPaidNo" Type="char" MaxLength="3" />
+    <Property Name="overdueNotPaidAmount" Type="char" MaxLength="12" />
+    <Property Name="noOfDaysPaymentDelay" Type="char" MaxLength="3" />
+    <Property Name="leasedGoodType" Type="char" MaxLength="1" />
+    <Property Name="leasedGoodValue" Type="char" MaxLength="12" />
+    <Property Name="regNo" Type="char" MaxLength="40" />
+    <Property Name="manufactureDate" Type="char" MaxLength="8" />
+    <Property Name="dueForRecovery" Type="char" MaxLength="12" />
+    <Property Name="recoveryDuringPeriod" Type="char" MaxLength="12" />
+    <Property Name="cumRecovery" Type="char" MaxLength="12" />
+    <Property Name="lawsuiteDate" Type="char" MaxLength="8" />
+    <Property Name="classificationDate" Type="char" MaxLength="8" />
+    <Property Name="rescheduledTimesNo" Type="char" MaxLength="6" />
+    <Property Name="lastRescheduleDate" Type="char" MaxLength="8" />
+    <Property Name="ecoPurposeCode" Type="char" MaxLength="4" />
+    <Property Name="sme" Type="char" MaxLength="1" />
+    <Property Name="enterpriseType" Type="char" MaxLength="2" />
+    <Property Name="createDate" Type="char" MaxLength="8" />
+    <Property Name="upadateDate" Type="char" MaxLength="8" />
+  </EntityType>
+  <EntityType Name="CONTRACT_GENERAL_INFO">
+    <Key>
+      <PropertyRef Name="accountingPeriod" />
+      <PropertyRef Name="fiContCode" />
+    </Key>
+    <Property Name="accountingPeriod" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="recType" Type="char" MaxLength="1" />
+    <Property Name="contractNature" Type="char" MaxLength="1" />
+    <Property Name="fiCode" Type="char" MaxLength="3" />
+    <Property Name="branch" Type="char" MaxLength="4" />
+    <Property Name="fiSubCode" Type="char" MaxLength="16" />
+    <Property Name="fiContCode" Type="char" MaxLength="16" Nullable="false" />
+    <Property Name="contType" Type="char" MaxLength="2" />
+    <Property Name="contPhase" Type="char" MaxLength="2" />
+    <Property Name="contStatus" Type="char" MaxLength="1" />
+    <Property Name="curr" Type="char" MaxLength="3" />
+    <Property Name="contStartDate" Type="char" MaxLength="8" />
+    <Property Name="contRequestDate" Type="char" MaxLength="8" />
+    <Property Name="contPlannedEndDate" Type="char" MaxLength="8" />
+    <Property Name="contActualEndDate" Type="char" MaxLength="8" />
+    <Property Name="defaultStatus" Type="char" MaxLength="1" />
+    <Property Name="lastPaymentDate" Type="char" MaxLength="8" />
+    <Property Name="isSubsidized" Type="char" MaxLength="1" />
+    <Property Name="isPreFinanced" Type="char" MaxLength="1" />
+    <Property Name="isReOrganized" Type="char" MaxLength="1" />
+    <Property Name="thirdPartyGuaranteeType" Type="char" MaxLength="3" />
+    <Property Name="SecurityType" Type="char" MaxLength="2" />
+    <Property Name="thirdPartyGuaranteeAmount" Type="char" MaxLength="12" />
+    <Property Name="SecurityAmount" Type="char" MaxLength="12" />
+    <Property Name="classificationbasis" Type="char" MaxLength="1" />
+    <Property Name="filler" Type="char" MaxLength="126" />
+    <Property Name="createDate" Type="char" MaxLength="8" />
+    <Property Name="updateDate" Type="char" MaxLength="8" />
+    <Property Name="isGuaranted" Type="char" MaxLength="1" />
+    <Property Name="hasCoBorrower" Type="char" MaxLength="1" />
+    <Property Name="isRejected" Type="char" MaxLength="1" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'cibLatest.dbo.ERROR_REPORTED' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ERROR_REPORTED">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ErrorFile" Type="char" MaxLength="1" />
+    <Property Name="FISubjectCode" Type="char" MaxLength="16" />
+    <Property Name="FISecondarySubjectCode" Type="char" MaxLength="16" />
+    <Property Name="FIContractCode" Type="char" MaxLength="16" />
+    <Property Name="ErrorType" Type="char" MaxLength="5" />
+    <Property Name="ErrorCode" Type="char" MaxLength="5" />
+    <Property Name="WrongValue" Type="char" MaxLength="100" />
+    <Property Name="ErrorDescription" Type="char" MaxLength="250" />
+    <Property Name="AccountingPeriod" Type="char" MaxLength="8" />
+    <Property Name="CreateDate" Type="char" MaxLength="8" />
+    <Property Name="UpdateDate" Type="char" MaxLength="8" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'cibLatest.dbo.FILLER' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="FILLER">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="SubjectHeader" Type="char" MaxLength="1077" />
+    <Property Name="SubjectPersonal" Type="char" MaxLength="199" />
+    <Property Name="SubjectIndividual" Type="char" MaxLength="584" />
+    <Property Name="SubjectCompany" Type="char" MaxLength="584" />
+    <Property Name="LinkSubjectOwner" Type="char" MaxLength="1058" />
+    <Property Name="SubjectFooter" Type="char" MaxLength="1073" />
+    <Property Name="ContractHeader" Type="char" MaxLength="577" />
+    <Property Name="ContractGeneral" Type="char" MaxLength="127" />
+    <Property Name="ContractInstalment" Type="char" MaxLength="108" />
+    <Property Name="ContractCard" Type="char" MaxLength="172" />
+    <Property Name="ContractNonInstlment" Type="char" MaxLength="250" />
+    <Property Name="ContractSubInfo" Type="char" MaxLength="567" />
+    <Property Name="LinkContractSubject" Type="char" MaxLength="543" />
+    <Property Name="ContractFooter" Type="char" MaxLength="573" />
+  </EntityType>
+  <EntityType Name="LINK_SUBJECT_CONTRACT">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="recType" Type="char" MaxLength="1" />
+    <Property Name="fiCode" Type="char" MaxLength="3" />
+    <Property Name="branch" Type="char" MaxLength="4" />
+    <Property Name="linkType" Type="char" MaxLength="1" />
+    <Property Name="fiSubjectCodeBorrower" Type="char" MaxLength="16" />
+    <Property Name="fiSubjectCodeLinked" Type="char" MaxLength="16" />
+    <Property Name="fiContCode" Type="char" MaxLength="16" />
+    <Property Name="filler" Type="char" MaxLength="543" />
+    <Property Name="createDate" Type="char" MaxLength="8" />
+    <Property Name="updateDate" Type="char" MaxLength="8" />
+    <Property Name="accountingPeriod" Type="char" MaxLength="8" />
+  </EntityType>
+  <EntityType Name="LINK_SUBJECT_SUBJECT">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="recType" Type="char" MaxLength="1" />
+    <Property Name="fiCode" Type="char" MaxLength="3" />
+    <Property Name="branch" Type="char" MaxLength="4" />
+    <Property Name="fiSubCodeBusiness" Type="char" MaxLength="16" />
+    <Property Name="role" Type="char" MaxLength="2" />
+    <Property Name="fiSubCodeOwner" Type="char" MaxLength="16" />
+    <Property Name="filler" Type="char" MaxLength="1059" />
+    <Property Name="link_O_CODE" Type="char" MaxLength="10" />
+    <Property Name="createDate" Type="char" MaxLength="8" />
+    <Property Name="updateDate" Type="char" MaxLength="8" />
+    <Property Name="accountingPeriod" Type="char" MaxLength="8" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'cibLatest.dbo.OWNER_INFO' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="OWNER_INFO">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="owenerId" Type="char" MaxLength="16" />
+    <Property Name="ownedComapy" Type="char" MaxLength="16" />
+    <Property Name="role" Type="char" MaxLength="1" />
+    <Property Name="createDate" Type="char" MaxLength="8" />
+    <Property Name="updateDate" Type="char" MaxLength="8" />
+  </EntityType>
+  <EntityType Name="SUBJECT_INFORMATION">
+    <Key>
+      <PropertyRef Name="fiSubCode" />
+    </Key>
+    <Property Name="accountingPeriod" Type="char" MaxLength="8" />
+    <Property Name="recType" Type="char" MaxLength="1" />
+    <Property Name="fiCode" Type="char" MaxLength="3" />
+    <Property Name="branch" Type="char" MaxLength="4" />
+    <Property Name="fiSubCode" Type="char" MaxLength="16" Nullable="false" />
+    <Property Name="title" Type="char" MaxLength="20" />
+    <Property Name="subName" Type="char" MaxLength="70" />
+    <Property Name="tradeName" Type="char" MaxLength="130" />
+    <Property Name="sectorType" Type="char" MaxLength="1" />
+    <Property Name="sectorCode" Type="char" MaxLength="6" />
+    <Property Name="TIN" Type="char" MaxLength="12" />
+    <Property Name="parAdd" Type="char" MaxLength="100" />
+    <Property Name="parPost" Type="char" MaxLength="4" />
+    <Property Name="parDist" Type="char" MaxLength="20" />
+    <Property Name="parCountry" Type="char" MaxLength="2" />
+    <Property Name="presentAdd" Type="char" MaxLength="100" />
+    <Property Name="presentPost" Type="char" MaxLength="4" />
+    <Property Name="presentDist" Type="char" MaxLength="20" />
+    <Property Name="presentCountry" Type="char" MaxLength="2" />
+    <Property Name="phone" Type="char" MaxLength="40" />
+    <Property Name="legalForm" Type="char" MaxLength="2" />
+    <Property Name="owTitle" Type="char" MaxLength="20" />
+    <Property Name="owName" Type="char" MaxLength="70" />
+    <Property Name="fatherTitle" Type="char" MaxLength="20" />
+    <Property Name="fatherName" Type="char" MaxLength="70" />
+    <Property Name="motherTitle" Type="char" MaxLength="20" />
+    <Property Name="mothrName" Type="char" MaxLength="70" />
+    <Property Name="husTitle" Type="char" MaxLength="20" />
+    <Property Name="husName" Type="char" MaxLength="70" />
+    <Property Name="gender" Type="char" MaxLength="1" />
+    <Property Name="owBirthDate" Type="char" MaxLength="8" />
+    <Property Name="owBirthPlace" Type="char" MaxLength="20" />
+    <Property Name="owBirthCountry" Type="char" MaxLength="2" />
+    <Property Name="isNIDAvailable" Type="char" MaxLength="1" />
+    <Property Name="owTIN" Type="char" MaxLength="12" />
+    <Property Name="FactoryAdd" Type="char" MaxLength="100" />
+    <Property Name="FactoryPost" Type="char" MaxLength="4" />
+    <Property Name="FactoryDist" Type="char" MaxLength="20" />
+    <Property Name="FactoryCountry" Type="char" MaxLength="2" />
+    <Property Name="owDocType" Type="char" MaxLength="1" />
+    <Property Name="owDocNo" Type="char" MaxLength="20" />
+    <Property Name="owDocIssueDate" Type="char" MaxLength="8" />
+    <Property Name="owDocIssueCountry" Type="char" MaxLength="2" />
+    <Property Name="createDate" Type="char" MaxLength="8" />
+    <Property Name="updateDate" Type="char" MaxLength="8" />
+    <Property Name="isImportedFromDBF" Type="char" MaxLength="1" />
+    <Property Name="isBorrower" Type="char" MaxLength="1" />
+    <Property Name="isOwner" Type="char" MaxLength="1" />
+    <Property Name="isGuarantor" Type="char" MaxLength="1" />
+    <Property Name="isCoBorrower" Type="char" MaxLength="1" />
+    <Property Name="isRejected" Type="char" MaxLength="1" />
+    <Property Name="NID" Type="char" MaxLength="17" />
+    <Property Name="businessAdd" Type="char" MaxLength="100" />
+    <Property Name="businessPost" Type="char" MaxLength="4" />
+    <Property Name="businessDist" Type="char" MaxLength="20" />
+    <Property Name="businessCountry" Type="char" MaxLength="2" />
+    <Property Name="rjscNumber" Type="char" MaxLength="15" />
+    <Property Name="rjscDate" Type="char" MaxLength="8" />
+    <Property Name="crgScore" Type="char" MaxLength="3" />
+    <Property Name="creditRating" Type="char" MaxLength="3" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'cibLatest.dbo.TempTable' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="TempTable">
+          <Property Name="ownerID" Type="char" MaxLength="16" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'cibLatest.dbo.testtable' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="testtable">
+          <Property Name="total" Type="int" />
+        </EntityType>-->
+  <EntityContainer Name="cibLatestModelStoreContainer">
+    <EntitySet Name="CODE_CONTRACT_TYPE" EntityType="Self.CODE_CONTRACT_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CODE_COUNTRY" EntityType="Self.CODE_COUNTRY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CODE_LEGALFORM" EntityType="Self.CODE_LEGALFORM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CODE_OWNER_DOCUMENT_TYPE" EntityType="Self.CODE_OWNER_DOCUMENT_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CODE_SECTORTYPE" EntityType="Self.CODE_SECTORTYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CODE_SHAREHOLDER_TYPE" EntityType="Self.CODE_SHAREHOLDER_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CONTRACT_DETAILS" EntityType="Self.CONTRACT_DETAILS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CONTRACT_GENERAL_INFO" EntityType="Self.CONTRACT_GENERAL_INFO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LINK_SUBJECT_CONTRACT" EntityType="Self.LINK_SUBJECT_CONTRACT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LINK_SUBJECT_SUBJECT" EntityType="Self.LINK_SUBJECT_SUBJECT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SUBJECT_INFORMATION" EntityType="Self.SUBJECT_INFORMATION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CODE_CONTRACT_PHASE" EntityType="Self.CODE_CONTRACT_PHASE" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CODE_CONTRACT_PHASE].[value] AS [value], 
+    [CODE_CONTRACT_PHASE].[description] AS [description]
+    FROM [dbo].[CODE_CONTRACT_PHASE] AS [CODE_CONTRACT_PHASE]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CODE_CONTRACT_STATUS" EntityType="Self.CODE_CONTRACT_STATUS" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CODE_CONTRACT_STATUS].[value] AS [value], 
+    [CODE_CONTRACT_STATUS].[description] AS [description]
+    FROM [dbo].[CODE_CONTRACT_STATUS] AS [CODE_CONTRACT_STATUS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CODE_CURRENCY" EntityType="Self.CODE_CURRENCY" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CODE_CURRENCY].[value] AS [value], 
+    [CODE_CURRENCY].[description] AS [description]
+    FROM [dbo].[CODE_CURRENCY] AS [CODE_CURRENCY]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CODE_ECO_PURPOSE_CODE" EntityType="Self.CODE_ECO_PURPOSE_CODE" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CODE_ECO_PURPOSE_CODE].[value] AS [value], 
+    [CODE_ECO_PURPOSE_CODE].[description] AS [description]
+    FROM [dbo].[CODE_ECO_PURPOSE_CODE] AS [CODE_ECO_PURPOSE_CODE]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CODE_ENTERPRISE_TYPE" EntityType="Self.CODE_ENTERPRISE_TYPE" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CODE_ENTERPRISE_TYPE].[value] AS [value], 
+    [CODE_ENTERPRISE_TYPE].[description] AS [description]
+    FROM [dbo].[CODE_ENTERPRISE_TYPE] AS [CODE_ENTERPRISE_TYPE]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CODE_INSTALMENT_TYPE" EntityType="Self.CODE_INSTALMENT_TYPE" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CODE_INSTALMENT_TYPE].[value] AS [value], 
+    [CODE_INSTALMENT_TYPE].[description] AS [description]
+    FROM [dbo].[CODE_INSTALMENT_TYPE] AS [CODE_INSTALMENT_TYPE]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CODE_LEASED_GOODS_TYPE" EntityType="Self.CODE_LEASED_GOODS_TYPE" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CODE_LEASED_GOODS_TYPE].[value] AS [value], 
+    [CODE_LEASED_GOODS_TYPE].[description] AS [description]
+    FROM [dbo].[CODE_LEASED_GOODS_TYPE] AS [CODE_LEASED_GOODS_TYPE]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CODE_NEW_OR_USED_GOODS_FLAG" EntityType="Self.CODE_NEW_OR_USED_GOODS_FLAG" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CODE_NEW_OR_USED_GOODS_FLAG].[value] AS [value], 
+    [CODE_NEW_OR_USED_GOODS_FLAG].[description] AS [description]
+    FROM [dbo].[CODE_NEW_OR_USED_GOODS_FLAG] AS [CODE_NEW_OR_USED_GOODS_FLAG]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CODE_PAYMENT_METHOD" EntityType="Self.CODE_PAYMENT_METHOD" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CODE_PAYMENT_METHOD].[value] AS [value], 
+    [CODE_PAYMENT_METHOD].[description] AS [description]
+    FROM [dbo].[CODE_PAYMENT_METHOD] AS [CODE_PAYMENT_METHOD]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CODE_PAYMENT_PERIODICITY" EntityType="Self.CODE_PAYMENT_PERIODICITY" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CODE_PAYMENT_PERIODICITY].[value] AS [value], 
+    [CODE_PAYMENT_PERIODICITY].[description] AS [description], 
+    [CODE_PAYMENT_PERIODICITY].[noOfDays] AS [noOfDays]
+    FROM [dbo].[CODE_PAYMENT_PERIODICITY] AS [CODE_PAYMENT_PERIODICITY]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CODE_PERSONAL_GUARANTEE_TYPE" EntityType="Self.CODE_PERSONAL_GUARANTEE_TYPE" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CODE_PERSONAL_GUARANTEE_TYPE].[value] AS [value], 
+    [CODE_PERSONAL_GUARANTEE_TYPE].[description] AS [description]
+    FROM [dbo].[CODE_PERSONAL_GUARANTEE_TYPE] AS [CODE_PERSONAL_GUARANTEE_TYPE]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CODE_PREFINANCE_LOAN_FLAG" EntityType="Self.CODE_PREFINANCE_LOAN_FLAG" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CODE_PREFINANCE_LOAN_FLAG].[value] AS [value], 
+    [CODE_PREFINANCE_LOAN_FLAG].[description] AS [description]
+    FROM [dbo].[CODE_PREFINANCE_LOAN_FLAG] AS [CODE_PREFINANCE_LOAN_FLAG]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CODE_REAL_GUARANTEE_TYPE" EntityType="Self.CODE_REAL_GUARANTEE_TYPE" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CODE_REAL_GUARANTEE_TYPE].[value] AS [value], 
+    [CODE_REAL_GUARANTEE_TYPE].[description] AS [description]
+    FROM [dbo].[CODE_REAL_GUARANTEE_TYPE] AS [CODE_REAL_GUARANTEE_TYPE]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CODE_REORGANIZED_CREDIT_FLAG" EntityType="Self.CODE_REORGANIZED_CREDIT_FLAG" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CODE_REORGANIZED_CREDIT_FLAG].[value] AS [value], 
+    [CODE_REORGANIZED_CREDIT_FLAG].[description] AS [description]
+    FROM [dbo].[CODE_REORGANIZED_CREDIT_FLAG] AS [CODE_REORGANIZED_CREDIT_FLAG]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CODE_SUBSIDIZED_CREDIT_FLAG" EntityType="Self.CODE_SUBSIDIZED_CREDIT_FLAG" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CODE_SUBSIDIZED_CREDIT_FLAG].[value] AS [value], 
+    [CODE_SUBSIDIZED_CREDIT_FLAG].[description] AS [description]
+    FROM [dbo].[CODE_SUBSIDIZED_CREDIT_FLAG] AS [CODE_SUBSIDIZED_CREDIT_FLAG]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ERROR_REPORTED" EntityType="Self.ERROR_REPORTED" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ERROR_REPORTED].[ID] AS [ID], 
+    [ERROR_REPORTED].[ErrorFile] AS [ErrorFile], 
+    [ERROR_REPORTED].[FISubjectCode] AS [FISubjectCode], 
+    [ERROR_REPORTED].[FISecondarySubjectCode] AS [FISecondarySubjectCode], 
+    [ERROR_REPORTED].[FIContractCode] AS [FIContractCode], 
+    [ERROR_REPORTED].[ErrorType] AS [ErrorType], 
+    [ERROR_REPORTED].[ErrorCode] AS [ErrorCode], 
+    [ERROR_REPORTED].[WrongValue] AS [WrongValue], 
+    [ERROR_REPORTED].[ErrorDescription] AS [ErrorDescription], 
+    [ERROR_REPORTED].[AccountingPeriod] AS [AccountingPeriod], 
+    [ERROR_REPORTED].[CreateDate] AS [CreateDate], 
+    [ERROR_REPORTED].[UpdateDate] AS [UpdateDate]
+    FROM [dbo].[ERROR_REPORTED] AS [ERROR_REPORTED]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="FILLER" EntityType="Self.FILLER" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [FILLER].[id] AS [id], 
+    [FILLER].[SubjectHeader] AS [SubjectHeader], 
+    [FILLER].[SubjectPersonal] AS [SubjectPersonal], 
+    [FILLER].[SubjectIndividual] AS [SubjectIndividual], 
+    [FILLER].[SubjectCompany] AS [SubjectCompany], 
+    [FILLER].[LinkSubjectOwner] AS [LinkSubjectOwner], 
+    [FILLER].[SubjectFooter] AS [SubjectFooter], 
+    [FILLER].[ContractHeader] AS [ContractHeader], 
+    [FILLER].[ContractGeneral] AS [ContractGeneral], 
+    [FILLER].[ContractInstalment] AS [ContractInstalment], 
+    [FILLER].[ContractCard] AS [ContractCard], 
+    [FILLER].[ContractNonInstlment] AS [ContractNonInstlment], 
+    [FILLER].[ContractSubInfo] AS [ContractSubInfo], 
+    [FILLER].[LinkContractSubject] AS [LinkContractSubject], 
+    [FILLER].[ContractFooter] AS [ContractFooter]
+    FROM [dbo].[FILLER] AS [FILLER]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="OWNER_INFO" EntityType="Self.OWNER_INFO" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [OWNER_INFO].[id] AS [id], 
+    [OWNER_INFO].[owenerId] AS [owenerId], 
+    [OWNER_INFO].[ownedComapy] AS [ownedComapy], 
+    [OWNER_INFO].[role] AS [role], 
+    [OWNER_INFO].[createDate] AS [createDate], 
+    [OWNER_INFO].[updateDate] AS [updateDate]
+    FROM [dbo].[OWNER_INFO] AS [OWNER_INFO]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

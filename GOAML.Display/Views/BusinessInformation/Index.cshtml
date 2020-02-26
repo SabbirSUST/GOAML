@@ -1,0 +1,35 @@
+﻿
+<ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#customer-info-tab">Customer Information</a></li>
+    <li><a data-toggle="tab" href="#customer-address-tab">Address</a></li>
+    <li><a data-toggle="tab" href="#customer-phone-tab">Phone</a></li>
+</ul>
+@{
+    if (ViewBag.CommunicationTypes == null)
+    {
+        <script>
+            alert("Couldnot connect with database.");
+        </script>
+    }
+    else
+    {
+
+        <div class="tab-content">
+            <div id="customer-info-tab" class="tab-pane fade in active">
+                @{
+        Html.RenderPartial("Partials/_businessInformation");
+                }
+            </div>
+            <div id="customer-address-tab" class="tab-pane fade">
+                @{
+        Html.RenderPartial("Partials/_businessAddress");
+                }
+            </div>
+            <div id="customer-phone-tab" class="tab-pane fade">
+                @{
+        Html.RenderPartial("Partials/_businessPhone");
+                }
+            </div>
+        </div>
+    }
+}

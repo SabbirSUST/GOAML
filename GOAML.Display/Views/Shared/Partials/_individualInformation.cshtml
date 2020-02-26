@@ -1,0 +1,131 @@
+﻿
+<script>
+    var infoFormControl = {
+        'IsSingle': true,
+        'ControlStr': 'TpersonMyClient<prop>t_person_my_client_id^gender^Title^first_name^middle_name^prefix^last_name^birthdate^Birth_place^mothers_name^fathers_Name^SSN^passport_number^passport_country^id_number^Nationality1_id^Nationality2_id^Nationality3_id^residence^Email^Occupation^employer_id^deceased^deceased_date^tax_number^tax_reg_numebr^source_of_wealth^comments^branchId^updateBy^updateDate'
+    };
+    var controls = {
+        'TpersonMyClient': ['t_person_my_client_id', 'gender', 'Title', 'first_name', 'middle_name', 'prefix', 'last_name', 'birthdate', 'Birth_place', 'mothers_name', 'fathers_Name', 'SSN', 'passport_number', 'passport_country', 'id_number', 'Nationality1_id', 'Nationality2_id', 'Nationality3_id', 'residence', 'Email', 'Occupation', 'employer_id', 'deceased', 'deceased_date', 'tax_number', 'tax_reg_numebr', 'source_of_wealth', 'comments', 'branchId', 'select'
+        ],
+        'Taddress': [
+             't_address_id', 'Address_type_id', 'Address', 'Town_id', 'City_id', 'Zip', 'country_code_id', 'State_id', 't_person_my_client_id'
+        ],
+        'Tphone': [
+             't_phone_id', 'tph_contact_type_id', 'tph_communication_type_id', 'tph_country_prefix', 'tph_number', 'tph_extension', 'comments', 't_person_my_client_id'
+        ],
+        'TpersonIdentification': [
+             't_person_identification_id', 'type_id', 'number', 'issue_date', 'expiry_date', 'issued_by', 'issue_country_id', 'comments', 't_person_my_client_id'
+        ]
+    };
+
+    var infoValidate = { 'IsChecked': false, 'validateStr': "" };
+    var infoUrl = "IndividualInformation/SaveIndividualInformation";
+    var redirectUrl = "Index";
+</script>
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="panel panel-default" id="clientlist">
+            <div class="panel-body TpersonMyClient">
+                <div class="row">
+                    <div class="col-sm-2">@Html.Label("CIF NO")</div>
+                    <div class="col-sm-4"><input type="text" name="CifSearchBox" id="CifSearchBox" class="form-control" value="" style="display: inline-block !important;" /><button id="CifSearchBtn" name="CifSearchBtn" class="btn btn-default CifSearchBtn" onclick="GetIndividualInformation('CifSearchBox', controls);" style="margin-left: -39px !important; position: absolute !important;">
+    <i class="fa fa-search"></i>
+</button></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">NAME</div>
+                    <div class="col-sm-4">
+                        <input type="text" name="Name" id="Name" class="form-control" value="" style="display: inline-block !important;" />
+                        <input type="hidden" id="employer_id" name="employer_id" />
+                        <input type="hidden" name="t_person_my_client_id" id="t_person_my_client_id" class="t_person_my_client_id" value="" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">Title</div>
+                    <div class="col-sm-4"><input type="text" name="Title" id="Title" class="form-control" value="" style="display: inline-block !important;" /> </div>
+                    <div class="col-sm-2">Branch</div>
+                    <div class="col-sm-4">@Html.DropDownList("branchId", new SelectList(@ViewBag.BranchList, "BranchID", "BranchName"), "Select One", new { @class = "form-control" })</div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">FIRST NAME</div>
+                    <div class="col-sm-4"><input type="text" name="FirstName" id="first_name" class="form-control" value="" style="display: inline-block !important;" /> </div>
+                    <div class="col-sm-2">Gender</div>
+                    <div class="col-sm-4">
+                        @Html.DropDownList("gender", new SelectList(@ViewBag.Gender, "Value", "Text"), "Select One", new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">MIDDLE NAME</div>
+                    <div class="col-sm-4"><input type="text" name="MiddleName" id="middle_name" class="form-control" value="" style="display: inline-block !important;" /> </div>
+                    <div class="col-sm-2">LAST NAME</div>
+                    <div class="col-sm-4"><input type="text" name="LastName" id="last_name" class="form-control" value="" style="display: inline-block !important;" /> </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">BIRTH DATE</div>
+                    <div class="col-sm-4"><input type="text" name="birthdate" id="birthdate" class="form-control datepicker" value="" style="display: inline-block !important;" /> </div>
+                    <div class="col-sm-2">BIRTH PLACE</div>
+                    <div class="col-sm-4"><input type="text" name="BirthPlace" id="Birth_place" class="form-control" value="" style="display: inline-block !important;" /> </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">MOTHER NAME</div>
+                    <div class="col-sm-4"><input type="text" name="MotherName" id="mothers_name" class="form-control" value="" style="display: inline-block !important;" /> </div>
+                    <div class="col-sm-2">FATHER NAME</div>
+                    <div class="col-sm-4"><input type="text" name="fathers_Name" id="fathers_Name" class="form-control" value="" style="display: inline-block !important;" /> </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">NID </div>
+                    <div class="col-sm-4"><input type="text" name="SSN" id="SSN" class="form-control" value="" style="display: inline-block !important;" /> </div>
+                    <div class="col-sm-2">PASSPORT NUMBER</div>
+                    <div class="col-sm-4"><input type="text" name="PassportNumber" id="passport_number" class="form-control" value="" style="display: inline-block !important;" /> </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">PASSPORT COUNTRY</div>
+                    <div class="col-sm-4">@Html.DropDownList("passport_country", new SelectList(@ViewBag.Country, "Value", "description"), "Select One", new { @class = "form-control" }) </div>
+                    <div class="col-sm-2">ID NUMBER:</div>
+                    <div class="col-sm-4"><input type="text" name="IdNumber" id="id_number" class="form-control" value="" style="display: inline-block !important;" /> </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">NATIONALITY 1</div>
+                    <div class="col-sm-4">@Html.DropDownList("Nationality1_id", new SelectList(@ViewBag.Country, "Value", "description"), " Select One", new { @class = "form-control" }) </div>
+                    <div class="col-sm-2">NATIONALITY 2</div>
+                    <div class="col-sm-4">@Html.DropDownList("Nationality2_id", new SelectList(@ViewBag.Country, "Value", "description"), "Select One", new { @class = "form-control" }) </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">NATIONALITY 3</div>
+                    <div class="col-sm-4">@Html.DropDownList("Nationality3_id", new SelectList(@ViewBag.Country, "Value", "description"), " Select One", new { @class = "form-control" }) </div>
+                    <div class="col-sm-2">RESIDENCE</div>
+                    <div class="col-sm-4">@Html.DropDownList("residence", new SelectList(@ViewBag.Country, "Value", "description"), " Select One", new { @class = "form-control" }) </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">EMAIL</div>
+                    <div class="col-sm-4"><input type="text" name="Email" id="Email" class="form-control" value="" style="display: inline-block !important;" /> </div>
+                    <div class="col-sm-2">OCCUPATION</div>
+                    <div class="col-sm-4"><input type="text" name="Occupation" id="Occupation" class="form-control" value="" style="display: inline-block !important;" /> </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">DECEASED</div>
+                    <div class="col-sm-4"><input type="text" name="Deceased" id="deceased" class="form-control" value="" style="display: inline-block !important;" /> </div>
+                    <div class="col-sm-2">DECEASED DATE</div>
+                    <div class="col-sm-4"><input type="text" name="DeceasedDate" id="deceased_date" class="form-control datepicker" value="" style="display: inline-block !important;" /> </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">TAX NUMBER</div>
+                    <div class="col-sm-4"><input type="text" name="TaxNumber" id="tax_number" class="form-control" value="" style="display: inline-block !important;" /> </div>
+                    <div class="col-sm-2">TAX REG NUMBER</div>
+                    <div class="col-sm-4"><input type="text" name="TaxRegNumber" id="tax_reg_numebr" class="form-control" value="" style="display: inline-block !important;" /> </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">SOURCE OF WEALTH</div>
+                    <div class="col-sm-4"><input type="text" name="SourceOfWealth" id="source_of_wealth" class="form-control" value="" style="display: inline-block !important;" /> </div>
+                    <div class="col-sm-2">COMMENTS</div>
+                    <div class="col-sm-4"><input type="text" name="Comments" id="comments" class="form-control" value="" style="display: inline-block !important;" /> </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">&nbsp;</div>
+                    <div class="col-sm-4"><button name="Save" class="btn btn-default submitBtn" onclick="individual_submit(infoFormControl, infoValidate, infoUrl, controls);">SAVE</button> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

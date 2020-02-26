@@ -1,0 +1,649 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GOAMLModelStoreContainer" CdmEntityContainer="GOAMLEntities">
+    <EntitySetMapping Name="Account_Person_Role">
+      <EntityTypeMapping TypeName="GOAMLModel.Account_Person_Role">
+        <MappingFragment StoreEntitySet="Account_Person_Role">
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Account_Status_Type">
+      <EntityTypeMapping TypeName="GOAMLModel.Account_Status_Type">
+        <MappingFragment StoreEntitySet="Account_Status_Type">
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Account_Type">
+      <EntityTypeMapping TypeName="GOAMLModel.Account_Type">
+        <MappingFragment StoreEntitySet="Account_Type">
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Branch_Info">
+      <EntityTypeMapping TypeName="GOAMLModel.Branch_Info">
+        <MappingFragment StoreEntitySet="Branch_Info">
+          <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+          <ScalarProperty Name="BranchName" ColumnName="BranchName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Communication_Type">
+      <EntityTypeMapping TypeName="GOAMLModel.Communication_Type">
+        <MappingFragment StoreEntitySet="Communication_Type">
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contact_Type">
+      <EntityTypeMapping TypeName="GOAMLModel.Contact_Type">
+        <MappingFragment StoreEntitySet="Contact_Type">
+          <ScalarProperty Name="tph_contact_type_id" ColumnName="tph_contact_type_id" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Country_Codes">
+      <EntityTypeMapping TypeName="GOAMLModel.Country_Codes">
+        <MappingFragment StoreEntitySet="Country_Codes">
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Currencies">
+      <EntityTypeMapping TypeName="GOAMLModel.Currency">
+        <MappingFragment StoreEntitySet="Currencies">
+          <ScalarProperty Name="currency_code_local_id" ColumnName="currency_code_local_id" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOMER_FROM_WINFOS">
+      <EntityTypeMapping TypeName="GOAMLModel.CUSTOMER_FROM_WINFOS">
+        <MappingFragment StoreEntitySet="CUSTOMER_FROM_WINFOS">
+          <ScalarProperty Name="CIF" ColumnName="CIF" />
+          <ScalarProperty Name="BRANCH_CODE" ColumnName="BRANCH_CODE" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+          <ScalarProperty Name="CITY" ColumnName="CITY" />
+          <ScalarProperty Name="COUNTRY" ColumnName="COUNTRY" />
+          <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+          <ScalarProperty Name="ENTITY_CODE" ColumnName="ENTITY_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="director_detail">
+      <EntityTypeMapping TypeName="GOAMLModel.director_detail">
+        <MappingFragment StoreEntitySet="director_detail">
+          <ScalarProperty Name="t_person_id" ColumnName="t_person_id" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="middle_name" ColumnName="middle_name" />
+          <ScalarProperty Name="prefix" ColumnName="prefix" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="birthdate" ColumnName="birthdate" />
+          <ScalarProperty Name="Birth_place" ColumnName="Birth_place" />
+          <ScalarProperty Name="mothers_name" ColumnName="mothers_name" />
+          <ScalarProperty Name="alias" ColumnName="alias" />
+          <ScalarProperty Name="SSN" ColumnName="SSN" />
+          <ScalarProperty Name="passport_number" ColumnName="passport_number" />
+          <ScalarProperty Name="passport_country" ColumnName="passport_country" />
+          <ScalarProperty Name="id_number" ColumnName="id_number" />
+          <ScalarProperty Name="Nationality1" ColumnName="Nationality1" />
+          <ScalarProperty Name="Nationality2" ColumnName="Nationality2" />
+          <ScalarProperty Name="Nationality3" ColumnName="Nationality3" />
+          <ScalarProperty Name="residence" ColumnName="residence" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Occupation" ColumnName="Occupation" />
+          <ScalarProperty Name="deceased" ColumnName="deceased" />
+          <ScalarProperty Name="deceased_date" ColumnName="deceased_date" />
+          <ScalarProperty Name="tax_number" ColumnName="tax_number" />
+          <ScalarProperty Name="tax_reg_number" ColumnName="tax_reg_number" />
+          <ScalarProperty Name="source_of_wealth" ColumnName="source_of_wealth" />
+          <ScalarProperty Name="comments" ColumnName="comments" />
+          <ScalarProperty Name="entity_id" ColumnName="entity_id" />
+          <ScalarProperty Name="role_id" ColumnName="role_id" />
+          <ScalarProperty Name="signatoryStatus" ColumnName="signatoryStatus" />
+          <ScalarProperty Name="updateBy" ColumnName="updateBy" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="District_Name">
+      <EntityTypeMapping TypeName="GOAMLModel.District_Name">
+        <MappingFragment StoreEntitySet="District_Name">
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Division_Name">
+      <EntityTypeMapping TypeName="GOAMLModel.Division_Name">
+        <MappingFragment StoreEntitySet="Division_Name">
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Funds_type">
+      <EntityTypeMapping TypeName="GOAMLModel.Funds_type">
+        <MappingFragment StoreEntitySet="Funds_type">
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="goods_services">
+      <EntityTypeMapping TypeName="GOAMLModel.goods_services">
+        <MappingFragment StoreEntitySet="goods_services">
+          <ScalarProperty Name="goods_services_id" ColumnName="goods_services_id" />
+          <ScalarProperty Name="trans_Item_type_id" ColumnName="trans_Item_type_id" />
+          <ScalarProperty Name="Item_make" ColumnName="Item_make" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="previously_registered_to" ColumnName="previously_registered_to" />
+          <ScalarProperty Name="presently_registered_to" ColumnName="presently_registered_to" />
+          <ScalarProperty Name="estimated_value" ColumnName="estimated_value" />
+          <ScalarProperty Name="status_code_id" ColumnName="status_code_id" />
+          <ScalarProperty Name="status_comments" ColumnName="status_comments" />
+          <ScalarProperty Name="disposed_value" ColumnName="disposed_value" />
+          <ScalarProperty Name="currency_code" ColumnName="currency_code" />
+          <ScalarProperty Name="size" ColumnName="size" />
+          <ScalarProperty Name="size_uom" ColumnName="size_uom" />
+          <ScalarProperty Name="address_id" ColumnName="address_id" />
+          <ScalarProperty Name="registration_date" ColumnName="registration_date" />
+          <ScalarProperty Name="registration_number" ColumnName="registration_number" />
+          <ScalarProperty Name="identification_number" ColumnName="identification_number" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Identification_Type">
+      <EntityTypeMapping TypeName="GOAMLModel.Identification_Type">
+        <MappingFragment StoreEntitySet="Identification_Type">
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Legal_Form_Type">
+      <EntityTypeMapping TypeName="GOAMLModel.Legal_Form_Type">
+        <MappingFragment StoreEntitySet="Legal_Form_Type">
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="reports">
+      <EntityTypeMapping TypeName="GOAMLModel.report">
+        <MappingFragment StoreEntitySet="report">
+          <ScalarProperty Name="rentity_id" ColumnName="rentity_id" />
+          <ScalarProperty Name="rentity_branch" ColumnName="rentity_branch" />
+          <ScalarProperty Name="submission_code_id" ColumnName="submission_code_id" />
+          <ScalarProperty Name="report_code_id" ColumnName="report_code_id" />
+          <ScalarProperty Name="entity_reference" ColumnName="entity_reference" />
+          <ScalarProperty Name="fiu_ref_number" ColumnName="fiu_ref_number" />
+          <ScalarProperty Name="submission_date" ColumnName="submission_date" />
+          <ScalarProperty Name="currency_code_local_id" ColumnName="currency_code_local_id" />
+          <ScalarProperty Name="reporting_person_id" ColumnName="reporting_person_id" />
+          <ScalarProperty Name="Location_id" ColumnName="Location_id" />
+          <ScalarProperty Name="reason" ColumnName="reason" />
+          <ScalarProperty Name="action" ColumnName="action" />
+          <ScalarProperty Name="transaction_id" ColumnName="transaction_id" />
+          <ScalarProperty Name="Activity_id" ColumnName="Activity_id" />
+          <ScalarProperty Name="report_indicators" ColumnName="report_indicators" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Report_Code">
+      <EntityTypeMapping TypeName="GOAMLModel.Report_Code">
+        <MappingFragment StoreEntitySet="Report_Code">
+          <ScalarProperty Name="report_code_id" ColumnName="report_code_id" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Role_type">
+      <EntityTypeMapping TypeName="GOAMLModel.Role_type">
+        <MappingFragment StoreEntitySet="Role_type">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="entityCode" ColumnName="entityCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="signatories">
+      <EntityTypeMapping TypeName="GOAMLModel.signatory">
+        <MappingFragment StoreEntitySet="signatory">
+          <ScalarProperty Name="signId" ColumnName="signId" />
+          <ScalarProperty Name="isprimary" ColumnName="isprimary" />
+          <ScalarProperty Name="signatoryDetail_id" ColumnName="signatoryDetail_id" />
+          <ScalarProperty Name="roleId" ColumnName="roleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="signatoryDetails">
+      <EntityTypeMapping TypeName="GOAMLModel.signatoryDetail">
+        <MappingFragment StoreEntitySet="signatoryDetail">
+          <ScalarProperty Name="sign_id" ColumnName="sign_id" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="middle_name" ColumnName="middle_name" />
+          <ScalarProperty Name="prefix" ColumnName="prefix" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="birthdate" ColumnName="birthdate" />
+          <ScalarProperty Name="Birth_place" ColumnName="Birth_place" />
+          <ScalarProperty Name="mothers_name" ColumnName="mothers_name" />
+          <ScalarProperty Name="alias" ColumnName="alias" />
+          <ScalarProperty Name="SSN" ColumnName="SSN" />
+          <ScalarProperty Name="passport_number" ColumnName="passport_number" />
+          <ScalarProperty Name="passport_country" ColumnName="passport_country" />
+          <ScalarProperty Name="id_number" ColumnName="id_number" />
+          <ScalarProperty Name="Nationality1" ColumnName="Nationality1" />
+          <ScalarProperty Name="Nationality2" ColumnName="Nationality2" />
+          <ScalarProperty Name="Nationality3" ColumnName="Nationality3" />
+          <ScalarProperty Name="residence" ColumnName="residence" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Occupation" ColumnName="Occupation" />
+          <ScalarProperty Name="deceased" ColumnName="deceased" />
+          <ScalarProperty Name="deceased_date" ColumnName="deceased_date" />
+          <ScalarProperty Name="tax_number" ColumnName="tax_number" />
+          <ScalarProperty Name="tax_reg_number" ColumnName="tax_reg_number" />
+          <ScalarProperty Name="source_of_wealth" ColumnName="source_of_wealth" />
+          <ScalarProperty Name="comments" ColumnName="comments" />
+          <ScalarProperty Name="role_id" ColumnName="role_id" />
+          <ScalarProperty Name="isprimary" ColumnName="isprimary" />
+          <ScalarProperty Name="t_account_my_client_id" ColumnName="t_account_my_client_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SignatoryInfoes">
+      <EntityTypeMapping TypeName="GOAMLModel.SignatoryInfo">
+        <MappingFragment StoreEntitySet="SignatoryInfo">
+          <ScalarProperty Name="sign_Id" ColumnName="sign_Id" />
+          <ScalarProperty Name="accountNumber" ColumnName="accountNumber" />
+          <ScalarProperty Name="signatorId" ColumnName="signatorId" />
+          <ScalarProperty Name="isprimary" ColumnName="isprimary" />
+          <ScalarProperty Name="director_id" ColumnName="director_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Submission_type">
+      <EntityTypeMapping TypeName="GOAMLModel.Submission_type">
+        <MappingFragment StoreEntitySet="Submission_type">
+          <ScalarProperty Name="submission_code_id" ColumnName="submission_code_id" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="GOAMLModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_account_my_client">
+      <EntityTypeMapping TypeName="GOAMLModel.t_account_my_client">
+        <MappingFragment StoreEntitySet="t_account_my_client">
+          <ScalarProperty Name="t_account_my_client_id" ColumnName="t_account_my_client_id" />
+          <ScalarProperty Name="Instituation_name" ColumnName="Instituation_name" />
+          <ScalarProperty Name="institution_code" ColumnName="institution_code" />
+          <ScalarProperty Name="swift" ColumnName="swift" />
+          <ScalarProperty Name="Non_banking_institution" ColumnName="Non_banking_institution" />
+          <ScalarProperty Name="Branch" ColumnName="Branch" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="currency_code_id" ColumnName="currency_code_id" />
+          <ScalarProperty Name="account_name" ColumnName="account_name" />
+          <ScalarProperty Name="iban" ColumnName="iban" />
+          <ScalarProperty Name="client_number" ColumnName="client_number" />
+          <ScalarProperty Name="personal_account_type_id" ColumnName="personal_account_type_id" />
+          <ScalarProperty Name="t_entity_id" ColumnName="t_entity_id" />
+          <ScalarProperty Name="opened" ColumnName="opened" />
+          <ScalarProperty Name="closed" ColumnName="closed" />
+          <ScalarProperty Name="status_code_id" ColumnName="status_code_id" />
+          <ScalarProperty Name="beneficiary" ColumnName="beneficiary" />
+          <ScalarProperty Name="beneficiary_comment" ColumnName="beneficiary_comment" />
+          <ScalarProperty Name="comments" ColumnName="comments" />
+          <ScalarProperty Name="entityCode" ColumnName="entityCode" />
+          <ScalarProperty Name="t_person_Id" ColumnName="t_person_Id" />
+          <ScalarProperty Name="branchId" ColumnName="branchId" />
+          <ScalarProperty Name="signCard" ColumnName="signCard" />
+          <ScalarProperty Name="person_role" ColumnName="person_role" />
+          <ScalarProperty Name="updateBy" ColumnName="updateBy" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_address">
+      <EntityTypeMapping TypeName="GOAMLModel.t_address">
+        <MappingFragment StoreEntitySet="t_address">
+          <ScalarProperty Name="t_address_id" ColumnName="t_address_id" />
+          <ScalarProperty Name="Address_type_id" ColumnName="Address_type_id" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Town_id" ColumnName="Town_id" />
+          <ScalarProperty Name="City_id" ColumnName="City_id" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="country_code_id" ColumnName="country_code_id" />
+          <ScalarProperty Name="State_id" ColumnName="State_id" />
+          <ScalarProperty Name="comments" ColumnName="comments" />
+          <ScalarProperty Name="t_person_my_client_id" ColumnName="t_person_my_client_id" />
+          <ScalarProperty Name="entity_id" ColumnName="entity_id" />
+          <ScalarProperty Name="director_id" ColumnName="director_id" />
+          <ScalarProperty Name="signatory_id" ColumnName="signatory_id" />
+          <ScalarProperty Name="updateBy" ColumnName="updateBy" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_entity">
+      <EntityTypeMapping TypeName="GOAMLModel.t_entity">
+        <MappingFragment StoreEntitySet="t_entity">
+          <ScalarProperty Name="t_entity_id" ColumnName="t_entity_id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Commercial_name" ColumnName="Commercial_name" />
+          <ScalarProperty Name="Incorporation_legal_form_id" ColumnName="Incorporation_legal_form_id" />
+          <ScalarProperty Name="incorporation_number" ColumnName="incorporation_number" />
+          <ScalarProperty Name="Business" ColumnName="Business" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="url" ColumnName="url" />
+          <ScalarProperty Name="incorporation_state" ColumnName="incorporation_state" />
+          <ScalarProperty Name="incorporation_country_code" ColumnName="incorporation_country_code" />
+          <ScalarProperty Name="incorporation_date" ColumnName="incorporation_date" />
+          <ScalarProperty Name="business_closed" ColumnName="business_closed" />
+          <ScalarProperty Name="date_business_closed" ColumnName="date_business_closed" />
+          <ScalarProperty Name="tax_numebr" ColumnName="tax_numebr" />
+          <ScalarProperty Name="tax_registeration_number" ColumnName="tax_registeration_number" />
+          <ScalarProperty Name="comments" ColumnName="comments" />
+          <ScalarProperty Name="branchId" ColumnName="branchId" />
+          <ScalarProperty Name="updateBy" ColumnName="updateBy" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_foreign_currency">
+      <EntityTypeMapping TypeName="GOAMLModel.t_foreign_currency">
+        <MappingFragment StoreEntitySet="t_foreign_currency">
+          <ScalarProperty Name="foreign_currency_id" ColumnName="foreign_currency_id" />
+          <ScalarProperty Name="foreign_currency_code" ColumnName="foreign_currency_code" />
+          <ScalarProperty Name="foreign_amount" ColumnName="foreign_amount" />
+          <ScalarProperty Name="foreign_exchange_rate" ColumnName="foreign_exchange_rate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_from">
+      <EntityTypeMapping TypeName="GOAMLModel.t_from">
+        <MappingFragment StoreEntitySet="t_from">
+          <ScalarProperty Name="t_from_id" ColumnName="t_from_id" />
+          <ScalarProperty Name="from_funds_code_id" ColumnName="from_funds_code_id" />
+          <ScalarProperty Name="from_funds_comment" ColumnName="from_funds_comment" />
+          <ScalarProperty Name="from_foreign_currency_id" ColumnName="from_foreign_currency_id" />
+          <ScalarProperty Name="t_conductor_id" ColumnName="t_conductor_id" />
+          <ScalarProperty Name="from_account_id" ColumnName="from_account_id" />
+          <ScalarProperty Name="from_person_id" ColumnName="from_person_id" />
+          <ScalarProperty Name="from_entity_id" ColumnName="from_entity_id" />
+          <ScalarProperty Name="from_country_id" ColumnName="from_country_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_from_my_client">
+      <EntityTypeMapping TypeName="GOAMLModel.t_from_my_client">
+        <MappingFragment StoreEntitySet="t_from_my_client">
+          <ScalarProperty Name="t_from_my_client_id" ColumnName="t_from_my_client_id" />
+          <ScalarProperty Name="from_funds_code_id" ColumnName="from_funds_code_id" />
+          <ScalarProperty Name="from_funds_comment" ColumnName="from_funds_comment" />
+          <ScalarProperty Name="from_foreign_currency_id" ColumnName="from_foreign_currency_id" />
+          <ScalarProperty Name="t_conductor_id" ColumnName="t_conductor_id" />
+          <ScalarProperty Name="from_account_id" ColumnName="from_account_id" />
+          <ScalarProperty Name="from_person_id" ColumnName="from_person_id" />
+          <ScalarProperty Name="from_entity_id" ColumnName="from_entity_id" />
+          <ScalarProperty Name="from_country_id" ColumnName="from_country_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_person_employer">
+      <EntityTypeMapping TypeName="GOAMLModel.t_person_employer">
+        <MappingFragment StoreEntitySet="t_person_employer">
+          <ScalarProperty Name="EmployerId" ColumnName="EmployerId" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="addressTypeId" ColumnName="addressTypeId" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="townid" ColumnName="townid" />
+          <ScalarProperty Name="cityid" ColumnName="cityid" />
+          <ScalarProperty Name="stateid" ColumnName="stateid" />
+          <ScalarProperty Name="zip" ColumnName="zip" />
+          <ScalarProperty Name="country_code_id" ColumnName="country_code_id" />
+          <ScalarProperty Name="contactTypeId" ColumnName="contactTypeId" />
+          <ScalarProperty Name="communcationTypeId" ColumnName="communcationTypeId" />
+          <ScalarProperty Name="country_prefix" ColumnName="country_prefix" />
+          <ScalarProperty Name="phonenumber" ColumnName="phonenumber" />
+          <ScalarProperty Name="extension" ColumnName="extension" />
+          <ScalarProperty Name="t_person_my_client_id" ColumnName="t_person_my_client_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_person_identification">
+      <EntityTypeMapping TypeName="GOAMLModel.t_person_identification">
+        <MappingFragment StoreEntitySet="t_person_identification">
+          <ScalarProperty Name="t_person_identification_id" ColumnName="t_person_identification_id" />
+          <ScalarProperty Name="type_id" ColumnName="type_id" />
+          <ScalarProperty Name="number" ColumnName="number" />
+          <ScalarProperty Name="issue_date" ColumnName="issue_date" />
+          <ScalarProperty Name="expiry_date" ColumnName="expiry_date" />
+          <ScalarProperty Name="issued_by" ColumnName="issued_by" />
+          <ScalarProperty Name="issue_country_id" ColumnName="issue_country_id" />
+          <ScalarProperty Name="comments" ColumnName="comments" />
+          <ScalarProperty Name="t_person_my_client_id" ColumnName="t_person_my_client_id" />
+          <ScalarProperty Name="directors_id" ColumnName="directors_id" />
+          <ScalarProperty Name="entity_id" ColumnName="entity_id" />
+          <ScalarProperty Name="signatory_id" ColumnName="signatory_id" />
+          <ScalarProperty Name="updateBy" ColumnName="updateBy" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_person_my_client">
+      <EntityTypeMapping TypeName="GOAMLModel.t_person_my_client">
+        <MappingFragment StoreEntitySet="t_person_my_client">
+          <ScalarProperty Name="t_person_my_client_id" ColumnName="t_person_my_client_id" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="middle_name" ColumnName="middle_name" />
+          <ScalarProperty Name="prefix" ColumnName="prefix" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="birthdate" ColumnName="birthdate" />
+          <ScalarProperty Name="Birth_place" ColumnName="Birth_place" />
+          <ScalarProperty Name="mothers_name" ColumnName="mothers_name" />
+          <ScalarProperty Name="fathers_Name" ColumnName="fathers_Name" />
+          <ScalarProperty Name="SSN" ColumnName="SSN" />
+          <ScalarProperty Name="passport_number" ColumnName="passport_number" />
+          <ScalarProperty Name="passport_country" ColumnName="passport_country" />
+          <ScalarProperty Name="id_number" ColumnName="id_number" />
+          <ScalarProperty Name="Nationality1_id" ColumnName="Nationality1_id" />
+          <ScalarProperty Name="Nationality2_id" ColumnName="Nationality2_id" />
+          <ScalarProperty Name="Nationality3_id" ColumnName="Nationality3_id" />
+          <ScalarProperty Name="residence" ColumnName="residence" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Occupation" ColumnName="Occupation" />
+          <ScalarProperty Name="employer_id" ColumnName="employer_id" />
+          <ScalarProperty Name="deceased" ColumnName="deceased" />
+          <ScalarProperty Name="deceased_date" ColumnName="deceased_date" />
+          <ScalarProperty Name="tax_number" ColumnName="tax_number" />
+          <ScalarProperty Name="tax_reg_numebr" ColumnName="tax_reg_numebr" />
+          <ScalarProperty Name="source_of_wealth" ColumnName="source_of_wealth" />
+          <ScalarProperty Name="comments" ColumnName="comments" />
+          <ScalarProperty Name="branchId" ColumnName="branchId" />
+          <ScalarProperty Name="updateBy" ColumnName="updateBy" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_phone">
+      <EntityTypeMapping TypeName="GOAMLModel.t_phone">
+        <MappingFragment StoreEntitySet="t_phone">
+          <ScalarProperty Name="t_phone_id" ColumnName="t_phone_id" />
+          <ScalarProperty Name="tph_contact_type_id" ColumnName="tph_contact_type_id" />
+          <ScalarProperty Name="tph_communication_type_id" ColumnName="tph_communication_type_id" />
+          <ScalarProperty Name="tph_country_prefix" ColumnName="tph_country_prefix" />
+          <ScalarProperty Name="tph_number" ColumnName="tph_number" />
+          <ScalarProperty Name="tph_extension" ColumnName="tph_extension" />
+          <ScalarProperty Name="comments" ColumnName="comments" />
+          <ScalarProperty Name="t_person_my_client_id" ColumnName="t_person_my_client_id" />
+          <ScalarProperty Name="entity_id" ColumnName="entity_id" />
+          <ScalarProperty Name="director_id" ColumnName="director_id" />
+          <ScalarProperty Name="signatory_id" ColumnName="signatory_id" />
+          <ScalarProperty Name="updateBy" ColumnName="updateBy" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_to">
+      <EntityTypeMapping TypeName="GOAMLModel.t_to">
+        <MappingFragment StoreEntitySet="t_to">
+          <ScalarProperty Name="t_to_id" ColumnName="t_to_id" />
+          <ScalarProperty Name="to_funds_code_id" ColumnName="to_funds_code_id" />
+          <ScalarProperty Name="to_funds_comment" ColumnName="to_funds_comment" />
+          <ScalarProperty Name="to_foreign_currency_id" ColumnName="to_foreign_currency_id" />
+          <ScalarProperty Name="to_account_id" ColumnName="to_account_id" />
+          <ScalarProperty Name="to_person_id" ColumnName="to_person_id" />
+          <ScalarProperty Name="to_entity_id" ColumnName="to_entity_id" />
+          <ScalarProperty Name="to_country_id" ColumnName="to_country_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_to_my_client">
+      <EntityTypeMapping TypeName="GOAMLModel.t_to_my_client">
+        <MappingFragment StoreEntitySet="t_to_my_client">
+          <ScalarProperty Name="t_to_my_client_id" ColumnName="t_to_my_client_id" />
+          <ScalarProperty Name="to_funds_code_id" ColumnName="to_funds_code_id" />
+          <ScalarProperty Name="to_funds_comment" ColumnName="to_funds_comment" />
+          <ScalarProperty Name="to_foreign_currency_id" ColumnName="to_foreign_currency_id" />
+          <ScalarProperty Name="to_account_id" ColumnName="to_account_id" />
+          <ScalarProperty Name="to_person_id" ColumnName="to_person_id" />
+          <ScalarProperty Name="to_entity_id" ColumnName="to_entity_id" />
+          <ScalarProperty Name="to_country_id" ColumnName="to_country_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_transaction">
+      <EntityTypeMapping TypeName="GOAMLModel.t_transaction">
+        <MappingFragment StoreEntitySet="t_transaction">
+          <ScalarProperty Name="transactionnumber" ColumnName="transactionnumber" />
+          <ScalarProperty Name="Internal_ref_number" ColumnName="Internal_ref_number" />
+          <ScalarProperty Name="transaction_location" ColumnName="transaction_location" />
+          <ScalarProperty Name="transaction_description" ColumnName="transaction_description" />
+          <ScalarProperty Name="date_transaction" ColumnName="date_transaction" />
+          <ScalarProperty Name="teller" ColumnName="teller" />
+          <ScalarProperty Name="authorized" ColumnName="authorized" />
+          <ScalarProperty Name="late_deposit" ColumnName="late_deposit" />
+          <ScalarProperty Name="date_posting" ColumnName="date_posting" />
+          <ScalarProperty Name="value_date" ColumnName="value_date" />
+          <ScalarProperty Name="transmode_code" ColumnName="transmode_code" />
+          <ScalarProperty Name="transmode_comment" ColumnName="transmode_comment" />
+          <ScalarProperty Name="amount_local" ColumnName="amount_local" />
+          <ScalarProperty Name="goods_services_id" ColumnName="goods_services_id" />
+          <ScalarProperty Name="comments" ColumnName="comments" />
+          <ScalarProperty Name="accnoutno" ColumnName="accnoutno" />
+          <ScalarProperty Name="balance" ColumnName="balance" />
+          <ScalarProperty Name="cifno" ColumnName="cifno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tempTransactions">
+      <EntityTypeMapping TypeName="GOAMLModel.tempTransaction">
+        <MappingFragment StoreEntitySet="tempTransaction">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="accno" ColumnName="accno" />
+          <ScalarProperty Name="voucherno" ColumnName="voucherno" />
+          <ScalarProperty Name="in_out" ColumnName="in_out" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="balance" ColumnName="balance" />
+          <ScalarProperty Name="cif" ColumnName="cif" />
+          <ScalarProperty Name="cifname" ColumnName="cifname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Thana_Name">
+      <EntityTypeMapping TypeName="GOAMLModel.Thana_Name">
+        <MappingFragment StoreEntitySet="Thana_Name">
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Transaction_Item_Status">
+      <EntityTypeMapping TypeName="GOAMLModel.Transaction_Item_Status">
+        <MappingFragment StoreEntitySet="Transaction_Item_Status">
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Transaction_Item_Type">
+      <EntityTypeMapping TypeName="GOAMLModel.Transaction_Item_Type">
+        <MappingFragment StoreEntitySet="Transaction_Item_Type">
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Transaction_Mode">
+      <EntityTypeMapping TypeName="GOAMLModel.Transaction_Mode">
+        <MappingFragment StoreEntitySet="Transaction_Mode">
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="userInfoes">
+      <EntityTypeMapping TypeName="GOAMLModel.userInfo">
+        <MappingFragment StoreEntitySet="userInfo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="userNme" ColumnName="userNme" />
+          <ScalarProperty Name="userpassword" ColumnName="userpassword" />
+          <ScalarProperty Name="branchId" ColumnName="branchId" />
+          <ScalarProperty Name="category" ColumnName="category" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="GOAMLModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="GOAMLModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="GOAMLModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="GOAMLModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GOAMLModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="GOAMLModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GOAMLModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="GOAMLModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="GOAMLModel.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>

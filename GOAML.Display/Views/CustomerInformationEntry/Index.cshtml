@@ -1,0 +1,158 @@
+﻿<script>
+    var cusFormControl = {
+        'IsSingle': false,
+        'ControlStr': 'TaccountMyClient<prop>t_account_my_client_id^Instituation_name^institution_code^swift^Non_banking_institution^Branch^Account^currency_code_id^account_name^iban^client_number^personal_account_type_id^t_entity_id^opened^closed^status_code_id^beneficiary^beneficiary_comment^comments^entityCode^t_person_Id^branchId^signCard^person_role^updateBy^updateDate~SignatoryInfo<prop>director_id^isprimary'
+    };
+    var controls = {
+        't_account_my_clients': ['t_account_my_client_id', 'Instituation_name', 'institution_code', 'swift', 'Non_banking_institution', 'Branch', 'Account', 'currency_code_id', 'account_name', 'iban', 'client_number', 'personal_account_type_id', 't_entity_id', 'opened', 'closed', 'status_code_id', 'beneficiary', 'beneficiary_comment', 'comments', 'entityCode', 't_person_Id', 'branchId', 'signCard', 'person_role', 'updateBy', 'updateDate'
+        ]
+    };
+    var cusValidate = { 'IsChecked': false, 'validateStr': "" };
+    var cusUrl = "SaveCustomerInfoUpdate";
+    var redirectUrl = "";
+</script>
+@{
+    if (ViewBag.CurrencyList == null)
+    {
+        <script>
+            alert("Couldnot connect with database.");
+        </script>
+    }
+    else
+    {
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-body TaccountMyClient">
+                        <div class="row">
+                            <div class="col-sm-2">@Html.Label("ACCOUNT NO")</div>
+                            <div class="col-sm-4">
+                                <input type="text" name="CifSearchBox" id="CifSearchBox" class="form-control" value="" style="display: inline-block !important;" placeholder="CIF NUMBER" />
+                            </div>
+                            <div class="col-sm-4">
+                                <button id="CifSearchBtn" name="CifSearchBtn" class="btn btn-default CifSearchBtn" onclick=" GetCustomerInfo('CifSearchBox', controls); " style="margin-left: -68px !important; position: absolute !important;"><i class="fa fa-search"></i></button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">NAME</div>
+                            <div class="col-sm-4">
+                                <input type="text" name="account_name" id="account_name" class="form-control" value="" style="display: inline-block !important;" />
+                                <input type="hidden" id="Account" name="Account" class="Account" />
+                                <input type="hidden" id="t_account_my_client_id" name="t_account_my_client_id" class="t_account_my_client_id" />
+                                <input type="hidden" id="entityCode" name="entityCode" class="entityCode" />
+                                <input type="hidden" id="Instituation_name" name="Instituation_name" class="Instituation_name" />
+                                <input type="hidden" id="institution_code" name="institution_code" class="institution_code" />
+                                <input type="hidden" id="swift" name="swift" class="swift" />
+                                <input type="hidden" id="Non_banking_institution" name="Non_banking_institution" class="Non_banking_institution" />
+                                <input type="hidden" id="Branch" name="Branch" class="Branch" />
+                                <input type="hidden" id="t_entity_id" name="t_entity_id" class="t_entity_id" />
+                                <input type="hidden" id="t_person_Id" name="t_person_Id" class="t_person_Id" />
+                                <input type="hidden" id="branchId" name="branchId" class="branchId" />
+                                <input type="hidden" id="signCard" name="signCard" class="signCard" />
+                                <input type="hidden" id="person_role" name="person_role" class="person_role" />
+                            </div>
+                            <div class="col-sm-2">ACCOUNT STATUS</div>
+                            <div class="col-sm-4">
+                                @Html.DropDownList("status_code_id", new SelectList(@ViewBag.AccStatusList, "value", "description"), "Select One", new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">CURRENCY</div>
+                            <div class="col-sm-2">
+                                @Html.DropDownList("currency_code_id", new SelectList(@ViewBag.CurrencyList, "currency_code_local_id", "description"), "Select One", new { @class = "form-control" })
+                            </div>
+                            <div class="col-sm-1 " style="margin-left: -3px;">IBAN</div>
+                            <div class="col-sm-1 ">
+                                <input type="text" name="iban" id="iban" class="form-control" value="" style="display: inline-block !important;" />
+                            </div>
+                            <div class="col-sm-2">ACCOUNT ROLE</div>
+                            <div class="col-sm-4">
+                                @Html.DropDownList("person_role", new SelectList(@ViewBag.AccRoleList, "value", "description"), "Select One", new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">CLIENT NUMBER</div>
+                            <div class="col-sm-4">
+                                <input type="text" name="client_number" id="client_number" class="form-control" value="" style="display: inline-block !important;" />
+                            </div>
+                            <div class="col-sm-2">BENEFICIARY NAME</div>
+                            <div class="col-sm-4">
+                                <input type="text" name="beneficiary" id="beneficiary" class="form-control" value="" style="display: inline-block !important;" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">ACCOUNT TYPE</div>
+                            <div class="col-sm-4">
+                                @Html.DropDownList("personal_account_type_id", new SelectList(@ViewBag.AccTypeList, "value", "description"), "Select One", new { @class = "form-control" })
+                            </div>
+                            <div class="col-sm-2">BENEFICIARY COMMENTS</div>
+                            <div class="col-sm-4"><input type="text" name="beneficiary_comment" id="beneficiary_comment" class="form-control" value="" style="display: inline-block !important;" /> </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">OPENED DATE</div>
+                            <div class="col-sm-4">
+                                <input type="text" name="opened" id="opened" class="form-control" value="" style="display: inline-block !important;" placeholder="yyyy-mm-dd" />
+                            </div>
+                            <div class="col-sm-2">COMMENTS</div>
+                            <div class="col-sm-4">
+                                <input type="text" name="comments" id="comments" class="form-control" value="" style="display: inline-block !important;" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">CLOSED DATE</div>
+                            <div class="col-sm-4"><input type="text" name="closed" id="closed" class="form-control" value="" style="display: inline-block !important;" placeholder="yyyy-mm-dd" /> </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title"><i class="fa fa-home"></i>Signatory List</h3>
+                                    </div>
+                                    <div class="panel-body SignatoryInfo">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-body">
+                                                        <div class="row">
+                                                            <div class="col-sm-4">ACCOUNT SIGNATORY</div>
+                                                            <div class="col-sm-8">
+                                                                <select name="director_id" id="director_id" class="form-control"></select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-4">SIGNATORY STATUS</div>
+                                                            <div class="col-sm-8">
+                                                                @Html.DropDownList("isprimary", new SelectList(@ViewBag.SignatoryStatusList, "Value", "Text"), "Select One", new { @class = "form-control" })
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-12">
+                                                                <table class="table table-bordered table-responsive table-striped table-hover">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Name</th>
+                                                                            <th>Primary(Y/N)</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody class="signatory-table"></tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">&nbsp;</div>
+                            <div class="col-sm-4"><button name="Save" class="btn btn-default submitBtn" onclick=" cusUpdate_submit(cusFormControl, cusValidate, cusUrl, controls); ">SAVE</button> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+}

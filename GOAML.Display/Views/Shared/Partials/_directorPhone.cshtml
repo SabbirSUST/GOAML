@@ -1,0 +1,74 @@
+﻿
+<script>
+    var phoneFormControl = {
+        'IsSingle': true,
+        'ControlStr': 'tphone<prop>t_phone_id^tph_contact_type_id^tph_communication_type_id^tph_country_prefix^tph_number^tph_extension^comments^entity_id^director_id'
+    };
+
+    var phoneValidate = { 'IsChecked': false, 'validateStr': "" };
+    var phoneUrl = "DirectorInformation/SaveDirectorPhone";
+    var redirectUrl = "Index";
+</script>
+<div class="row">
+    <div class="col-sm-12">
+
+        <div class="panel panel-default" id="clientlist">
+            <div class="panel-body tphone">
+                <div class="row">
+                    <div class="col-sm-2">DIRECTORS NAME</div>
+                    <div class="col-sm-8"><input type="text" name="DirectorName" id="DPDirectorName" class="form-control director-name" /> </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-sm-2">CONTACT TYPE</div>
+                        <div class="col-sm-4">
+                            @Html.DropDownList("tph_contact_type_id", new SelectList(@ViewBag.ContactTypes, "tph_contact_type_id", "description"), "Select One", new { @class = "form-control" })
+                            <input type="hidden" name="PhoneId" id="t_phone_id" class="form-control" />
+                            <input type="hidden" id="director_id" name="DirectorId" class="director_id" />
+                            <input type="hidden" id="entity_id" name="EntityId" class="entity_id" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2">COMMUNICATION TYPE</div>
+                        <div class="col-sm-4">
+                            @Html.DropDownList("tph_communication_type_id", new SelectList(@ViewBag.CommunicationTypes, "Value", "description"), "Select One", new { @class = "form-control" })
+                        </div>
+                        <div class="col-sm-2">NUMBER</div>
+                        <div class="col-sm-4"><input type="text" name="Number" id="tph_number" class="form-control" value="" style="display: inline-block !important;" /> </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2">COUNTRY PREFIX</div>
+                        <div class="col-sm-4"><input type="text" name="CountryPrefix" id="tph_country_prefix" class="form-control" value="" style="display: inline-block !important;" /> </div>
+                        <div class="col-sm-2">EXTENSION</div>
+                        <div class="col-sm-4"><input type="text" name="Extension" id="tph_extension" class="form-control" value="" style="display: inline-block !important;" /> </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2">COMMENTS</div>
+                        <div class="col-sm-4"><textarea name="Comments" id="comments" class="form-control"></textarea> </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">&nbsp;</div>
+                    <div class="col-sm-4"><button name="Save" class="btn btn-default submitBtn" onclick="director_submit(phoneFormControl, phoneValidate, phoneUrl, controls);">Save</button> </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-11">
+                    <table class="table table-striped table-responsive table-hover table-bordered">
+                        <thead>
+                            <tr>
+                                <th>CONTACT TYPE</th>
+                                <th>COMMUNICATION TYPE</th>
+                                <th>NUMBER</th>
+                                <th>EXTENSION</th>
+                                <th>COUNTRY PREFIX</th>
+                            </tr>
+                        </thead>
+                        <tbody class="Tphone-table"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

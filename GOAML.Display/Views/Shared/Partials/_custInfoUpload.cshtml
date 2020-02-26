@@ -1,0 +1,41 @@
+﻿
+<script>
+    var accInfoUpload = {
+        'accountUpload': 'taccountMyClients<prop>^Branch^^personal_account_type_id^Account^account_name^^^^status_code_id^^^t_entity_id^^^^^t_person_Id^entityCode^'
+    };
+    var accInfoUploadUrl = 'WinFosFileUpload/CustomerInfoUpload';
+</script>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="panel panel-default" id="clientlist">
+            <div class="panel-body">
+                @using (Html.BeginForm("CustomerInfoUpload", "WinFosFileUpload", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    <div class="row" style="margin-left: 0px !important">
+                        <div class="col-sm-4 input-group">
+                            <span class="input-group-btn">
+                                <span class="btn btn-primary btn-file">Browse&hellip;<input type="file" name="file" id="infofile" multiple /></span>
+                            </span>
+                            <input type="text" class="form-control" id="infoFileName" readonly>
+                        </div>
+                        <div class="col-sm-8">
+                            <input type="submit" name="Submit" id="Submit" value="Upload" class="btn btn-info" />
+                            @*<button name="Submit" class="btn btn-primary" id="Submit" onclick="CustInfoUpload('infofile', accInfoUploadUrl, accInfoUpload);">Save</button>*@
+                        </div>
+                    </div>
+                }
+                @*<div class="row">
+                        <div class="col-sm-4 input-group">
+                            <span class="input-group-btn">
+                                <span class="btn btn-primary btn-file">Browse&hellip;<input type="file" name="file" id="infofile" multiple /></span>
+                            </span>
+                            <input type="text" class="form-control" id="infoFileName" readonly>
+                        </div>
+                        <div class="col-sm-4">
+                            <button name="Submit" class="btn btn-primary" id="Submit" onclick="CustInfoUpload('infofile', accInfoUploadUrl, accInfoUpload);">Save</button>
+                        </div>
+                    </div>*@
+            </div>
+        </div>
+    </div>
+</div>

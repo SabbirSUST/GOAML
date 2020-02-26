@@ -1,0 +1,39 @@
+﻿<ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#director-info-tab">Individual Personal Information</a></li>
+    <li><a data-toggle="tab" href="#address-tab">Address</a></li>
+    <li><a data-toggle="tab" href="#phone-tab">Phone</a></li>
+    <li><a data-toggle="tab" href="#identification-tab">Identification</a></li>
+</ul>
+@{
+    if (ViewBag.BranchList == null)
+    {
+        <script>
+            alert("Couldnot connect with database.");
+        </script>
+    }
+    else
+    {
+        <div class="tab-content">
+            <div id="director-info-tab" class="tab-pane fade in active">
+                @{
+        Html.RenderPartial("Partials/_individualInformation");
+                }
+            </div>
+            <div id="address-tab" class="tab-pane fade">
+                @{
+        Html.RenderPartial("Partials/_individualAddress");
+                }
+            </div>
+            <div id="phone-tab" class="tab-pane fade">
+                @{
+        Html.RenderPartial("Partials/_individualPhone");
+                }
+            </div>
+            <div id="identification-tab" class="tab-pane fade">
+                @{
+        Html.RenderPartial("Partials/_individualIdentity");
+                }
+            </div>
+        </div>
+    }
+}

@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Credit Information Bureau - Woori Bank";
+
+}
+<script>
+    var dbResponse = {};
+    dbResponse['MessageType'] = '@ViewBag.MessageType';
+    dbResponse['Message'] = '@ViewBag.Message';
+    dbResponse['ReturnValue'] = '@ViewBag.ReturnValue';
+</script>
+
+<ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#director-info-tab">Individual</a></li>
+    <li><a data-toggle="tab" href="#address-tab">Proprietorship</a></li>
+    <li><a data-toggle="tab" href="#phone-tab">Company</a></li>
+</ul>
+<div class="tab-content">
+    <div id="director-info-tab" class="tab-pane fade in active">
+        @{
+            Html.RenderPartial("Partial/_Individual");
+        }
+    </div>
+    <div id="address-tab" class="tab-pane fade">
+        @{
+            Html.RenderPartial("Partial/_Proprietorship");
+        }
+    </div>
+    <div id="phone-tab" class="tab-pane fade">
+        @{
+            Html.RenderPartial("Partial/_Company");
+        }
+    </div>
+</div>

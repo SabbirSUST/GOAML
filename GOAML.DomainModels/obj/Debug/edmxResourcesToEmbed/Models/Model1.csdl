@@ -1,0 +1,2466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GOAMLModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Account_Person_Role">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="t_account_my_client" Relationship="Self.FK_t_account_my_client_Account_Person_Role" FromRole="Account_Person_Role" ToRole="t_account_my_client" />
+  </EntityType>
+  <EntityType Name="Account_Status_Type">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="t_account_my_client" Relationship="Self.FK_t_account_my_client_Account_Status_Type" FromRole="Account_Status_Type" ToRole="t_account_my_client" />
+  </EntityType>
+  <EntityType Name="Account_Type">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="t_account_my_client" Relationship="Self.FK_t_account_my_client_Account_Type" FromRole="Account_Type" ToRole="t_account_my_client" />
+  </EntityType>
+  <EntityType Name="Branch_Info">
+    <Key>
+      <PropertyRef Name="BranchID" />
+    </Key>
+    <Property Name="BranchID" Type="Int32" Nullable="false" />
+    <Property Name="BranchName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="t_account_my_client" Relationship="Self.FK_t_account_my_client_Branch_Info" FromRole="Branch_Info" ToRole="t_account_my_client" />
+    <NavigationProperty Name="t_entity" Relationship="Self.FK_t_entity_Branch_Info" FromRole="Branch_Info" ToRole="t_entity" />
+    <NavigationProperty Name="t_person_my_client" Relationship="Self.FK_t_person_my_client_Branch_Info" FromRole="Branch_Info" ToRole="t_person_my_client" />
+    <NavigationProperty Name="userInfoes" Relationship="Self.FK_userInfo_Branch_Info" FromRole="Branch_Info" ToRole="userInfo" />
+  </EntityType>
+  <EntityType Name="Communication_Type">
+    <Key>
+      <PropertyRef Name="Value" />
+    </Key>
+    <Property Name="Value" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="t_person_employer" Relationship="Self.FK_t_person_employer_Communication_Type" FromRole="Communication_Type" ToRole="t_person_employer" />
+    <NavigationProperty Name="t_phone" Relationship="Self.FK_t_phone_Communication_Type" FromRole="Communication_Type" ToRole="t_phone" />
+  </EntityType>
+  <EntityType Name="Contact_Type">
+    <Key>
+      <PropertyRef Name="tph_contact_type_id" />
+    </Key>
+    <Property Name="tph_contact_type_id" Type="Int32" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="t_address" Relationship="Self.FK_t_address_Contact_Type" FromRole="Contact_Type" ToRole="t_address" />
+    <NavigationProperty Name="t_person_employer" Relationship="Self.FK_t_person_employer_Contact_Type" FromRole="Contact_Type" ToRole="t_person_employer" />
+    <NavigationProperty Name="t_person_employer1" Relationship="Self.FK_t_person_employer_Contact_Type1" FromRole="Contact_Type" ToRole="t_person_employer" />
+    <NavigationProperty Name="t_phone" Relationship="Self.FK_t_phone_Contact_Type" FromRole="Contact_Type" ToRole="t_phone" />
+  </EntityType>
+  <EntityType Name="Country_Codes">
+    <Key>
+      <PropertyRef Name="Value" />
+    </Key>
+    <Property Name="Value" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="director_detail" Relationship="Self.FK_director_detail_Country_Codes" FromRole="Country_Codes" ToRole="director_detail" />
+    <NavigationProperty Name="director_detail1" Relationship="Self.FK_director_detail_Country_Codes1" FromRole="Country_Codes" ToRole="director_detail" />
+    <NavigationProperty Name="director_detail2" Relationship="Self.FK_director_detail_Country_Codes2" FromRole="Country_Codes" ToRole="director_detail" />
+    <NavigationProperty Name="director_detail3" Relationship="Self.FK_director_detail_Country_Codes3" FromRole="Country_Codes" ToRole="director_detail" />
+    <NavigationProperty Name="director_detail4" Relationship="Self.FK_director_detail_Country_Codes4" FromRole="Country_Codes" ToRole="director_detail" />
+    <NavigationProperty Name="signatoryDetails" Relationship="Self.FK_signatoryDetail_Country_Codes" FromRole="Country_Codes" ToRole="signatoryDetail" />
+    <NavigationProperty Name="signatoryDetails1" Relationship="Self.FK_signatoryDetail_Country_Codes1" FromRole="Country_Codes" ToRole="signatoryDetail" />
+    <NavigationProperty Name="signatoryDetails2" Relationship="Self.FK_signatoryDetail_Country_Codes2" FromRole="Country_Codes" ToRole="signatoryDetail" />
+    <NavigationProperty Name="signatoryDetails3" Relationship="Self.FK_signatoryDetail_Country_Codes3" FromRole="Country_Codes" ToRole="signatoryDetail" />
+    <NavigationProperty Name="signatoryDetails4" Relationship="Self.FK_signatoryDetail_Country_Codes4" FromRole="Country_Codes" ToRole="signatoryDetail" />
+    <NavigationProperty Name="t_address" Relationship="Self.FK_t_address_Country_Codes" FromRole="Country_Codes" ToRole="t_address" />
+    <NavigationProperty Name="t_entity" Relationship="Self.FK_t_entity_Country_Codes" FromRole="Country_Codes" ToRole="t_entity" />
+    <NavigationProperty Name="t_from" Relationship="Self.FK_t_from_Country_Codes" FromRole="Country_Codes" ToRole="t_from" />
+    <NavigationProperty Name="t_from_my_client" Relationship="Self.FK_t_from_my_client_Country_Codes" FromRole="Country_Codes" ToRole="t_from_my_client" />
+    <NavigationProperty Name="t_person_employer" Relationship="Self.FK_t_person_employer_Country_Codes" FromRole="Country_Codes" ToRole="t_person_employer" />
+    <NavigationProperty Name="t_person_identification" Relationship="Self.FK_t_person_identification_Country_Codes" FromRole="Country_Codes" ToRole="t_person_identification" />
+    <NavigationProperty Name="t_person_my_client" Relationship="Self.FK_t_person_my_client_Country_Codes" FromRole="Country_Codes" ToRole="t_person_my_client" />
+    <NavigationProperty Name="t_person_my_client1" Relationship="Self.FK_t_person_my_client_Country_Codes1" FromRole="Country_Codes" ToRole="t_person_my_client" />
+    <NavigationProperty Name="t_person_my_client2" Relationship="Self.FK_t_person_my_client_Country_Codes2" FromRole="Country_Codes" ToRole="t_person_my_client" />
+    <NavigationProperty Name="t_person_my_client3" Relationship="Self.FK_t_person_my_client_Country_Codes3" FromRole="Country_Codes" ToRole="t_person_my_client" />
+    <NavigationProperty Name="t_to" Relationship="Self.FK_t_to_Country_Codes" FromRole="Country_Codes" ToRole="t_to" />
+    <NavigationProperty Name="t_to_my_client" Relationship="Self.FK_t_to_my_client_Country_Codes" FromRole="Country_Codes" ToRole="t_to_my_client" />
+  </EntityType>
+  <EntityType Name="Currency">
+    <Key>
+      <PropertyRef Name="currency_code_local_id" />
+    </Key>
+    <Property Name="currency_code_local_id" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="goods_services" Relationship="Self.FK_goods_services_Currencies" FromRole="Currencies" ToRole="goods_services" />
+    <NavigationProperty Name="reports" Relationship="Self.FK_report_Currencies" FromRole="Currencies" ToRole="report" />
+    <NavigationProperty Name="t_account_my_client" Relationship="Self.FK_t_account_my_client_Currencies" FromRole="Currencies" ToRole="t_account_my_client" />
+    <NavigationProperty Name="t_foreign_currency" Relationship="Self.FK_t_foreign_currency_Currencies" FromRole="Currencies" ToRole="t_foreign_currency" />
+    <NavigationProperty Name="t_from_my_client" Relationship="Self.FK_t_from_my_client_Currencies" FromRole="Currencies" ToRole="t_from_my_client" />
+  </EntityType>
+  <EntityType Name="CUSTOMER_FROM_WINFOS">
+    <Key>
+      <PropertyRef Name="CIF" />
+    </Key>
+    <Property Name="CIF" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BRANCH_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ADDRESS" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CITY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="COUNTRY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PHONE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ENTITY_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="director_detail">
+    <Key>
+      <PropertyRef Name="t_person_id" />
+    </Key>
+    <Property Name="t_person_id" Type="Int32" Nullable="false" />
+    <Property Name="gender" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="Title" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="first_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="middle_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="prefix" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="last_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="birthdate" Type="DateTime" Precision="3" />
+    <Property Name="Birth_place" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mothers_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="alias" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SSN" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="passport_number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="passport_country" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="id_number" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Nationality1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nationality2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Nationality3" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="residence" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Occupation" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="deceased" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="deceased_date" Type="DateTime" Precision="3" />
+    <Property Name="tax_number" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="tax_reg_number" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="source_of_wealth" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="comments" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="entity_id" Type="Int32" />
+    <Property Name="role_id" Type="Int32" />
+    <Property Name="signatoryStatus" Type="Int32" />
+    <Property Name="updateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="updateDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Country_Codes" Relationship="Self.FK_director_detail_Country_Codes" FromRole="director_detail" ToRole="Country_Codes" />
+    <NavigationProperty Name="Country_Codes1" Relationship="Self.FK_director_detail_Country_Codes1" FromRole="director_detail" ToRole="Country_Codes" />
+    <NavigationProperty Name="Country_Codes2" Relationship="Self.FK_director_detail_Country_Codes2" FromRole="director_detail" ToRole="Country_Codes" />
+    <NavigationProperty Name="Country_Codes3" Relationship="Self.FK_director_detail_Country_Codes3" FromRole="director_detail" ToRole="Country_Codes" />
+    <NavigationProperty Name="Country_Codes4" Relationship="Self.FK_director_detail_Country_Codes4" FromRole="director_detail" ToRole="Country_Codes" />
+    <NavigationProperty Name="Role_type" Relationship="Self.FK_director_detail_Role_type" FromRole="director_detail" ToRole="Role_type" />
+    <NavigationProperty Name="t_entity" Relationship="Self.FK_director_detail_t_entity" FromRole="director_detail" ToRole="t_entity" />
+    <NavigationProperty Name="SignatoryInfoes" Relationship="Self.FK_SignatoryInfo_director_detail" FromRole="director_detail" ToRole="SignatoryInfo" />
+    <NavigationProperty Name="t_address" Relationship="Self.FK_t_address_director_detail" FromRole="director_detail" ToRole="t_address" />
+    <NavigationProperty Name="t_person_identification" Relationship="Self.FK_t_person_identification_director_detail" FromRole="director_detail" ToRole="t_person_identification" />
+    <NavigationProperty Name="t_phone" Relationship="Self.FK_t_phone_director_detail" FromRole="director_detail" ToRole="t_phone" />
+  </EntityType>
+  <EntityType Name="District_Name">
+    <Key>
+      <PropertyRef Name="Value" />
+    </Key>
+    <Property Name="Value" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="t_address" Relationship="Self.FK_t_address_District_Name" FromRole="District_Name" ToRole="t_address" />
+    <NavigationProperty Name="t_person_employer" Relationship="Self.FK_t_person_employer_District_Name" FromRole="District_Name" ToRole="t_person_employer" />
+  </EntityType>
+  <EntityType Name="Division_Name">
+    <Key>
+      <PropertyRef Name="Value" />
+    </Key>
+    <Property Name="Value" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="t_address" Relationship="Self.FK_t_address_Division_Name" FromRole="Division_Name" ToRole="t_address" />
+    <NavigationProperty Name="t_person_employer" Relationship="Self.FK_t_person_employer_Division_Name" FromRole="Division_Name" ToRole="t_person_employer" />
+  </EntityType>
+  <EntityType Name="Funds_type">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="t_from" Relationship="Self.FK_t_from_Funds_type" FromRole="Funds_type" ToRole="t_from" />
+    <NavigationProperty Name="t_from_my_client" Relationship="Self.FK_t_from_my_client_Funds_type" FromRole="Funds_type" ToRole="t_from_my_client" />
+    <NavigationProperty Name="t_to" Relationship="Self.FK_t_to_Funds_type" FromRole="Funds_type" ToRole="t_to" />
+    <NavigationProperty Name="t_to_my_client" Relationship="Self.FK_t_to_my_client_Funds_type" FromRole="Funds_type" ToRole="t_to_my_client" />
+  </EntityType>
+  <EntityType Name="goods_services">
+    <Key>
+      <PropertyRef Name="goods_services_id" />
+    </Key>
+    <Property Name="goods_services_id" Type="Int32" Nullable="false" />
+    <Property Name="trans_Item_type_id" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="Item_make" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="previously_registered_to" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="presently_registered_to" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="estimated_value" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="status_code_id" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="status_comments" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="disposed_value" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="currency_code" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="size" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="size_uom" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="address_id" Type="Int32" />
+    <Property Name="registration_date" Type="DateTime" Precision="3" />
+    <Property Name="registration_number" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="identification_number" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Comments" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Currency" Relationship="Self.FK_goods_services_Currencies" FromRole="goods_services" ToRole="Currencies" />
+    <NavigationProperty Name="t_address" Relationship="Self.FK_goods_services_t_address" FromRole="goods_services" ToRole="t_address" />
+    <NavigationProperty Name="Transaction_Item_Status" Relationship="Self.FK_goods_services_Transaction_Item_Status" FromRole="goods_services" ToRole="Transaction_Item_Status" />
+    <NavigationProperty Name="Transaction_Item_Type" Relationship="Self.FK_goods_services_Transaction_Item_Type" FromRole="goods_services" ToRole="Transaction_Item_Type" />
+  </EntityType>
+  <EntityType Name="Identification_Type">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="t_person_identification" Relationship="Self.FK_t_person_identification_Identification_Type" FromRole="Identification_Type" ToRole="t_person_identification" />
+  </EntityType>
+  <EntityType Name="Legal_Form_Type">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="t_entity" Relationship="Self.FK_t_entity_Legal_Form_Type" FromRole="Legal_Form_Type" ToRole="t_entity" />
+  </EntityType>
+  <EntityType Name="report">
+    <Key>
+      <PropertyRef Name="rentity_id" />
+    </Key>
+    <Property Name="rentity_id" Type="Int32" Nullable="false" />
+    <Property Name="rentity_branch" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="submission_code_id" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="report_code_id" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="entity_reference" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="fiu_ref_number" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="submission_date" Type="DateTime" Precision="3" />
+    <Property Name="currency_code_local_id" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="reporting_person_id" Type="Int32" />
+    <Property Name="Location_id" Type="Int32" />
+    <Property Name="reason" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="action" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="transaction_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Activity_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="report_indicators" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Currency" Relationship="Self.FK_report_Currencies" FromRole="report" ToRole="Currencies" />
+    <NavigationProperty Name="Report_Code" Relationship="Self.FK_report_Report_Code" FromRole="report" ToRole="Report_Code" />
+    <NavigationProperty Name="Submission_type" Relationship="Self.FK_report_Submission_type" FromRole="report" ToRole="Submission_type" />
+    <NavigationProperty Name="t_address" Relationship="Self.FK_report_t_address" FromRole="report" ToRole="t_address" />
+    <NavigationProperty Name="t_person_my_client" Relationship="Self.FK_report_t_person_my_client" FromRole="report" ToRole="t_person_my_client" />
+    <NavigationProperty Name="t_transaction" Relationship="Self.FK_report_transaction" FromRole="report" ToRole="t_transaction" />
+  </EntityType>
+  <EntityType Name="Report_Code">
+    <Key>
+      <PropertyRef Name="report_code_id" />
+    </Key>
+    <Property Name="report_code_id" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="reports" Relationship="Self.FK_report_Report_Code" FromRole="Report_Code" ToRole="report" />
+  </EntityType>
+  <EntityType Name="Role_type">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="value" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="entityCode" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="director_detail" Relationship="Self.FK_director_detail_Role_type" FromRole="Role_type" ToRole="director_detail" />
+    <NavigationProperty Name="signatoryDetails" Relationship="Self.FK_signatoryDetail_Role_type" FromRole="Role_type" ToRole="signatoryDetail" />
+  </EntityType>
+  <EntityType Name="signatory">
+    <Key>
+      <PropertyRef Name="signId" />
+    </Key>
+    <Property Name="signId" Type="Int32" Nullable="false" />
+    <Property Name="isprimary" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="signatoryDetail_id" Type="Int32" />
+    <Property Name="roleId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="signatoryDetail">
+    <Key>
+      <PropertyRef Name="sign_id" />
+    </Key>
+    <Property Name="sign_id" Type="Int32" Nullable="false" />
+    <Property Name="gender" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="Title" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="first_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="middle_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="prefix" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="last_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="birthdate" Type="DateTime" Precision="3" />
+    <Property Name="Birth_place" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="mothers_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="alias" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SSN" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="passport_number" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="passport_country" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="id_number" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nationality1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Nationality2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Nationality3" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="residence" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Occupation" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="deceased" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="deceased_date" Type="DateTime" Precision="3" />
+    <Property Name="tax_number" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="tax_reg_number" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="source_of_wealth" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="comments" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="role_id" Type="Int32" />
+    <Property Name="isprimary" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="t_account_my_client_id" Type="Int32" />
+    <NavigationProperty Name="Country_Codes" Relationship="Self.FK_signatoryDetail_Country_Codes" FromRole="signatoryDetail" ToRole="Country_Codes" />
+    <NavigationProperty Name="Country_Codes1" Relationship="Self.FK_signatoryDetail_Country_Codes1" FromRole="signatoryDetail" ToRole="Country_Codes" />
+    <NavigationProperty Name="Country_Codes2" Relationship="Self.FK_signatoryDetail_Country_Codes2" FromRole="signatoryDetail" ToRole="Country_Codes" />
+    <NavigationProperty Name="Country_Codes3" Relationship="Self.FK_signatoryDetail_Country_Codes3" FromRole="signatoryDetail" ToRole="Country_Codes" />
+    <NavigationProperty Name="Country_Codes4" Relationship="Self.FK_signatoryDetail_Country_Codes4" FromRole="signatoryDetail" ToRole="Country_Codes" />
+    <NavigationProperty Name="Role_type" Relationship="Self.FK_signatoryDetail_Role_type" FromRole="signatoryDetail" ToRole="Role_type" />
+    <NavigationProperty Name="t_account_my_client" Relationship="Self.FK_signatoryDetail_t_account_my_client" FromRole="signatoryDetail" ToRole="t_account_my_client" />
+    <NavigationProperty Name="t_address" Relationship="Self.FK_t_address_signatoryDetail" FromRole="signatoryDetail" ToRole="t_address" />
+    <NavigationProperty Name="t_person_identification" Relationship="Self.FK_t_person_identification_signatoryDetail" FromRole="signatoryDetail" ToRole="t_person_identification" />
+    <NavigationProperty Name="t_phone" Relationship="Self.FK_t_phone_signatoryDetail" FromRole="signatoryDetail" ToRole="t_phone" />
+  </EntityType>
+  <EntityType Name="SignatoryInfo">
+    <Key>
+      <PropertyRef Name="sign_Id" />
+    </Key>
+    <Property Name="sign_Id" Type="Int32" Nullable="false" />
+    <Property Name="accountNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="signatorId" Type="Int32" />
+    <Property Name="isprimary" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="director_id" Type="Int32" />
+    <NavigationProperty Name="director_detail" Relationship="Self.FK_SignatoryInfo_director_detail" FromRole="SignatoryInfo" ToRole="director_detail" />
+    <NavigationProperty Name="t_person_my_client" Relationship="Self.FK_SignatoryInfo_t_person_my_client" FromRole="SignatoryInfo" ToRole="t_person_my_client" />
+  </EntityType>
+  <EntityType Name="Submission_type">
+    <Key>
+      <PropertyRef Name="submission_code_id" />
+    </Key>
+    <Property Name="submission_code_id" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="reports" Relationship="Self.FK_report_Submission_type" FromRole="Submission_type" ToRole="report" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="t_account_my_client">
+    <Key>
+      <PropertyRef Name="t_account_my_client_id" />
+    </Key>
+    <Property Name="t_account_my_client_id" Type="Int32" Nullable="false" />
+    <Property Name="Instituation_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="institution_code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="swift" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="Non_banking_institution" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="Branch" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Account" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="currency_code_id" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="account_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="iban" Type="String" MaxLength="34" FixedLength="false" Unicode="false" />
+    <Property Name="client_number" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="personal_account_type_id" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="t_entity_id" Type="Int32" />
+    <Property Name="opened" Type="DateTime" Precision="3" />
+    <Property Name="closed" Type="DateTime" Precision="3" />
+    <Property Name="status_code_id" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="beneficiary" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="beneficiary_comment" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="comments" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="entityCode" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="t_person_Id" Type="Int32" />
+    <Property Name="branchId" Type="Int32" />
+    <Property Name="signCard" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="person_role" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="updateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="updateDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Account_Person_Role" Relationship="Self.FK_t_account_my_client_Account_Person_Role" FromRole="t_account_my_client" ToRole="Account_Person_Role" />
+    <NavigationProperty Name="Account_Status_Type" Relationship="Self.FK_t_account_my_client_Account_Status_Type" FromRole="t_account_my_client" ToRole="Account_Status_Type" />
+    <NavigationProperty Name="Account_Type" Relationship="Self.FK_t_account_my_client_Account_Type" FromRole="t_account_my_client" ToRole="Account_Type" />
+    <NavigationProperty Name="Branch_Info" Relationship="Self.FK_t_account_my_client_Branch_Info" FromRole="t_account_my_client" ToRole="Branch_Info" />
+    <NavigationProperty Name="Currency" Relationship="Self.FK_t_account_my_client_Currencies" FromRole="t_account_my_client" ToRole="Currencies" />
+    <NavigationProperty Name="signatoryDetails" Relationship="Self.FK_signatoryDetail_t_account_my_client" FromRole="t_account_my_client" ToRole="signatoryDetail" />
+    <NavigationProperty Name="t_entity" Relationship="Self.FK_t_account_my_client_t_entity" FromRole="t_account_my_client" ToRole="t_entity" />
+    <NavigationProperty Name="t_person_my_client" Relationship="Self.FK_t_account_my_client_t_person_my_client" FromRole="t_account_my_client" ToRole="t_person_my_client" />
+    <NavigationProperty Name="t_person_my_client1" Relationship="Self.FK_t_account_my_client_t_person_my_client1" FromRole="t_account_my_client" ToRole="t_person_my_client" />
+    <NavigationProperty Name="t_from_my_client" Relationship="Self.FK_t_from_my_client_t_account_my_client" FromRole="t_account_my_client" ToRole="t_from_my_client" />
+    <NavigationProperty Name="t_from" Relationship="Self.FK_t_from_t_account_my_client" FromRole="t_account_my_client" ToRole="t_from" />
+    <NavigationProperty Name="t_to_my_client" Relationship="Self.FK_t_to_my_client_t_account_my_client" FromRole="t_account_my_client" ToRole="t_to_my_client" />
+    <NavigationProperty Name="t_to" Relationship="Self.FK_t_to_t_account_my_client" FromRole="t_account_my_client" ToRole="t_to" />
+  </EntityType>
+  <EntityType Name="t_address">
+    <Key>
+      <PropertyRef Name="t_address_id" />
+    </Key>
+    <Property Name="t_address_id" Type="Int32" Nullable="false" />
+    <Property Name="Address_type_id" Type="Int32" />
+    <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Town_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="City_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Zip" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="country_code_id" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="State_id" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="comments" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="t_person_my_client_id" Type="Int32" />
+    <Property Name="entity_id" Type="Int32" />
+    <Property Name="director_id" Type="Int32" />
+    <Property Name="signatory_id" Type="Int32" />
+    <Property Name="updateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="updateDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Contact_Type" Relationship="Self.FK_t_address_Contact_Type" FromRole="t_address" ToRole="Contact_Type" />
+    <NavigationProperty Name="Country_Codes" Relationship="Self.FK_t_address_Country_Codes" FromRole="t_address" ToRole="Country_Codes" />
+    <NavigationProperty Name="director_detail" Relationship="Self.FK_t_address_director_detail" FromRole="t_address" ToRole="director_detail" />
+    <NavigationProperty Name="District_Name" Relationship="Self.FK_t_address_District_Name" FromRole="t_address" ToRole="District_Name" />
+    <NavigationProperty Name="Division_Name" Relationship="Self.FK_t_address_Division_Name" FromRole="t_address" ToRole="Division_Name" />
+    <NavigationProperty Name="goods_services" Relationship="Self.FK_goods_services_t_address" FromRole="t_address" ToRole="goods_services" />
+    <NavigationProperty Name="reports" Relationship="Self.FK_report_t_address" FromRole="t_address" ToRole="report" />
+    <NavigationProperty Name="signatoryDetail" Relationship="Self.FK_t_address_signatoryDetail" FromRole="t_address" ToRole="signatoryDetail" />
+    <NavigationProperty Name="t_entity" Relationship="Self.FK_t_address_t_entity" FromRole="t_address" ToRole="t_entity" />
+    <NavigationProperty Name="t_person_my_client" Relationship="Self.FK_t_address_t_person_my_client" FromRole="t_address" ToRole="t_person_my_client" />
+    <NavigationProperty Name="Thana_Name" Relationship="Self.FK_t_address_Thana_Name" FromRole="t_address" ToRole="Thana_Name" />
+  </EntityType>
+  <EntityType Name="t_entity">
+    <Key>
+      <PropertyRef Name="t_entity_id" />
+    </Key>
+    <Property Name="t_entity_id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Commercial_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Incorporation_legal_form_id" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="incorporation_number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Business" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="url" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="incorporation_state" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="incorporation_country_code" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="incorporation_date" Type="String" MaxLength="19" FixedLength="false" Unicode="false" />
+    <Property Name="business_closed" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="date_business_closed" Type="String" MaxLength="19" FixedLength="false" Unicode="false" />
+    <Property Name="tax_numebr" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="tax_registeration_number" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="comments" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="branchId" Type="Int32" />
+    <Property Name="updateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="updateDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Branch_Info" Relationship="Self.FK_t_entity_Branch_Info" FromRole="t_entity" ToRole="Branch_Info" />
+    <NavigationProperty Name="Country_Codes" Relationship="Self.FK_t_entity_Country_Codes" FromRole="t_entity" ToRole="Country_Codes" />
+    <NavigationProperty Name="director_detail" Relationship="Self.FK_director_detail_t_entity" FromRole="t_entity" ToRole="director_detail" />
+    <NavigationProperty Name="Legal_Form_Type" Relationship="Self.FK_t_entity_Legal_Form_Type" FromRole="t_entity" ToRole="Legal_Form_Type" />
+    <NavigationProperty Name="t_account_my_client" Relationship="Self.FK_t_account_my_client_t_entity" FromRole="t_entity" ToRole="t_account_my_client" />
+    <NavigationProperty Name="t_address" Relationship="Self.FK_t_address_t_entity" FromRole="t_entity" ToRole="t_address" />
+    <NavigationProperty Name="t_from_my_client" Relationship="Self.FK_t_from_my_client_t_entity" FromRole="t_entity" ToRole="t_from_my_client" />
+    <NavigationProperty Name="t_from" Relationship="Self.FK_t_from_t_entity" FromRole="t_entity" ToRole="t_from" />
+    <NavigationProperty Name="t_person_identification" Relationship="Self.FK_t_person_identification_t_entity" FromRole="t_entity" ToRole="t_person_identification" />
+    <NavigationProperty Name="t_phone" Relationship="Self.FK_t_phone_t_entity" FromRole="t_entity" ToRole="t_phone" />
+    <NavigationProperty Name="t_to_my_client" Relationship="Self.FK_t_to_my_client_t_entity" FromRole="t_entity" ToRole="t_to_my_client" />
+    <NavigationProperty Name="t_to" Relationship="Self.FK_t_to_t_entity" FromRole="t_entity" ToRole="t_to" />
+  </EntityType>
+  <EntityType Name="t_foreign_currency">
+    <Key>
+      <PropertyRef Name="foreign_currency_id" />
+    </Key>
+    <Property Name="foreign_currency_id" Type="Int32" Nullable="false" />
+    <Property Name="foreign_currency_code" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="foreign_amount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="foreign_exchange_rate" Type="Decimal" Precision="5" Scale="2" />
+    <NavigationProperty Name="Currency" Relationship="Self.FK_t_foreign_currency_Currencies" FromRole="t_foreign_currency" ToRole="Currencies" />
+    <NavigationProperty Name="t_from" Relationship="Self.FK_t_from_t_foreign_currency" FromRole="t_foreign_currency" ToRole="t_from" />
+    <NavigationProperty Name="t_to_my_client" Relationship="Self.FK_t_to_my_client_t_foreign_currency" FromRole="t_foreign_currency" ToRole="t_to_my_client" />
+    <NavigationProperty Name="t_to" Relationship="Self.FK_t_to_t_foreign_currency" FromRole="t_foreign_currency" ToRole="t_to" />
+  </EntityType>
+  <EntityType Name="t_from">
+    <Key>
+      <PropertyRef Name="t_from_id" />
+    </Key>
+    <Property Name="t_from_id" Type="Int32" Nullable="false" />
+    <Property Name="from_funds_code_id" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="from_funds_comment" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="from_foreign_currency_id" Type="Int32" />
+    <Property Name="t_conductor_id" Type="Int32" />
+    <Property Name="from_account_id" Type="Int32" />
+    <Property Name="from_person_id" Type="Int32" />
+    <Property Name="from_entity_id" Type="Int32" />
+    <Property Name="from_country_id" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Country_Codes" Relationship="Self.FK_t_from_Country_Codes" FromRole="t_from" ToRole="Country_Codes" />
+    <NavigationProperty Name="Funds_type" Relationship="Self.FK_t_from_Funds_type" FromRole="t_from" ToRole="Funds_type" />
+    <NavigationProperty Name="t_account_my_client" Relationship="Self.FK_t_from_t_account_my_client" FromRole="t_from" ToRole="t_account_my_client" />
+    <NavigationProperty Name="t_entity" Relationship="Self.FK_t_from_t_entity" FromRole="t_from" ToRole="t_entity" />
+    <NavigationProperty Name="t_foreign_currency" Relationship="Self.FK_t_from_t_foreign_currency" FromRole="t_from" ToRole="t_foreign_currency" />
+    <NavigationProperty Name="t_person_my_client" Relationship="Self.FK_t_from_t_person_my_client" FromRole="t_from" ToRole="t_person_my_client" />
+    <NavigationProperty Name="t_person_my_client1" Relationship="Self.FK_t_from_t_person_my_client1" FromRole="t_from" ToRole="t_person_my_client" />
+  </EntityType>
+  <EntityType Name="t_from_my_client">
+    <Key>
+      <PropertyRef Name="t_from_my_client_id" />
+    </Key>
+    <Property Name="t_from_my_client_id" Type="Int32" Nullable="false" />
+    <Property Name="from_funds_code_id" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="from_funds_comment" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="from_foreign_currency_id" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="t_conductor_id" Type="Int32" />
+    <Property Name="from_account_id" Type="Int32" />
+    <Property Name="from_person_id" Type="Int32" />
+    <Property Name="from_entity_id" Type="Int32" />
+    <Property Name="from_country_id" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Country_Codes" Relationship="Self.FK_t_from_my_client_Country_Codes" FromRole="t_from_my_client" ToRole="Country_Codes" />
+    <NavigationProperty Name="Currency" Relationship="Self.FK_t_from_my_client_Currencies" FromRole="t_from_my_client" ToRole="Currencies" />
+    <NavigationProperty Name="Funds_type" Relationship="Self.FK_t_from_my_client_Funds_type" FromRole="t_from_my_client" ToRole="Funds_type" />
+    <NavigationProperty Name="t_account_my_client" Relationship="Self.FK_t_from_my_client_t_account_my_client" FromRole="t_from_my_client" ToRole="t_account_my_client" />
+    <NavigationProperty Name="t_entity" Relationship="Self.FK_t_from_my_client_t_entity" FromRole="t_from_my_client" ToRole="t_entity" />
+    <NavigationProperty Name="t_person_my_client" Relationship="Self.FK_t_from_my_client_t_person_my_client" FromRole="t_from_my_client" ToRole="t_person_my_client" />
+    <NavigationProperty Name="t_person_my_client1" Relationship="Self.FK_t_from_my_client_t_person_my_client1" FromRole="t_from_my_client" ToRole="t_person_my_client" />
+  </EntityType>
+  <EntityType Name="t_person_employer">
+    <Key>
+      <PropertyRef Name="EmployerId" />
+    </Key>
+    <Property Name="EmployerId" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="addressTypeId" Type="Int32" />
+    <Property Name="address" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="townid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cityid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="stateid" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="zip" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="country_code_id" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="contactTypeId" Type="Int32" />
+    <Property Name="communcationTypeId" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="country_prefix" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="phonenumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="extension" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="t_person_my_client_id" Type="Int32" />
+    <NavigationProperty Name="Communication_Type" Relationship="Self.FK_t_person_employer_Communication_Type" FromRole="t_person_employer" ToRole="Communication_Type" />
+    <NavigationProperty Name="Contact_Type" Relationship="Self.FK_t_person_employer_Contact_Type" FromRole="t_person_employer" ToRole="Contact_Type" />
+    <NavigationProperty Name="Contact_Type1" Relationship="Self.FK_t_person_employer_Contact_Type1" FromRole="t_person_employer" ToRole="Contact_Type" />
+    <NavigationProperty Name="Country_Codes" Relationship="Self.FK_t_person_employer_Country_Codes" FromRole="t_person_employer" ToRole="Country_Codes" />
+    <NavigationProperty Name="District_Name" Relationship="Self.FK_t_person_employer_District_Name" FromRole="t_person_employer" ToRole="District_Name" />
+    <NavigationProperty Name="Division_Name" Relationship="Self.FK_t_person_employer_Division_Name" FromRole="t_person_employer" ToRole="Division_Name" />
+    <NavigationProperty Name="t_person_my_client" Relationship="Self.FK_t_person_employer_t_person_my_client" FromRole="t_person_employer" ToRole="t_person_my_client" />
+    <NavigationProperty Name="t_person_my_client1" Relationship="Self.FK_t_person_my_client_t_person_employer" FromRole="t_person_employer" ToRole="t_person_my_client" />
+  </EntityType>
+  <EntityType Name="t_person_identification">
+    <Key>
+      <PropertyRef Name="t_person_identification_id" />
+    </Key>
+    <Property Name="t_person_identification_id" Type="Int32" Nullable="false" />
+    <Property Name="type_id" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="number" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="issue_date" Type="DateTime" Precision="3" />
+    <Property Name="expiry_date" Type="DateTime" Precision="3" />
+    <Property Name="issued_by" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="issue_country_id" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="comments" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="t_person_my_client_id" Type="Int32" />
+    <Property Name="directors_id" Type="Int32" />
+    <Property Name="entity_id" Type="Int32" />
+    <Property Name="signatory_id" Type="Int32" />
+    <Property Name="updateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="updateDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Country_Codes" Relationship="Self.FK_t_person_identification_Country_Codes" FromRole="t_person_identification" ToRole="Country_Codes" />
+    <NavigationProperty Name="director_detail" Relationship="Self.FK_t_person_identification_director_detail" FromRole="t_person_identification" ToRole="director_detail" />
+    <NavigationProperty Name="Identification_Type" Relationship="Self.FK_t_person_identification_Identification_Type" FromRole="t_person_identification" ToRole="Identification_Type" />
+    <NavigationProperty Name="signatoryDetail" Relationship="Self.FK_t_person_identification_signatoryDetail" FromRole="t_person_identification" ToRole="signatoryDetail" />
+    <NavigationProperty Name="t_entity" Relationship="Self.FK_t_person_identification_t_entity" FromRole="t_person_identification" ToRole="t_entity" />
+    <NavigationProperty Name="t_person_my_client" Relationship="Self.FK_t_person_identification_t_person_my_client" FromRole="t_person_identification" ToRole="t_person_my_client" />
+  </EntityType>
+  <EntityType Name="t_person_my_client">
+    <Key>
+      <PropertyRef Name="t_person_my_client_id" />
+    </Key>
+    <Property Name="t_person_my_client_id" Type="Int32" Nullable="false" />
+    <Property Name="gender" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="Title" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="first_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="middle_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="prefix" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="last_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="birthdate" Type="DateTime" Precision="3" />
+    <Property Name="Birth_place" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="mothers_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="fathers_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SSN" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="passport_number" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="passport_country" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="id_number" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Nationality1_id" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Nationality2_id" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Nationality3_id" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="residence" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Occupation" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="employer_id" Type="Int32" />
+    <Property Name="deceased" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="deceased_date" Type="DateTime" Precision="3" />
+    <Property Name="tax_number" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="tax_reg_numebr" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="source_of_wealth" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="comments" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="branchId" Type="Int32" />
+    <Property Name="updateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="updateDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Branch_Info" Relationship="Self.FK_t_person_my_client_Branch_Info" FromRole="t_person_my_client" ToRole="Branch_Info" />
+    <NavigationProperty Name="Country_Codes" Relationship="Self.FK_t_person_my_client_Country_Codes" FromRole="t_person_my_client" ToRole="Country_Codes" />
+    <NavigationProperty Name="Country_Codes1" Relationship="Self.FK_t_person_my_client_Country_Codes1" FromRole="t_person_my_client" ToRole="Country_Codes" />
+    <NavigationProperty Name="Country_Codes2" Relationship="Self.FK_t_person_my_client_Country_Codes2" FromRole="t_person_my_client" ToRole="Country_Codes" />
+    <NavigationProperty Name="Country_Codes3" Relationship="Self.FK_t_person_my_client_Country_Codes3" FromRole="t_person_my_client" ToRole="Country_Codes" />
+    <NavigationProperty Name="reports" Relationship="Self.FK_report_t_person_my_client" FromRole="t_person_my_client" ToRole="report" />
+    <NavigationProperty Name="SignatoryInfoes" Relationship="Self.FK_SignatoryInfo_t_person_my_client" FromRole="t_person_my_client" ToRole="SignatoryInfo" />
+    <NavigationProperty Name="t_account_my_client" Relationship="Self.FK_t_account_my_client_t_person_my_client" FromRole="t_person_my_client" ToRole="t_account_my_client" />
+    <NavigationProperty Name="t_account_my_client1" Relationship="Self.FK_t_account_my_client_t_person_my_client1" FromRole="t_person_my_client" ToRole="t_account_my_client" />
+    <NavigationProperty Name="t_address" Relationship="Self.FK_t_address_t_person_my_client" FromRole="t_person_my_client" ToRole="t_address" />
+    <NavigationProperty Name="t_from" Relationship="Self.FK_t_from_t_person_my_client" FromRole="t_person_my_client" ToRole="t_from" />
+    <NavigationProperty Name="t_from1" Relationship="Self.FK_t_from_t_person_my_client1" FromRole="t_person_my_client" ToRole="t_from" />
+    <NavigationProperty Name="t_from_my_client" Relationship="Self.FK_t_from_my_client_t_person_my_client" FromRole="t_person_my_client" ToRole="t_from_my_client" />
+    <NavigationProperty Name="t_from_my_client1" Relationship="Self.FK_t_from_my_client_t_person_my_client1" FromRole="t_person_my_client" ToRole="t_from_my_client" />
+    <NavigationProperty Name="t_person_employer" Relationship="Self.FK_t_person_employer_t_person_my_client" FromRole="t_person_my_client" ToRole="t_person_employer" />
+    <NavigationProperty Name="t_person_employer1" Relationship="Self.FK_t_person_my_client_t_person_employer" FromRole="t_person_my_client" ToRole="t_person_employer" />
+    <NavigationProperty Name="t_person_identification" Relationship="Self.FK_t_person_identification_t_person_my_client" FromRole="t_person_my_client" ToRole="t_person_identification" />
+    <NavigationProperty Name="t_phone" Relationship="Self.FK_t_phone_t_person_my_client" FromRole="t_person_my_client" ToRole="t_phone" />
+    <NavigationProperty Name="t_to_my_client" Relationship="Self.FK_t_to_my_client_t_person_my_client" FromRole="t_person_my_client" ToRole="t_to_my_client" />
+    <NavigationProperty Name="t_to" Relationship="Self.FK_t_to_t_person_my_client" FromRole="t_person_my_client" ToRole="t_to" />
+  </EntityType>
+  <EntityType Name="t_phone">
+    <Key>
+      <PropertyRef Name="t_phone_id" />
+    </Key>
+    <Property Name="t_phone_id" Type="Int32" Nullable="false" />
+    <Property Name="tph_contact_type_id" Type="Int32" Nullable="false" />
+    <Property Name="tph_communication_type_id" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tph_country_prefix" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="tph_number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tph_extension" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="comments" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="t_person_my_client_id" Type="Int32" />
+    <Property Name="entity_id" Type="Int32" />
+    <Property Name="director_id" Type="Int32" />
+    <Property Name="signatory_id" Type="Int32" />
+    <Property Name="updateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="updateDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Communication_Type" Relationship="Self.FK_t_phone_Communication_Type" FromRole="t_phone" ToRole="Communication_Type" />
+    <NavigationProperty Name="Contact_Type" Relationship="Self.FK_t_phone_Contact_Type" FromRole="t_phone" ToRole="Contact_Type" />
+    <NavigationProperty Name="director_detail" Relationship="Self.FK_t_phone_director_detail" FromRole="t_phone" ToRole="director_detail" />
+    <NavigationProperty Name="signatoryDetail" Relationship="Self.FK_t_phone_signatoryDetail" FromRole="t_phone" ToRole="signatoryDetail" />
+    <NavigationProperty Name="t_entity" Relationship="Self.FK_t_phone_t_entity" FromRole="t_phone" ToRole="t_entity" />
+    <NavigationProperty Name="t_person_my_client" Relationship="Self.FK_t_phone_t_person_my_client" FromRole="t_phone" ToRole="t_person_my_client" />
+  </EntityType>
+  <EntityType Name="t_to">
+    <Key>
+      <PropertyRef Name="t_to_id" />
+    </Key>
+    <Property Name="t_to_id" Type="Int32" Nullable="false" />
+    <Property Name="to_funds_code_id" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="to_funds_comment" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="to_foreign_currency_id" Type="Int32" />
+    <Property Name="to_account_id" Type="Int32" />
+    <Property Name="to_person_id" Type="Int32" />
+    <Property Name="to_entity_id" Type="Int32" />
+    <Property Name="to_country_id" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Country_Codes" Relationship="Self.FK_t_to_Country_Codes" FromRole="t_to" ToRole="Country_Codes" />
+    <NavigationProperty Name="Funds_type" Relationship="Self.FK_t_to_Funds_type" FromRole="t_to" ToRole="Funds_type" />
+    <NavigationProperty Name="t_account_my_client" Relationship="Self.FK_t_to_t_account_my_client" FromRole="t_to" ToRole="t_account_my_client" />
+    <NavigationProperty Name="t_entity" Relationship="Self.FK_t_to_t_entity" FromRole="t_to" ToRole="t_entity" />
+    <NavigationProperty Name="t_foreign_currency" Relationship="Self.FK_t_to_t_foreign_currency" FromRole="t_to" ToRole="t_foreign_currency" />
+    <NavigationProperty Name="t_person_my_client" Relationship="Self.FK_t_to_t_person_my_client" FromRole="t_to" ToRole="t_person_my_client" />
+  </EntityType>
+  <EntityType Name="t_to_my_client">
+    <Key>
+      <PropertyRef Name="t_to_my_client_id" />
+    </Key>
+    <Property Name="t_to_my_client_id" Type="Int32" Nullable="false" />
+    <Property Name="to_funds_code_id" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="to_funds_comment" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="to_foreign_currency_id" Type="Int32" />
+    <Property Name="to_account_id" Type="Int32" />
+    <Property Name="to_person_id" Type="Int32" />
+    <Property Name="to_entity_id" Type="Int32" />
+    <Property Name="to_country_id" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Country_Codes" Relationship="Self.FK_t_to_my_client_Country_Codes" FromRole="t_to_my_client" ToRole="Country_Codes" />
+    <NavigationProperty Name="Funds_type" Relationship="Self.FK_t_to_my_client_Funds_type" FromRole="t_to_my_client" ToRole="Funds_type" />
+    <NavigationProperty Name="t_account_my_client" Relationship="Self.FK_t_to_my_client_t_account_my_client" FromRole="t_to_my_client" ToRole="t_account_my_client" />
+    <NavigationProperty Name="t_entity" Relationship="Self.FK_t_to_my_client_t_entity" FromRole="t_to_my_client" ToRole="t_entity" />
+    <NavigationProperty Name="t_foreign_currency" Relationship="Self.FK_t_to_my_client_t_foreign_currency" FromRole="t_to_my_client" ToRole="t_foreign_currency" />
+    <NavigationProperty Name="t_person_my_client" Relationship="Self.FK_t_to_my_client_t_person_my_client" FromRole="t_to_my_client" ToRole="t_person_my_client" />
+  </EntityType>
+  <EntityType Name="t_transaction">
+    <Key>
+      <PropertyRef Name="transactionnumber" />
+    </Key>
+    <Property Name="transactionnumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Internal_ref_number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="transaction_location" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="transaction_description" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="date_transaction" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="teller" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="authorized" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="late_deposit" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="date_posting" Type="DateTime" Precision="3" />
+    <Property Name="value_date" Type="DateTime" Precision="3" />
+    <Property Name="transmode_code" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="transmode_comment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="amount_local" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="goods_services_id" Type="Int32" />
+    <Property Name="comments" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="accnoutno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="balance" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="cifno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="reports" Relationship="Self.FK_report_transaction" FromRole="t_transaction" ToRole="report" />
+    <NavigationProperty Name="Transaction_Mode" Relationship="Self.FK_transaction_Transaction_Mode" FromRole="t_transaction" ToRole="Transaction_Mode" />
+  </EntityType>
+  <EntityType Name="tempTransaction">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="date" Type="DateTime" Precision="3" />
+    <Property Name="accno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="voucherno" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="in_out" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="amount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="balance" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="cif" Type="Int32" />
+    <Property Name="cifname" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Thana_Name">
+    <Key>
+      <PropertyRef Name="Value" />
+    </Key>
+    <Property Name="Value" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="t_address" Relationship="Self.FK_t_address_Thana_Name" FromRole="Thana_Name" ToRole="t_address" />
+  </EntityType>
+  <EntityType Name="Transaction_Item_Status">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="goods_services" Relationship="Self.FK_goods_services_Transaction_Item_Status" FromRole="Transaction_Item_Status" ToRole="goods_services" />
+  </EntityType>
+  <EntityType Name="Transaction_Item_Type">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="goods_services" Relationship="Self.FK_goods_services_Transaction_Item_Type" FromRole="Transaction_Item_Type" ToRole="goods_services" />
+  </EntityType>
+  <EntityType Name="Transaction_Mode">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="t_transaction" Relationship="Self.FK_transaction_Transaction_Mode" FromRole="Transaction_Mode" ToRole="t_transaction" />
+  </EntityType>
+  <EntityType Name="userInfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="userNme" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="userpassword" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="branchId" Type="Int32" />
+    <Property Name="category" Type="Int32" />
+    <NavigationProperty Name="Branch_Info" Relationship="Self.FK_userInfo_Branch_Info" FromRole="userInfo" ToRole="Branch_Info" />
+  </EntityType>
+  <Association Name="FK_t_account_my_client_Account_Person_Role">
+    <End Role="Account_Person_Role" Type="Self.Account_Person_Role" Multiplicity="0..1" />
+    <End Role="t_account_my_client" Type="Self.t_account_my_client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account_Person_Role">
+        <PropertyRef Name="value" />
+      </Principal>
+      <Dependent Role="t_account_my_client">
+        <PropertyRef Name="person_role" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_account_my_client_Account_Status_Type">
+    <End Role="Account_Status_Type" Type="Self.Account_Status_Type" Multiplicity="0..1" />
+    <End Role="t_account_my_client" Type="Self.t_account_my_client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account_Status_Type">
+        <PropertyRef Name="value" />
+      </Principal>
+      <Dependent Role="t_account_my_client">
+        <PropertyRef Name="status_code_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_account_my_client_Account_Type">
+    <End Role="Account_Type" Type="Self.Account_Type" Multiplicity="0..1" />
+    <End Role="t_account_my_client" Type="Self.t_account_my_client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account_Type">
+        <PropertyRef Name="value" />
+      </Principal>
+      <Dependent Role="t_account_my_client">
+        <PropertyRef Name="personal_account_type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_account_my_client_Branch_Info">
+    <End Role="Branch_Info" Type="Self.Branch_Info" Multiplicity="0..1" />
+    <End Role="t_account_my_client" Type="Self.t_account_my_client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Branch_Info">
+        <PropertyRef Name="BranchID" />
+      </Principal>
+      <Dependent Role="t_account_my_client">
+        <PropertyRef Name="branchId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_entity_Branch_Info">
+    <End Role="Branch_Info" Type="Self.Branch_Info" Multiplicity="0..1" />
+    <End Role="t_entity" Type="Self.t_entity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Branch_Info">
+        <PropertyRef Name="BranchID" />
+      </Principal>
+      <Dependent Role="t_entity">
+        <PropertyRef Name="branchId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_person_my_client_Branch_Info">
+    <End Role="Branch_Info" Type="Self.Branch_Info" Multiplicity="0..1" />
+    <End Role="t_person_my_client" Type="Self.t_person_my_client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Branch_Info">
+        <PropertyRef Name="BranchID" />
+      </Principal>
+      <Dependent Role="t_person_my_client">
+        <PropertyRef Name="branchId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_userInfo_Branch_Info">
+    <End Role="Branch_Info" Type="Self.Branch_Info" Multiplicity="0..1" />
+    <End Role="userInfo" Type="Self.userInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Branch_Info">
+        <PropertyRef Name="BranchID" />
+      </Principal>
+      <Dependent Role="userInfo">
+        <PropertyRef Name="branchId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_person_employer_Communication_Type">
+    <End Role="Communication_Type" Type="Self.Communication_Type" Multiplicity="0..1" />
+    <End Role="t_person_employer" Type="Self.t_person_employer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Communication_Type">
+        <PropertyRef Name="Value" />
+      </Principal>
+      <Dependent Role="t_person_employer">
+        <PropertyRef Name="communcationTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_phone_Communication_Type">
+    <End Role="Communication_Type" Type="Self.Communication_Type" Multiplicity="1" />
+    <End Role="t_phone" Type="Self.t_phone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Communication_Type">
+        <PropertyRef Name="Value" />
+      </Principal>
+      <Dependent Role="t_phone">
+        <PropertyRef Name="tph_communication_type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_address_Contact_Type">
+    <End Role="Contact_Type" Type="Self.Contact_Type" Multiplicity="0..1" />
+    <End Role="t_address" Type="Self.t_address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contact_Type">
+        <PropertyRef Name="tph_contact_type_id" />
+      </Principal>
+      <Dependent Role="t_address">
+        <PropertyRef Name="Address_type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_person_employer_Contact_Type">
+    <End Role="Contact_Type" Type="Self.Contact_Type" Multiplicity="0..1" />
+    <End Role="t_person_employer" Type="Self.t_person_employer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contact_Type">
+        <PropertyRef Name="tph_contact_type_id" />
+      </Principal>
+      <Dependent Role="t_person_employer">
+        <PropertyRef Name="addressTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_person_employer_Contact_Type1">
+    <End Role="Contact_Type" Type="Self.Contact_Type" Multiplicity="0..1" />
+    <End Role="t_person_employer" Type="Self.t_person_employer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contact_Type">
+        <PropertyRef Name="tph_contact_type_id" />
+      </Principal>
+      <Dependent Role="t_person_employer">
+        <PropertyRef Name="contactTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_phone_Contact_Type">
+    <End Role="Contact_Type" Type="Self.Contact_Type" Multiplicity="1" />
+    <End Role="t_phone" Type="Self.t_phone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contact_Type">
+        <PropertyRef Name="tph_contact_type_id" />
+      </Principal>
+      <Dependent Role="t_phone">
+        <PropertyRef Name="tph_contact_type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_director_detail_Country_Codes">
+    <End Role="Country_Codes" Type="Self.Country_Codes" Multiplicity="0..1" />
+    <End Role="director_detail" Type="Self.director_detail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country_Codes">
+        <PropertyRef Name="Value" />
+      </Principal>
+      <Dependent Role="director_detail">
+        <PropertyRef Name="passport_country" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_director_detail_Country_Codes1">
+    <End Role="Country_Codes" Type="Self.Country_Codes" Multiplicity="1" />
+    <End Role="director_detail" Type="Self.director_detail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country_Codes">
+        <PropertyRef Name="Value" />
+      </Principal>
+      <Dependent Role="director_detail">
+        <PropertyRef Name="Nationality1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_director_detail_Country_Codes2">
+    <End Role="Country_Codes" Type="Self.Country_Codes" Multiplicity="0..1" />
+    <End Role="director_detail" Type="Self.director_detail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country_Codes">
+        <PropertyRef Name="Value" />
+      </Principal>
+      <Dependent Role="director_detail">
+        <PropertyRef Name="Nationality2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_director_detail_Country_Codes3">
+    <End Role="Country_Codes" Type="Self.Country_Codes" Multiplicity="0..1" />
+    <End Role="director_detail" Type="Self.director_detail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country_Codes">
+        <PropertyRef Name="Value" />
+      </Principal>
+      <Dependent Role="director_detail">
+        <PropertyRef Name="Nationality3" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_director_detail_Country_Codes4">
+    <End Role="Country_Codes" Type="Self.Country_Codes" Multiplicity="1" />
+    <End Role="director_detail" Type="Self.director_detail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country_Codes">
+        <PropertyRef Name="Value" />
+      </Principal>
+      <Dependent Role="director_detail">
+        <PropertyRef Name="residence" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_signatoryDetail_Country_Codes">
+    <End Role="Country_Codes" Type="Self.Country_Codes" Multiplicity="0..1" />
+    <End Role="signatoryDetail" Type="Self.signatoryDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country_Codes">
+        <PropertyRef Name="Value" />
+      </Principal>
+      <Dependent Role="signatoryDetail">
+        <PropertyRef Name="passport_country" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_signatoryDetail_Country_Codes1">
+    <End Role="Country_Codes" Type="Self.Country_Codes" Multiplicity="0..1" />
+    <End Role="signatoryDetail" Type="Self.signatoryDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country_Codes">
+        <PropertyRef Name="Value" />
+      </Principal>
+      <Dependent Role="signatoryDetail">
+        <PropertyRef Name="Nationality1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_signatoryDetail_Country_Codes2">
+    <End Role="Country_Codes" Type="Self.Country_Codes" Multiplicity="0..1" />
+    <End Role="signatoryDetail" Type="Self.signatoryDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country_Codes">
+        <PropertyRef Name="Value" />
+      </Principal>
+      <Dependent Role="signatoryDetail">
+        <PropertyRef Name="Nationality2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_signatoryDetail_Country_Codes3">
+    <End Role="Country_Codes" Type="Self.Country_Codes" Multiplicity="0..1" />
+    <End Role="signatoryDetail" Type="Self.signatoryDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country_Codes">
+        <PropertyRef Name="Value" />
+      </Principal>
+      <Dependent Role="signatoryDetail">
+        <PropertyRef Name="Nationality3" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_signatoryDetail_Country_Codes4">
+    <End Role="Country_Codes" Type="Self.Country_Codes" Multiplicity="0..1" />
+    <End Role="signatoryDetail" Type="Self.signatoryDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country_Codes">
+        <PropertyRef Name="Value" />
+      </Principal>
+      <Dependent Role="signatoryDetail">
+        <PropertyRef Name="residence" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_address_Country_Codes">
+    <End Role="Country_Codes" Type="Self.Country_Codes" Multiplicity="0..1" />
+    <End Role="t_address" Type="Self.t_address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country_Codes">
+        <PropertyRef Name="Value" />
+      </Principal>
+      <Dependent Role="t_address">
+        <PropertyRef Name="country_code_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_entity_Country_Codes">
+    <End Role="Country_Codes" Type="Self.Country_Codes" Multiplicity="0..1" />
+    <End Role="t_entity" Type="Self.t_entity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country_Codes">
+        <PropertyRef Name="Value" />
+      </Principal>
+      <Dependent Role="t_entity">
+        <PropertyRef Name="incorporation_country_code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_from_Country_Codes">
+    <End Role="Country_Codes" Type="Self.Country_Codes" Multiplicity="0..1" />
+    <End Role="t_from" Type="Self.t_from" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country_Codes">
+        <PropertyRef Name="Value" />
+      </Principal>
+      <Dependent Role="t_from">
+        <PropertyRef Name="from_country_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_from_my_client_Country_Codes">
+    <End Role="Country_Codes" Type="Self.Country_Codes" Multiplicity="0..1" />
+    <End Role="t_from_my_client" Type="Self.t_from_my_client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country_Codes">
+        <PropertyRef Name="Value" />
+      </Principal>
+      <Dependent Role="t_from_my_client">
+        <PropertyRef Name="from_country_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_person_employer_Country_Codes">
+    <End Role="Country_Codes" Type="Self.Country_Codes" Multiplicity="0..1" />
+    <End Role="t_person_employer" Type="Self.t_person_employer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country_Codes">
+        <PropertyRef Name="Value" />
+      </Principal>
+      <Dependent Role="t_person_employer">
+        <PropertyRef Name="country_code_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_person_identification_Country_Codes">
+    <End Role="Country_Codes" Type="Self.Country_Codes" Multiplicity="1" />
+    <End Role="t_person_identification" Type="Self.t_person_identification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country_Codes">
+        <PropertyRef Name="Value" />
+      </Principal>
+      <Dependent Role="t_person_identification">
+        <PropertyRef Name="issue_country_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_person_my_client_Country_Codes">
+    <End Role="Country_Codes" Type="Self.Country_Codes" Multiplicity="0..1" />
+    <End Role="t_person_my_client" Type="Self.t_person_my_client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country_Codes">
+        <PropertyRef Name="Value" />
+      </Principal>
+      <Dependent Role="t_person_my_client">
+        <PropertyRef Name="Nationality1_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_person_my_client_Country_Codes1">
+    <End Role="Country_Codes" Type="Self.Country_Codes" Multiplicity="0..1" />
+    <End Role="t_person_my_client" Type="Self.t_person_my_client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country_Codes">
+        <PropertyRef Name="Value" />
+      </Principal>
+      <Dependent Role="t_person_my_client">
+        <PropertyRef Name="Nationality3_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_person_my_client_Country_Codes2">
+    <End Role="Country_Codes" Type="Self.Country_Codes" Multiplicity="0..1" />
+    <End Role="t_person_my_client" Type="Self.t_person_my_client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country_Codes">
+        <PropertyRef Name="Value" />
+      </Principal>
+      <Dependent Role="t_person_my_client">
+        <PropertyRef Name="Nationality3_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_person_my_client_Country_Codes3">
+    <End Role="Country_Codes" Type="Self.Country_Codes" Multiplicity="0..1" />
+    <End Role="t_person_my_client" Type="Self.t_person_my_client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country_Codes">
+        <PropertyRef Name="Value" />
+      </Principal>
+      <Dependent Role="t_person_my_client">
+        <PropertyRef Name="residence" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_to_Country_Codes">
+    <End Role="Country_Codes" Type="Self.Country_Codes" Multiplicity="0..1" />
+    <End Role="t_to" Type="Self.t_to" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country_Codes">
+        <PropertyRef Name="Value" />
+      </Principal>
+      <Dependent Role="t_to">
+        <PropertyRef Name="to_country_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_to_my_client_Country_Codes">
+    <End Role="Country_Codes" Type="Self.Country_Codes" Multiplicity="0..1" />
+    <End Role="t_to_my_client" Type="Self.t_to_my_client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country_Codes">
+        <PropertyRef Name="Value" />
+      </Principal>
+      <Dependent Role="t_to_my_client">
+        <PropertyRef Name="to_country_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_goods_services_Currencies">
+    <End Role="Currencies" Type="Self.Currency" Multiplicity="0..1" />
+    <End Role="goods_services" Type="Self.goods_services" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Currencies">
+        <PropertyRef Name="currency_code_local_id" />
+      </Principal>
+      <Dependent Role="goods_services">
+        <PropertyRef Name="currency_code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_report_Currencies">
+    <End Role="Currencies" Type="Self.Currency" Multiplicity="0..1" />
+    <End Role="report" Type="Self.report" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Currencies">
+        <PropertyRef Name="currency_code_local_id" />
+      </Principal>
+      <Dependent Role="report">
+        <PropertyRef Name="currency_code_local_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_account_my_client_Currencies">
+    <End Role="Currencies" Type="Self.Currency" Multiplicity="0..1" />
+    <End Role="t_account_my_client" Type="Self.t_account_my_client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Currencies">
+        <PropertyRef Name="currency_code_local_id" />
+      </Principal>
+      <Dependent Role="t_account_my_client">
+        <PropertyRef Name="currency_code_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_foreign_currency_Currencies">
+    <End Role="Currencies" Type="Self.Currency" Multiplicity="0..1" />
+    <End Role="t_foreign_currency" Type="Self.t_foreign_currency" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Currencies">
+        <PropertyRef Name="currency_code_local_id" />
+      </Principal>
+      <Dependent Role="t_foreign_currency">
+        <PropertyRef Name="foreign_currency_code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_from_my_client_Currencies">
+    <End Role="Currencies" Type="Self.Currency" Multiplicity="0..1" />
+    <End Role="t_from_my_client" Type="Self.t_from_my_client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Currencies">
+        <PropertyRef Name="currency_code_local_id" />
+      </Principal>
+      <Dependent Role="t_from_my_client">
+        <PropertyRef Name="from_foreign_currency_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_director_detail_Role_type">
+    <End Role="Role_type" Type="Self.Role_type" Multiplicity="0..1" />
+    <End Role="director_detail" Type="Self.director_detail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role_type">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="director_detail">
+        <PropertyRef Name="role_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_director_detail_t_entity">
+    <End Role="t_entity" Type="Self.t_entity" Multiplicity="0..1" />
+    <End Role="director_detail" Type="Self.director_detail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_entity">
+        <PropertyRef Name="t_entity_id" />
+      </Principal>
+      <Dependent Role="director_detail">
+        <PropertyRef Name="entity_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SignatoryInfo_director_detail">
+    <End Role="director_detail" Type="Self.director_detail" Multiplicity="0..1" />
+    <End Role="SignatoryInfo" Type="Self.SignatoryInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="director_detail">
+        <PropertyRef Name="t_person_id" />
+      </Principal>
+      <Dependent Role="SignatoryInfo">
+        <PropertyRef Name="director_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_address_director_detail">
+    <End Role="director_detail" Type="Self.director_detail" Multiplicity="0..1" />
+    <End Role="t_address" Type="Self.t_address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="director_detail">
+        <PropertyRef Name="t_person_id" />
+      </Principal>
+      <Dependent Role="t_address">
+        <PropertyRef Name="director_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_person_identification_director_detail">
+    <End Role="director_detail" Type="Self.director_detail" Multiplicity="0..1" />
+    <End Role="t_person_identification" Type="Self.t_person_identification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="director_detail">
+        <PropertyRef Name="t_person_id" />
+      </Principal>
+      <Dependent Role="t_person_identification">
+        <PropertyRef Name="directors_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_phone_director_detail">
+    <End Role="director_detail" Type="Self.director_detail" Multiplicity="0..1" />
+    <End Role="t_phone" Type="Self.t_phone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="director_detail">
+        <PropertyRef Name="t_person_id" />
+      </Principal>
+      <Dependent Role="t_phone">
+        <PropertyRef Name="director_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_address_District_Name">
+    <End Role="District_Name" Type="Self.District_Name" Multiplicity="0..1" />
+    <End Role="t_address" Type="Self.t_address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="District_Name">
+        <PropertyRef Name="Value" />
+      </Principal>
+      <Dependent Role="t_address">
+        <PropertyRef Name="City_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_person_employer_District_Name">
+    <End Role="District_Name" Type="Self.District_Name" Multiplicity="0..1" />
+    <End Role="t_person_employer" Type="Self.t_person_employer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="District_Name">
+        <PropertyRef Name="Value" />
+      </Principal>
+      <Dependent Role="t_person_employer">
+        <PropertyRef Name="cityid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_address_Division_Name">
+    <End Role="Division_Name" Type="Self.Division_Name" Multiplicity="0..1" />
+    <End Role="t_address" Type="Self.t_address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Division_Name">
+        <PropertyRef Name="Value" />
+      </Principal>
+      <Dependent Role="t_address">
+        <PropertyRef Name="State_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_person_employer_Division_Name">
+    <End Role="Division_Name" Type="Self.Division_Name" Multiplicity="0..1" />
+    <End Role="t_person_employer" Type="Self.t_person_employer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Division_Name">
+        <PropertyRef Name="Value" />
+      </Principal>
+      <Dependent Role="t_person_employer">
+        <PropertyRef Name="stateid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_from_Funds_type">
+    <End Role="Funds_type" Type="Self.Funds_type" Multiplicity="0..1" />
+    <End Role="t_from" Type="Self.t_from" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Funds_type">
+        <PropertyRef Name="value" />
+      </Principal>
+      <Dependent Role="t_from">
+        <PropertyRef Name="from_funds_code_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_from_my_client_Funds_type">
+    <End Role="Funds_type" Type="Self.Funds_type" Multiplicity="0..1" />
+    <End Role="t_from_my_client" Type="Self.t_from_my_client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Funds_type">
+        <PropertyRef Name="value" />
+      </Principal>
+      <Dependent Role="t_from_my_client">
+        <PropertyRef Name="from_funds_code_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_to_Funds_type">
+    <End Role="Funds_type" Type="Self.Funds_type" Multiplicity="0..1" />
+    <End Role="t_to" Type="Self.t_to" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Funds_type">
+        <PropertyRef Name="value" />
+      </Principal>
+      <Dependent Role="t_to">
+        <PropertyRef Name="to_funds_code_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_to_my_client_Funds_type">
+    <End Role="Funds_type" Type="Self.Funds_type" Multiplicity="0..1" />
+    <End Role="t_to_my_client" Type="Self.t_to_my_client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Funds_type">
+        <PropertyRef Name="value" />
+      </Principal>
+      <Dependent Role="t_to_my_client">
+        <PropertyRef Name="to_funds_code_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_goods_services_t_address">
+    <End Role="t_address" Type="Self.t_address" Multiplicity="0..1" />
+    <End Role="goods_services" Type="Self.goods_services" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_address">
+        <PropertyRef Name="t_address_id" />
+      </Principal>
+      <Dependent Role="goods_services">
+        <PropertyRef Name="address_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_goods_services_Transaction_Item_Status">
+    <End Role="Transaction_Item_Status" Type="Self.Transaction_Item_Status" Multiplicity="0..1" />
+    <End Role="goods_services" Type="Self.goods_services" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transaction_Item_Status">
+        <PropertyRef Name="value" />
+      </Principal>
+      <Dependent Role="goods_services">
+        <PropertyRef Name="status_code_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_goods_services_Transaction_Item_Type">
+    <End Role="Transaction_Item_Type" Type="Self.Transaction_Item_Type" Multiplicity="0..1" />
+    <End Role="goods_services" Type="Self.goods_services" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transaction_Item_Type">
+        <PropertyRef Name="value" />
+      </Principal>
+      <Dependent Role="goods_services">
+        <PropertyRef Name="trans_Item_type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_person_identification_Identification_Type">
+    <End Role="Identification_Type" Type="Self.Identification_Type" Multiplicity="1" />
+    <End Role="t_person_identification" Type="Self.t_person_identification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Identification_Type">
+        <PropertyRef Name="value" />
+      </Principal>
+      <Dependent Role="t_person_identification">
+        <PropertyRef Name="type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_entity_Legal_Form_Type">
+    <End Role="Legal_Form_Type" Type="Self.Legal_Form_Type" Multiplicity="0..1" />
+    <End Role="t_entity" Type="Self.t_entity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Legal_Form_Type">
+        <PropertyRef Name="value" />
+      </Principal>
+      <Dependent Role="t_entity">
+        <PropertyRef Name="Incorporation_legal_form_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_report_Report_Code">
+    <End Role="Report_Code" Type="Self.Report_Code" Multiplicity="0..1" />
+    <End Role="report" Type="Self.report" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Report_Code">
+        <PropertyRef Name="report_code_id" />
+      </Principal>
+      <Dependent Role="report">
+        <PropertyRef Name="report_code_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_report_Submission_type">
+    <End Role="Submission_type" Type="Self.Submission_type" Multiplicity="0..1" />
+    <End Role="report" Type="Self.report" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Submission_type">
+        <PropertyRef Name="submission_code_id" />
+      </Principal>
+      <Dependent Role="report">
+        <PropertyRef Name="submission_code_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_report_t_address">
+    <End Role="t_address" Type="Self.t_address" Multiplicity="0..1" />
+    <End Role="report" Type="Self.report" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_address">
+        <PropertyRef Name="t_address_id" />
+      </Principal>
+      <Dependent Role="report">
+        <PropertyRef Name="Location_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_report_t_person_my_client">
+    <End Role="t_person_my_client" Type="Self.t_person_my_client" Multiplicity="0..1" />
+    <End Role="report" Type="Self.report" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_person_my_client">
+        <PropertyRef Name="t_person_my_client_id" />
+      </Principal>
+      <Dependent Role="report">
+        <PropertyRef Name="reporting_person_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_report_transaction">
+    <End Role="t_transaction" Type="Self.t_transaction" Multiplicity="0..1" />
+    <End Role="report" Type="Self.report" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_transaction">
+        <PropertyRef Name="transactionnumber" />
+      </Principal>
+      <Dependent Role="report">
+        <PropertyRef Name="transaction_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_signatoryDetail_Role_type">
+    <End Role="Role_type" Type="Self.Role_type" Multiplicity="0..1" />
+    <End Role="signatoryDetail" Type="Self.signatoryDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role_type">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="signatoryDetail">
+        <PropertyRef Name="role_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_signatoryDetail_t_account_my_client">
+    <End Role="t_account_my_client" Type="Self.t_account_my_client" Multiplicity="0..1" />
+    <End Role="signatoryDetail" Type="Self.signatoryDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_account_my_client">
+        <PropertyRef Name="t_account_my_client_id" />
+      </Principal>
+      <Dependent Role="signatoryDetail">
+        <PropertyRef Name="t_account_my_client_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_address_signatoryDetail">
+    <End Role="signatoryDetail" Type="Self.signatoryDetail" Multiplicity="0..1" />
+    <End Role="t_address" Type="Self.t_address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="signatoryDetail">
+        <PropertyRef Name="sign_id" />
+      </Principal>
+      <Dependent Role="t_address">
+        <PropertyRef Name="signatory_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_person_identification_signatoryDetail">
+    <End Role="signatoryDetail" Type="Self.signatoryDetail" Multiplicity="0..1" />
+    <End Role="t_person_identification" Type="Self.t_person_identification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="signatoryDetail">
+        <PropertyRef Name="sign_id" />
+      </Principal>
+      <Dependent Role="t_person_identification">
+        <PropertyRef Name="signatory_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_phone_signatoryDetail">
+    <End Role="signatoryDetail" Type="Self.signatoryDetail" Multiplicity="0..1" />
+    <End Role="t_phone" Type="Self.t_phone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="signatoryDetail">
+        <PropertyRef Name="sign_id" />
+      </Principal>
+      <Dependent Role="t_phone">
+        <PropertyRef Name="signatory_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SignatoryInfo_t_person_my_client">
+    <End Role="t_person_my_client" Type="Self.t_person_my_client" Multiplicity="0..1" />
+    <End Role="SignatoryInfo" Type="Self.SignatoryInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_person_my_client">
+        <PropertyRef Name="t_person_my_client_id" />
+      </Principal>
+      <Dependent Role="SignatoryInfo">
+        <PropertyRef Name="signatorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_account_my_client_t_entity">
+    <End Role="t_entity" Type="Self.t_entity" Multiplicity="0..1" />
+    <End Role="t_account_my_client" Type="Self.t_account_my_client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_entity">
+        <PropertyRef Name="t_entity_id" />
+      </Principal>
+      <Dependent Role="t_account_my_client">
+        <PropertyRef Name="t_entity_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_account_my_client_t_person_my_client">
+    <End Role="t_person_my_client" Type="Self.t_person_my_client" Multiplicity="0..1" />
+    <End Role="t_account_my_client" Type="Self.t_account_my_client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_person_my_client">
+        <PropertyRef Name="t_person_my_client_id" />
+      </Principal>
+      <Dependent Role="t_account_my_client">
+        <PropertyRef Name="t_person_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_account_my_client_t_person_my_client1">
+    <End Role="t_person_my_client" Type="Self.t_person_my_client" Multiplicity="0..1" />
+    <End Role="t_account_my_client" Type="Self.t_account_my_client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_person_my_client">
+        <PropertyRef Name="t_person_my_client_id" />
+      </Principal>
+      <Dependent Role="t_account_my_client">
+        <PropertyRef Name="t_person_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_from_my_client_t_account_my_client">
+    <End Role="t_account_my_client" Type="Self.t_account_my_client" Multiplicity="0..1" />
+    <End Role="t_from_my_client" Type="Self.t_from_my_client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_account_my_client">
+        <PropertyRef Name="t_account_my_client_id" />
+      </Principal>
+      <Dependent Role="t_from_my_client">
+        <PropertyRef Name="from_account_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_from_t_account_my_client">
+    <End Role="t_account_my_client" Type="Self.t_account_my_client" Multiplicity="0..1" />
+    <End Role="t_from" Type="Self.t_from" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_account_my_client">
+        <PropertyRef Name="t_account_my_client_id" />
+      </Principal>
+      <Dependent Role="t_from">
+        <PropertyRef Name="from_account_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_to_my_client_t_account_my_client">
+    <End Role="t_account_my_client" Type="Self.t_account_my_client" Multiplicity="0..1" />
+    <End Role="t_to_my_client" Type="Self.t_to_my_client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_account_my_client">
+        <PropertyRef Name="t_account_my_client_id" />
+      </Principal>
+      <Dependent Role="t_to_my_client">
+        <PropertyRef Name="to_account_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_to_t_account_my_client">
+    <End Role="t_account_my_client" Type="Self.t_account_my_client" Multiplicity="0..1" />
+    <End Role="t_to" Type="Self.t_to" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_account_my_client">
+        <PropertyRef Name="t_account_my_client_id" />
+      </Principal>
+      <Dependent Role="t_to">
+        <PropertyRef Name="to_account_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_address_t_entity">
+    <End Role="t_entity" Type="Self.t_entity" Multiplicity="0..1" />
+    <End Role="t_address" Type="Self.t_address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_entity">
+        <PropertyRef Name="t_entity_id" />
+      </Principal>
+      <Dependent Role="t_address">
+        <PropertyRef Name="entity_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_address_t_person_my_client">
+    <End Role="t_person_my_client" Type="Self.t_person_my_client" Multiplicity="0..1" />
+    <End Role="t_address" Type="Self.t_address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_person_my_client">
+        <PropertyRef Name="t_person_my_client_id" />
+      </Principal>
+      <Dependent Role="t_address">
+        <PropertyRef Name="t_person_my_client_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_address_Thana_Name">
+    <End Role="Thana_Name" Type="Self.Thana_Name" Multiplicity="0..1" />
+    <End Role="t_address" Type="Self.t_address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Thana_Name">
+        <PropertyRef Name="Value" />
+      </Principal>
+      <Dependent Role="t_address">
+        <PropertyRef Name="Town_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_from_my_client_t_entity">
+    <End Role="t_entity" Type="Self.t_entity" Multiplicity="0..1" />
+    <End Role="t_from_my_client" Type="Self.t_from_my_client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_entity">
+        <PropertyRef Name="t_entity_id" />
+      </Principal>
+      <Dependent Role="t_from_my_client">
+        <PropertyRef Name="from_entity_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_from_t_entity">
+    <End Role="t_entity" Type="Self.t_entity" Multiplicity="0..1" />
+    <End Role="t_from" Type="Self.t_from" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_entity">
+        <PropertyRef Name="t_entity_id" />
+      </Principal>
+      <Dependent Role="t_from">
+        <PropertyRef Name="from_entity_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_person_identification_t_entity">
+    <End Role="t_entity" Type="Self.t_entity" Multiplicity="0..1" />
+    <End Role="t_person_identification" Type="Self.t_person_identification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_entity">
+        <PropertyRef Name="t_entity_id" />
+      </Principal>
+      <Dependent Role="t_person_identification">
+        <PropertyRef Name="entity_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_phone_t_entity">
+    <End Role="t_entity" Type="Self.t_entity" Multiplicity="0..1" />
+    <End Role="t_phone" Type="Self.t_phone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_entity">
+        <PropertyRef Name="t_entity_id" />
+      </Principal>
+      <Dependent Role="t_phone">
+        <PropertyRef Name="entity_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_to_my_client_t_entity">
+    <End Role="t_entity" Type="Self.t_entity" Multiplicity="0..1" />
+    <End Role="t_to_my_client" Type="Self.t_to_my_client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_entity">
+        <PropertyRef Name="t_entity_id" />
+      </Principal>
+      <Dependent Role="t_to_my_client">
+        <PropertyRef Name="to_entity_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_to_t_entity">
+    <End Role="t_entity" Type="Self.t_entity" Multiplicity="0..1" />
+    <End Role="t_to" Type="Self.t_to" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_entity">
+        <PropertyRef Name="t_entity_id" />
+      </Principal>
+      <Dependent Role="t_to">
+        <PropertyRef Name="to_entity_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_from_t_foreign_currency">
+    <End Role="t_foreign_currency" Type="Self.t_foreign_currency" Multiplicity="0..1" />
+    <End Role="t_from" Type="Self.t_from" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_foreign_currency">
+        <PropertyRef Name="foreign_currency_id" />
+      </Principal>
+      <Dependent Role="t_from">
+        <PropertyRef Name="from_foreign_currency_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_to_my_client_t_foreign_currency">
+    <End Role="t_foreign_currency" Type="Self.t_foreign_currency" Multiplicity="0..1" />
+    <End Role="t_to_my_client" Type="Self.t_to_my_client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_foreign_currency">
+        <PropertyRef Name="foreign_currency_id" />
+      </Principal>
+      <Dependent Role="t_to_my_client">
+        <PropertyRef Name="to_foreign_currency_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_to_t_foreign_currency">
+    <End Role="t_foreign_currency" Type="Self.t_foreign_currency" Multiplicity="0..1" />
+    <End Role="t_to" Type="Self.t_to" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_foreign_currency">
+        <PropertyRef Name="foreign_currency_id" />
+      </Principal>
+      <Dependent Role="t_to">
+        <PropertyRef Name="to_foreign_currency_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_from_t_person_my_client">
+    <End Role="t_person_my_client" Type="Self.t_person_my_client" Multiplicity="0..1" />
+    <End Role="t_from" Type="Self.t_from" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_person_my_client">
+        <PropertyRef Name="t_person_my_client_id" />
+      </Principal>
+      <Dependent Role="t_from">
+        <PropertyRef Name="t_conductor_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_from_t_person_my_client1">
+    <End Role="t_person_my_client" Type="Self.t_person_my_client" Multiplicity="0..1" />
+    <End Role="t_from" Type="Self.t_from" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_person_my_client">
+        <PropertyRef Name="t_person_my_client_id" />
+      </Principal>
+      <Dependent Role="t_from">
+        <PropertyRef Name="from_person_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_from_my_client_t_person_my_client">
+    <End Role="t_person_my_client" Type="Self.t_person_my_client" Multiplicity="0..1" />
+    <End Role="t_from_my_client" Type="Self.t_from_my_client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_person_my_client">
+        <PropertyRef Name="t_person_my_client_id" />
+      </Principal>
+      <Dependent Role="t_from_my_client">
+        <PropertyRef Name="t_conductor_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_from_my_client_t_person_my_client1">
+    <End Role="t_person_my_client" Type="Self.t_person_my_client" Multiplicity="0..1" />
+    <End Role="t_from_my_client" Type="Self.t_from_my_client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_person_my_client">
+        <PropertyRef Name="t_person_my_client_id" />
+      </Principal>
+      <Dependent Role="t_from_my_client">
+        <PropertyRef Name="from_person_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_person_employer_t_person_my_client">
+    <End Role="t_person_my_client" Type="Self.t_person_my_client" Multiplicity="0..1" />
+    <End Role="t_person_employer" Type="Self.t_person_employer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_person_my_client">
+        <PropertyRef Name="t_person_my_client_id" />
+      </Principal>
+      <Dependent Role="t_person_employer">
+        <PropertyRef Name="t_person_my_client_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_person_my_client_t_person_employer">
+    <End Role="t_person_employer" Type="Self.t_person_employer" Multiplicity="0..1" />
+    <End Role="t_person_my_client" Type="Self.t_person_my_client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_person_employer">
+        <PropertyRef Name="EmployerId" />
+      </Principal>
+      <Dependent Role="t_person_my_client">
+        <PropertyRef Name="employer_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_person_identification_t_person_my_client">
+    <End Role="t_person_my_client" Type="Self.t_person_my_client" Multiplicity="0..1" />
+    <End Role="t_person_identification" Type="Self.t_person_identification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_person_my_client">
+        <PropertyRef Name="t_person_my_client_id" />
+      </Principal>
+      <Dependent Role="t_person_identification">
+        <PropertyRef Name="t_person_my_client_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_phone_t_person_my_client">
+    <End Role="t_person_my_client" Type="Self.t_person_my_client" Multiplicity="0..1" />
+    <End Role="t_phone" Type="Self.t_phone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_person_my_client">
+        <PropertyRef Name="t_person_my_client_id" />
+      </Principal>
+      <Dependent Role="t_phone">
+        <PropertyRef Name="t_person_my_client_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_to_my_client_t_person_my_client">
+    <End Role="t_person_my_client" Type="Self.t_person_my_client" Multiplicity="0..1" />
+    <End Role="t_to_my_client" Type="Self.t_to_my_client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_person_my_client">
+        <PropertyRef Name="t_person_my_client_id" />
+      </Principal>
+      <Dependent Role="t_to_my_client">
+        <PropertyRef Name="to_person_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_to_t_person_my_client">
+    <End Role="t_person_my_client" Type="Self.t_person_my_client" Multiplicity="0..1" />
+    <End Role="t_to" Type="Self.t_to" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_person_my_client">
+        <PropertyRef Name="t_person_my_client_id" />
+      </Principal>
+      <Dependent Role="t_to">
+        <PropertyRef Name="to_person_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_transaction_Transaction_Mode">
+    <End Role="Transaction_Mode" Type="Self.Transaction_Mode" Multiplicity="1" />
+    <End Role="t_transaction" Type="Self.t_transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transaction_Mode">
+        <PropertyRef Name="value" />
+      </Principal>
+      <Dependent Role="t_transaction">
+        <PropertyRef Name="transmode_code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="GOAMLEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Account_Person_Role" EntityType="Self.Account_Person_Role" />
+    <EntitySet Name="Account_Status_Type" EntityType="Self.Account_Status_Type" />
+    <EntitySet Name="Account_Type" EntityType="Self.Account_Type" />
+    <EntitySet Name="Branch_Info" EntityType="Self.Branch_Info" />
+    <EntitySet Name="Communication_Type" EntityType="Self.Communication_Type" />
+    <EntitySet Name="Contact_Type" EntityType="Self.Contact_Type" />
+    <EntitySet Name="Country_Codes" EntityType="Self.Country_Codes" />
+    <EntitySet Name="Currencies" EntityType="Self.Currency" />
+    <EntitySet Name="CUSTOMER_FROM_WINFOS" EntityType="Self.CUSTOMER_FROM_WINFOS" />
+    <EntitySet Name="director_detail" EntityType="Self.director_detail" />
+    <EntitySet Name="District_Name" EntityType="Self.District_Name" />
+    <EntitySet Name="Division_Name" EntityType="Self.Division_Name" />
+    <EntitySet Name="Funds_type" EntityType="Self.Funds_type" />
+    <EntitySet Name="goods_services" EntityType="Self.goods_services" />
+    <EntitySet Name="Identification_Type" EntityType="Self.Identification_Type" />
+    <EntitySet Name="Legal_Form_Type" EntityType="Self.Legal_Form_Type" />
+    <EntitySet Name="reports" EntityType="Self.report" />
+    <EntitySet Name="Report_Code" EntityType="Self.Report_Code" />
+    <EntitySet Name="Role_type" EntityType="Self.Role_type" />
+    <EntitySet Name="signatories" EntityType="Self.signatory" />
+    <EntitySet Name="signatoryDetails" EntityType="Self.signatoryDetail" />
+    <EntitySet Name="SignatoryInfoes" EntityType="Self.SignatoryInfo" />
+    <EntitySet Name="Submission_type" EntityType="Self.Submission_type" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="t_account_my_client" EntityType="Self.t_account_my_client" />
+    <EntitySet Name="t_address" EntityType="Self.t_address" />
+    <EntitySet Name="t_entity" EntityType="Self.t_entity" />
+    <EntitySet Name="t_foreign_currency" EntityType="Self.t_foreign_currency" />
+    <EntitySet Name="t_from" EntityType="Self.t_from" />
+    <EntitySet Name="t_from_my_client" EntityType="Self.t_from_my_client" />
+    <EntitySet Name="t_person_employer" EntityType="Self.t_person_employer" />
+    <EntitySet Name="t_person_identification" EntityType="Self.t_person_identification" />
+    <EntitySet Name="t_person_my_client" EntityType="Self.t_person_my_client" />
+    <EntitySet Name="t_phone" EntityType="Self.t_phone" />
+    <EntitySet Name="t_to" EntityType="Self.t_to" />
+    <EntitySet Name="t_to_my_client" EntityType="Self.t_to_my_client" />
+    <EntitySet Name="t_transaction" EntityType="Self.t_transaction" />
+    <EntitySet Name="tempTransactions" EntityType="Self.tempTransaction" />
+    <EntitySet Name="Thana_Name" EntityType="Self.Thana_Name" />
+    <EntitySet Name="Transaction_Item_Status" EntityType="Self.Transaction_Item_Status" />
+    <EntitySet Name="Transaction_Item_Type" EntityType="Self.Transaction_Item_Type" />
+    <EntitySet Name="Transaction_Mode" EntityType="Self.Transaction_Mode" />
+    <EntitySet Name="userInfoes" EntityType="Self.userInfo" />
+    <AssociationSet Name="FK_t_account_my_client_Account_Person_Role" Association="Self.FK_t_account_my_client_Account_Person_Role">
+      <End Role="Account_Person_Role" EntitySet="Account_Person_Role" />
+      <End Role="t_account_my_client" EntitySet="t_account_my_client" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_account_my_client_Account_Status_Type" Association="Self.FK_t_account_my_client_Account_Status_Type">
+      <End Role="Account_Status_Type" EntitySet="Account_Status_Type" />
+      <End Role="t_account_my_client" EntitySet="t_account_my_client" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_account_my_client_Account_Type" Association="Self.FK_t_account_my_client_Account_Type">
+      <End Role="Account_Type" EntitySet="Account_Type" />
+      <End Role="t_account_my_client" EntitySet="t_account_my_client" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_account_my_client_Branch_Info" Association="Self.FK_t_account_my_client_Branch_Info">
+      <End Role="Branch_Info" EntitySet="Branch_Info" />
+      <End Role="t_account_my_client" EntitySet="t_account_my_client" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_entity_Branch_Info" Association="Self.FK_t_entity_Branch_Info">
+      <End Role="Branch_Info" EntitySet="Branch_Info" />
+      <End Role="t_entity" EntitySet="t_entity" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_person_my_client_Branch_Info" Association="Self.FK_t_person_my_client_Branch_Info">
+      <End Role="Branch_Info" EntitySet="Branch_Info" />
+      <End Role="t_person_my_client" EntitySet="t_person_my_client" />
+    </AssociationSet>
+    <AssociationSet Name="FK_userInfo_Branch_Info" Association="Self.FK_userInfo_Branch_Info">
+      <End Role="Branch_Info" EntitySet="Branch_Info" />
+      <End Role="userInfo" EntitySet="userInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_person_employer_Communication_Type" Association="Self.FK_t_person_employer_Communication_Type">
+      <End Role="Communication_Type" EntitySet="Communication_Type" />
+      <End Role="t_person_employer" EntitySet="t_person_employer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_phone_Communication_Type" Association="Self.FK_t_phone_Communication_Type">
+      <End Role="Communication_Type" EntitySet="Communication_Type" />
+      <End Role="t_phone" EntitySet="t_phone" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_address_Contact_Type" Association="Self.FK_t_address_Contact_Type">
+      <End Role="Contact_Type" EntitySet="Contact_Type" />
+      <End Role="t_address" EntitySet="t_address" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_person_employer_Contact_Type" Association="Self.FK_t_person_employer_Contact_Type">
+      <End Role="Contact_Type" EntitySet="Contact_Type" />
+      <End Role="t_person_employer" EntitySet="t_person_employer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_person_employer_Contact_Type1" Association="Self.FK_t_person_employer_Contact_Type1">
+      <End Role="Contact_Type" EntitySet="Contact_Type" />
+      <End Role="t_person_employer" EntitySet="t_person_employer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_phone_Contact_Type" Association="Self.FK_t_phone_Contact_Type">
+      <End Role="Contact_Type" EntitySet="Contact_Type" />
+      <End Role="t_phone" EntitySet="t_phone" />
+    </AssociationSet>
+    <AssociationSet Name="FK_director_detail_Country_Codes" Association="Self.FK_director_detail_Country_Codes">
+      <End Role="Country_Codes" EntitySet="Country_Codes" />
+      <End Role="director_detail" EntitySet="director_detail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_director_detail_Country_Codes1" Association="Self.FK_director_detail_Country_Codes1">
+      <End Role="Country_Codes" EntitySet="Country_Codes" />
+      <End Role="director_detail" EntitySet="director_detail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_director_detail_Country_Codes2" Association="Self.FK_director_detail_Country_Codes2">
+      <End Role="Country_Codes" EntitySet="Country_Codes" />
+      <End Role="director_detail" EntitySet="director_detail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_director_detail_Country_Codes3" Association="Self.FK_director_detail_Country_Codes3">
+      <End Role="Country_Codes" EntitySet="Country_Codes" />
+      <End Role="director_detail" EntitySet="director_detail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_director_detail_Country_Codes4" Association="Self.FK_director_detail_Country_Codes4">
+      <End Role="Country_Codes" EntitySet="Country_Codes" />
+      <End Role="director_detail" EntitySet="director_detail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_signatoryDetail_Country_Codes" Association="Self.FK_signatoryDetail_Country_Codes">
+      <End Role="Country_Codes" EntitySet="Country_Codes" />
+      <End Role="signatoryDetail" EntitySet="signatoryDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_signatoryDetail_Country_Codes1" Association="Self.FK_signatoryDetail_Country_Codes1">
+      <End Role="Country_Codes" EntitySet="Country_Codes" />
+      <End Role="signatoryDetail" EntitySet="signatoryDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_signatoryDetail_Country_Codes2" Association="Self.FK_signatoryDetail_Country_Codes2">
+      <End Role="Country_Codes" EntitySet="Country_Codes" />
+      <End Role="signatoryDetail" EntitySet="signatoryDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_signatoryDetail_Country_Codes3" Association="Self.FK_signatoryDetail_Country_Codes3">
+      <End Role="Country_Codes" EntitySet="Country_Codes" />
+      <End Role="signatoryDetail" EntitySet="signatoryDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_signatoryDetail_Country_Codes4" Association="Self.FK_signatoryDetail_Country_Codes4">
+      <End Role="Country_Codes" EntitySet="Country_Codes" />
+      <End Role="signatoryDetail" EntitySet="signatoryDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_address_Country_Codes" Association="Self.FK_t_address_Country_Codes">
+      <End Role="Country_Codes" EntitySet="Country_Codes" />
+      <End Role="t_address" EntitySet="t_address" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_entity_Country_Codes" Association="Self.FK_t_entity_Country_Codes">
+      <End Role="Country_Codes" EntitySet="Country_Codes" />
+      <End Role="t_entity" EntitySet="t_entity" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_from_Country_Codes" Association="Self.FK_t_from_Country_Codes">
+      <End Role="Country_Codes" EntitySet="Country_Codes" />
+      <End Role="t_from" EntitySet="t_from" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_from_my_client_Country_Codes" Association="Self.FK_t_from_my_client_Country_Codes">
+      <End Role="Country_Codes" EntitySet="Country_Codes" />
+      <End Role="t_from_my_client" EntitySet="t_from_my_client" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_person_employer_Country_Codes" Association="Self.FK_t_person_employer_Country_Codes">
+      <End Role="Country_Codes" EntitySet="Country_Codes" />
+      <End Role="t_person_employer" EntitySet="t_person_employer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_person_identification_Country_Codes" Association="Self.FK_t_person_identification_Country_Codes">
+      <End Role="Country_Codes" EntitySet="Country_Codes" />
+      <End Role="t_person_identification" EntitySet="t_person_identification" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_person_my_client_Country_Codes" Association="Self.FK_t_person_my_client_Country_Codes">
+      <End Role="Country_Codes" EntitySet="Country_Codes" />
+      <End Role="t_person_my_client" EntitySet="t_person_my_client" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_person_my_client_Country_Codes1" Association="Self.FK_t_person_my_client_Country_Codes1">
+      <End Role="Country_Codes" EntitySet="Country_Codes" />
+      <End Role="t_person_my_client" EntitySet="t_person_my_client" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_person_my_client_Country_Codes2" Association="Self.FK_t_person_my_client_Country_Codes2">
+      <End Role="Country_Codes" EntitySet="Country_Codes" />
+      <End Role="t_person_my_client" EntitySet="t_person_my_client" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_person_my_client_Country_Codes3" Association="Self.FK_t_person_my_client_Country_Codes3">
+      <End Role="Country_Codes" EntitySet="Country_Codes" />
+      <End Role="t_person_my_client" EntitySet="t_person_my_client" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_to_Country_Codes" Association="Self.FK_t_to_Country_Codes">
+      <End Role="Country_Codes" EntitySet="Country_Codes" />
+      <End Role="t_to" EntitySet="t_to" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_to_my_client_Country_Codes" Association="Self.FK_t_to_my_client_Country_Codes">
+      <End Role="Country_Codes" EntitySet="Country_Codes" />
+      <End Role="t_to_my_client" EntitySet="t_to_my_client" />
+    </AssociationSet>
+    <AssociationSet Name="FK_goods_services_Currencies" Association="Self.FK_goods_services_Currencies">
+      <End Role="Currencies" EntitySet="Currencies" />
+      <End Role="goods_services" EntitySet="goods_services" />
+    </AssociationSet>
+    <AssociationSet Name="FK_report_Currencies" Association="Self.FK_report_Currencies">
+      <End Role="Currencies" EntitySet="Currencies" />
+      <End Role="report" EntitySet="reports" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_account_my_client_Currencies" Association="Self.FK_t_account_my_client_Currencies">
+      <End Role="Currencies" EntitySet="Currencies" />
+      <End Role="t_account_my_client" EntitySet="t_account_my_client" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_foreign_currency_Currencies" Association="Self.FK_t_foreign_currency_Currencies">
+      <End Role="Currencies" EntitySet="Currencies" />
+      <End Role="t_foreign_currency" EntitySet="t_foreign_currency" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_from_my_client_Currencies" Association="Self.FK_t_from_my_client_Currencies">
+      <End Role="Currencies" EntitySet="Currencies" />
+      <End Role="t_from_my_client" EntitySet="t_from_my_client" />
+    </AssociationSet>
+    <AssociationSet Name="FK_director_detail_Role_type" Association="Self.FK_director_detail_Role_type">
+      <End Role="Role_type" EntitySet="Role_type" />
+      <End Role="director_detail" EntitySet="director_detail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_director_detail_t_entity" Association="Self.FK_director_detail_t_entity">
+      <End Role="t_entity" EntitySet="t_entity" />
+      <End Role="director_detail" EntitySet="director_detail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SignatoryInfo_director_detail" Association="Self.FK_SignatoryInfo_director_detail">
+      <End Role="director_detail" EntitySet="director_detail" />
+      <End Role="SignatoryInfo" EntitySet="SignatoryInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_address_director_detail" Association="Self.FK_t_address_director_detail">
+      <End Role="director_detail" EntitySet="director_detail" />
+      <End Role="t_address" EntitySet="t_address" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_person_identification_director_detail" Association="Self.FK_t_person_identification_director_detail">
+      <End Role="director_detail" EntitySet="director_detail" />
+      <End Role="t_person_identification" EntitySet="t_person_identification" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_phone_director_detail" Association="Self.FK_t_phone_director_detail">
+      <End Role="director_detail" EntitySet="director_detail" />
+      <End Role="t_phone" EntitySet="t_phone" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_address_District_Name" Association="Self.FK_t_address_District_Name">
+      <End Role="District_Name" EntitySet="District_Name" />
+      <End Role="t_address" EntitySet="t_address" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_person_employer_District_Name" Association="Self.FK_t_person_employer_District_Name">
+      <End Role="District_Name" EntitySet="District_Name" />
+      <End Role="t_person_employer" EntitySet="t_person_employer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_address_Division_Name" Association="Self.FK_t_address_Division_Name">
+      <End Role="Division_Name" EntitySet="Division_Name" />
+      <End Role="t_address" EntitySet="t_address" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_person_employer_Division_Name" Association="Self.FK_t_person_employer_Division_Name">
+      <End Role="Division_Name" EntitySet="Division_Name" />
+      <End Role="t_person_employer" EntitySet="t_person_employer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_from_Funds_type" Association="Self.FK_t_from_Funds_type">
+      <End Role="Funds_type" EntitySet="Funds_type" />
+      <End Role="t_from" EntitySet="t_from" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_from_my_client_Funds_type" Association="Self.FK_t_from_my_client_Funds_type">
+      <End Role="Funds_type" EntitySet="Funds_type" />
+      <End Role="t_from_my_client" EntitySet="t_from_my_client" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_to_Funds_type" Association="Self.FK_t_to_Funds_type">
+      <End Role="Funds_type" EntitySet="Funds_type" />
+      <End Role="t_to" EntitySet="t_to" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_to_my_client_Funds_type" Association="Self.FK_t_to_my_client_Funds_type">
+      <End Role="Funds_type" EntitySet="Funds_type" />
+      <End Role="t_to_my_client" EntitySet="t_to_my_client" />
+    </AssociationSet>
+    <AssociationSet Name="FK_goods_services_t_address" Association="Self.FK_goods_services_t_address">
+      <End Role="t_address" EntitySet="t_address" />
+      <End Role="goods_services" EntitySet="goods_services" />
+    </AssociationSet>
+    <AssociationSet Name="FK_goods_services_Transaction_Item_Status" Association="Self.FK_goods_services_Transaction_Item_Status">
+      <End Role="Transaction_Item_Status" EntitySet="Transaction_Item_Status" />
+      <End Role="goods_services" EntitySet="goods_services" />
+    </AssociationSet>
+    <AssociationSet Name="FK_goods_services_Transaction_Item_Type" Association="Self.FK_goods_services_Transaction_Item_Type">
+      <End Role="Transaction_Item_Type" EntitySet="Transaction_Item_Type" />
+      <End Role="goods_services" EntitySet="goods_services" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_person_identification_Identification_Type" Association="Self.FK_t_person_identification_Identification_Type">
+      <End Role="Identification_Type" EntitySet="Identification_Type" />
+      <End Role="t_person_identification" EntitySet="t_person_identification" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_entity_Legal_Form_Type" Association="Self.FK_t_entity_Legal_Form_Type">
+      <End Role="Legal_Form_Type" EntitySet="Legal_Form_Type" />
+      <End Role="t_entity" EntitySet="t_entity" />
+    </AssociationSet>
+    <AssociationSet Name="FK_report_Report_Code" Association="Self.FK_report_Report_Code">
+      <End Role="Report_Code" EntitySet="Report_Code" />
+      <End Role="report" EntitySet="reports" />
+    </AssociationSet>
+    <AssociationSet Name="FK_report_Submission_type" Association="Self.FK_report_Submission_type">
+      <End Role="Submission_type" EntitySet="Submission_type" />
+      <End Role="report" EntitySet="reports" />
+    </AssociationSet>
+    <AssociationSet Name="FK_report_t_address" Association="Self.FK_report_t_address">
+      <End Role="t_address" EntitySet="t_address" />
+      <End Role="report" EntitySet="reports" />
+    </AssociationSet>
+    <AssociationSet Name="FK_report_t_person_my_client" Association="Self.FK_report_t_person_my_client">
+      <End Role="t_person_my_client" EntitySet="t_person_my_client" />
+      <End Role="report" EntitySet="reports" />
+    </AssociationSet>
+    <AssociationSet Name="FK_report_transaction" Association="Self.FK_report_transaction">
+      <End Role="t_transaction" EntitySet="t_transaction" />
+      <End Role="report" EntitySet="reports" />
+    </AssociationSet>
+    <AssociationSet Name="FK_signatoryDetail_Role_type" Association="Self.FK_signatoryDetail_Role_type">
+      <End Role="Role_type" EntitySet="Role_type" />
+      <End Role="signatoryDetail" EntitySet="signatoryDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_signatoryDetail_t_account_my_client" Association="Self.FK_signatoryDetail_t_account_my_client">
+      <End Role="t_account_my_client" EntitySet="t_account_my_client" />
+      <End Role="signatoryDetail" EntitySet="signatoryDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_address_signatoryDetail" Association="Self.FK_t_address_signatoryDetail">
+      <End Role="signatoryDetail" EntitySet="signatoryDetails" />
+      <End Role="t_address" EntitySet="t_address" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_person_identification_signatoryDetail" Association="Self.FK_t_person_identification_signatoryDetail">
+      <End Role="signatoryDetail" EntitySet="signatoryDetails" />
+      <End Role="t_person_identification" EntitySet="t_person_identification" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_phone_signatoryDetail" Association="Self.FK_t_phone_signatoryDetail">
+      <End Role="signatoryDetail" EntitySet="signatoryDetails" />
+      <End Role="t_phone" EntitySet="t_phone" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SignatoryInfo_t_person_my_client" Association="Self.FK_SignatoryInfo_t_person_my_client">
+      <End Role="t_person_my_client" EntitySet="t_person_my_client" />
+      <End Role="SignatoryInfo" EntitySet="SignatoryInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_account_my_client_t_entity" Association="Self.FK_t_account_my_client_t_entity">
+      <End Role="t_entity" EntitySet="t_entity" />
+      <End Role="t_account_my_client" EntitySet="t_account_my_client" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_account_my_client_t_person_my_client" Association="Self.FK_t_account_my_client_t_person_my_client">
+      <End Role="t_person_my_client" EntitySet="t_person_my_client" />
+      <End Role="t_account_my_client" EntitySet="t_account_my_client" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_account_my_client_t_person_my_client1" Association="Self.FK_t_account_my_client_t_person_my_client1">
+      <End Role="t_person_my_client" EntitySet="t_person_my_client" />
+      <End Role="t_account_my_client" EntitySet="t_account_my_client" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_from_my_client_t_account_my_client" Association="Self.FK_t_from_my_client_t_account_my_client">
+      <End Role="t_account_my_client" EntitySet="t_account_my_client" />
+      <End Role="t_from_my_client" EntitySet="t_from_my_client" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_from_t_account_my_client" Association="Self.FK_t_from_t_account_my_client">
+      <End Role="t_account_my_client" EntitySet="t_account_my_client" />
+      <End Role="t_from" EntitySet="t_from" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_to_my_client_t_account_my_client" Association="Self.FK_t_to_my_client_t_account_my_client">
+      <End Role="t_account_my_client" EntitySet="t_account_my_client" />
+      <End Role="t_to_my_client" EntitySet="t_to_my_client" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_to_t_account_my_client" Association="Self.FK_t_to_t_account_my_client">
+      <End Role="t_account_my_client" EntitySet="t_account_my_client" />
+      <End Role="t_to" EntitySet="t_to" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_address_t_entity" Association="Self.FK_t_address_t_entity">
+      <End Role="t_entity" EntitySet="t_entity" />
+      <End Role="t_address" EntitySet="t_address" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_address_t_person_my_client" Association="Self.FK_t_address_t_person_my_client">
+      <End Role="t_person_my_client" EntitySet="t_person_my_client" />
+      <End Role="t_address" EntitySet="t_address" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_address_Thana_Name" Association="Self.FK_t_address_Thana_Name">
+      <End Role="Thana_Name" EntitySet="Thana_Name" />
+      <End Role="t_address" EntitySet="t_address" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_from_my_client_t_entity" Association="Self.FK_t_from_my_client_t_entity">
+      <End Role="t_entity" EntitySet="t_entity" />
+      <End Role="t_from_my_client" EntitySet="t_from_my_client" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_from_t_entity" Association="Self.FK_t_from_t_entity">
+      <End Role="t_entity" EntitySet="t_entity" />
+      <End Role="t_from" EntitySet="t_from" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_person_identification_t_entity" Association="Self.FK_t_person_identification_t_entity">
+      <End Role="t_entity" EntitySet="t_entity" />
+      <End Role="t_person_identification" EntitySet="t_person_identification" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_phone_t_entity" Association="Self.FK_t_phone_t_entity">
+      <End Role="t_entity" EntitySet="t_entity" />
+      <End Role="t_phone" EntitySet="t_phone" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_to_my_client_t_entity" Association="Self.FK_t_to_my_client_t_entity">
+      <End Role="t_entity" EntitySet="t_entity" />
+      <End Role="t_to_my_client" EntitySet="t_to_my_client" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_to_t_entity" Association="Self.FK_t_to_t_entity">
+      <End Role="t_entity" EntitySet="t_entity" />
+      <End Role="t_to" EntitySet="t_to" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_from_t_foreign_currency" Association="Self.FK_t_from_t_foreign_currency">
+      <End Role="t_foreign_currency" EntitySet="t_foreign_currency" />
+      <End Role="t_from" EntitySet="t_from" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_to_my_client_t_foreign_currency" Association="Self.FK_t_to_my_client_t_foreign_currency">
+      <End Role="t_foreign_currency" EntitySet="t_foreign_currency" />
+      <End Role="t_to_my_client" EntitySet="t_to_my_client" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_to_t_foreign_currency" Association="Self.FK_t_to_t_foreign_currency">
+      <End Role="t_foreign_currency" EntitySet="t_foreign_currency" />
+      <End Role="t_to" EntitySet="t_to" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_from_t_person_my_client" Association="Self.FK_t_from_t_person_my_client">
+      <End Role="t_person_my_client" EntitySet="t_person_my_client" />
+      <End Role="t_from" EntitySet="t_from" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_from_t_person_my_client1" Association="Self.FK_t_from_t_person_my_client1">
+      <End Role="t_person_my_client" EntitySet="t_person_my_client" />
+      <End Role="t_from" EntitySet="t_from" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_from_my_client_t_person_my_client" Association="Self.FK_t_from_my_client_t_person_my_client">
+      <End Role="t_person_my_client" EntitySet="t_person_my_client" />
+      <End Role="t_from_my_client" EntitySet="t_from_my_client" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_from_my_client_t_person_my_client1" Association="Self.FK_t_from_my_client_t_person_my_client1">
+      <End Role="t_person_my_client" EntitySet="t_person_my_client" />
+      <End Role="t_from_my_client" EntitySet="t_from_my_client" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_person_employer_t_person_my_client" Association="Self.FK_t_person_employer_t_person_my_client">
+      <End Role="t_person_my_client" EntitySet="t_person_my_client" />
+      <End Role="t_person_employer" EntitySet="t_person_employer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_person_my_client_t_person_employer" Association="Self.FK_t_person_my_client_t_person_employer">
+      <End Role="t_person_employer" EntitySet="t_person_employer" />
+      <End Role="t_person_my_client" EntitySet="t_person_my_client" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_person_identification_t_person_my_client" Association="Self.FK_t_person_identification_t_person_my_client">
+      <End Role="t_person_my_client" EntitySet="t_person_my_client" />
+      <End Role="t_person_identification" EntitySet="t_person_identification" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_phone_t_person_my_client" Association="Self.FK_t_phone_t_person_my_client">
+      <End Role="t_person_my_client" EntitySet="t_person_my_client" />
+      <End Role="t_phone" EntitySet="t_phone" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_to_my_client_t_person_my_client" Association="Self.FK_t_to_my_client_t_person_my_client">
+      <End Role="t_person_my_client" EntitySet="t_person_my_client" />
+      <End Role="t_to_my_client" EntitySet="t_to_my_client" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_to_t_person_my_client" Association="Self.FK_t_to_t_person_my_client">
+      <End Role="t_person_my_client" EntitySet="t_person_my_client" />
+      <End Role="t_to" EntitySet="t_to" />
+    </AssociationSet>
+    <AssociationSet Name="FK_transaction_Transaction_Mode" Association="Self.FK_transaction_Transaction_Mode">
+      <End Role="Transaction_Mode" EntitySet="Transaction_Mode" />
+      <End Role="t_transaction" EntitySet="t_transaction" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(GOAMLModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(GOAMLModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+</Schema>

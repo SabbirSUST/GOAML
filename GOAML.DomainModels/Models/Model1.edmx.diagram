@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3e412f4ee42346e9b93aa1afad4d6e60" Name="Diagram1">
+        <EntityTypeShape EntityType="GOAMLModel.Account_Person_Role" Width="1.5" PointX="17.25" PointY="28.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.Account_Status_Type" Width="1.5" PointX="17.25" PointY="25.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.Account_Type" Width="1.5" PointX="17.25" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.Branch_Info" Width="1.5" PointX="9" PointY="23" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.Communication_Type" Width="1.5" PointX="6.75" PointY="23.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.Contact_Type" Width="1.5" PointX="6.75" PointY="25.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.Country_Codes" Width="1.5" PointX="0.75" PointY="33.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.Currency" Width="1.5" PointX="17.25" PointY="41.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.CUSTOMER_FROM_WINFOS" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.director_detail" Width="1.5" PointX="3" PointY="31.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.District_Name" Width="1.5" PointX="6.75" PointY="28.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.Division_Name" Width="1.5" PointX="6.75" PointY="20.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.Funds_type" Width="1.5" PointX="22.5" PointY="22.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.goods_services" Width="1.5" PointX="21.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.Identification_Type" Width="1.5" PointX="11.25" PointY="39.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.Legal_Form_Type" Width="1.5" PointX="6.75" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.report" Width="1.5" PointX="21.75" PointY="25.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.Report_Code" Width="1.5" PointX="19.5" PointY="23.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.Role_type" Width="1.5" PointX="0.75" PointY="30.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.signatory" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.signatoryDetail" Width="1.5" PointX="6" PointY="32.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.SignatoryInfo" Width="1.5" PointX="13.5" PointY="33.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.Submission_type" Width="1.5" PointX="19.5" PointY="25.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.sysdiagram" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.t_account_my_client" Width="1.5" PointX="19.5" PointY="29.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.t_address" Width="1.5" PointX="16.5" PointY="31.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.t_entity" Width="1.5" PointX="9" PointY="33" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.t_foreign_currency" Width="1.5" PointX="22.5" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.t_from" Width="1.5" PointX="24.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.t_from_my_client" Width="1.5" PointX="24.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.t_person_employer" Width="1.5" PointX="9" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.t_person_identification" Width="1.5" PointX="13.5" PointY="37" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.t_person_my_client" Width="1.5" PointX="11.25" PointY="27.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.t_phone" Width="1.5" PointX="13.5" PointY="27" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.t_to" Width="1.5" PointX="24.75" PointY="27" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.t_to_my_client" Width="1.5" PointX="21.75" PointY="38" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.t_transaction" Width="1.5" PointX="19.5" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.tempTransaction" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.Thana_Name" Width="1.5" PointX="14.25" PointY="24.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.Transaction_Item_Status" Width="1.5" PointX="19.5" PointY="39.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.Transaction_Item_Type" Width="1.5" PointX="19.5" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.Transaction_Mode" Width="1.5" PointX="17.25" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GOAMLModel.userInfo" Width="1.5" PointX="11.25" PointY="23" IsExpanded="true" />
+        <AssociationConnector Association="GOAMLModel.FK_t_account_my_client_Account_Person_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_account_my_client_Account_Status_Type" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_account_my_client_Account_Type" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_account_my_client_Branch_Info" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_entity_Branch_Info" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_person_my_client_Branch_Info" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_userInfo_Branch_Info" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_person_employer_Communication_Type" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_phone_Communication_Type" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_address_Contact_Type" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_person_employer_Contact_Type" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_person_employer_Contact_Type1" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_phone_Contact_Type" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_director_detail_Country_Codes" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_director_detail_Country_Codes1" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_director_detail_Country_Codes2" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_director_detail_Country_Codes3" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_director_detail_Country_Codes4" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_signatoryDetail_Country_Codes" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_signatoryDetail_Country_Codes1" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_signatoryDetail_Country_Codes2" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_signatoryDetail_Country_Codes3" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_signatoryDetail_Country_Codes4" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_address_Country_Codes" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_entity_Country_Codes" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_from_Country_Codes" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_from_my_client_Country_Codes" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_person_employer_Country_Codes" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_person_identification_Country_Codes" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_person_my_client_Country_Codes" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_person_my_client_Country_Codes1" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_person_my_client_Country_Codes2" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_person_my_client_Country_Codes3" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_to_Country_Codes" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_to_my_client_Country_Codes" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_goods_services_Currencies" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_report_Currencies" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_account_my_client_Currencies" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_foreign_currency_Currencies" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_from_my_client_Currencies" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_director_detail_Role_type" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_director_detail_t_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_SignatoryInfo_director_detail" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_address_director_detail" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_person_identification_director_detail" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_phone_director_detail" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_address_District_Name" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_person_employer_District_Name" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_address_Division_Name" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_person_employer_Division_Name" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_from_Funds_type" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_from_my_client_Funds_type" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_to_Funds_type" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_to_my_client_Funds_type" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_goods_services_t_address" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_goods_services_Transaction_Item_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_goods_services_Transaction_Item_Type" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_person_identification_Identification_Type" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_entity_Legal_Form_Type" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_report_Report_Code" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_report_Submission_type" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_report_t_address" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_report_t_person_my_client" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_report_transaction" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_signatoryDetail_Role_type" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_signatoryDetail_t_account_my_client" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_address_signatoryDetail" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_person_identification_signatoryDetail" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_phone_signatoryDetail" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_SignatoryInfo_t_person_my_client" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_account_my_client_t_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_account_my_client_t_person_my_client" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_account_my_client_t_person_my_client1" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_from_my_client_t_account_my_client" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_from_t_account_my_client" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_to_my_client_t_account_my_client" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_to_t_account_my_client" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_address_t_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_address_t_person_my_client" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_address_Thana_Name" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_from_my_client_t_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_from_t_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_person_identification_t_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_phone_t_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_to_my_client_t_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_to_t_entity" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_from_t_foreign_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_to_my_client_t_foreign_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_to_t_foreign_currency" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_from_t_person_my_client" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_from_t_person_my_client1" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_from_my_client_t_person_my_client" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_from_my_client_t_person_my_client1" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_person_employer_t_person_my_client" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_person_my_client_t_person_employer" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_person_identification_t_person_my_client" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_phone_t_person_my_client" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_to_my_client_t_person_my_client" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_t_to_t_person_my_client" ManuallyRouted="false" />
+        <AssociationConnector Association="GOAMLModel.FK_transaction_Transaction_Mode" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

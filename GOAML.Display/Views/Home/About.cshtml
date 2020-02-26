@@ -1,0 +1,22 @@
+﻿@model IEnumerable<GOAML.DomainModels.Models.director_detail>
+
+@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Use this area to provide additional information.</p>
+
+@{
+    <table class="table table-bordered table-responsive table-striped text-center">
+        @foreach (var directorDetail in Model)
+        {
+        <tr>
+            <td> @directorDetail.first_name</td>
+            <td> @directorDetail.middle_name</td>
+            <td> @directorDetail.last_name</td>
+        </tr>
+        }
+    </table>
+}

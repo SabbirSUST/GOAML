@@ -1,0 +1,153 @@
+﻿
+@*<div class="navbar navbar-inverse navbar-fixed-top">
+    <ul class="nav nav-tabs">
+        <li>@Html.ActionLink("WinFos File", "Index", "WinFosFileUpload", new { area = "" }, null)</li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Customer Modify<span class="caret"></span></a>
+            <ul class="dropdown-menu  sub-menu">
+                <li>
+                <li>@Html.ActionLink("Individual Customer", "IndividualInformation", "IndividualInformation", new { area = "" }, null)</li>
+                <li>
+                    <a class="trigger right-caret">Corporate Customer (Company)</a>
+                    <ul class="dropdown-menu sub-menu">
+                        <li>@Html.ActionLink("Business Information", "GetBusinessInformation", "BusinessInformation", new { area = "" }, null)</li>
+                        <li>@Html.ActionLink("Director Information", "DirectorInformation", "DirectorInformation", new { area = "" }, null)</li>
+                    </ul>
+                </li>
+                <li>@Html.ActionLink("Customer Account Update", "GetCustomerInformation", "CustomerInformationEntry", new { area = "" }, null)</li>
+                <li>@Html.ActionLink("Card Registration", "DebitCardReg", "DebitCardProcess", new { area = "" }, null)</li>
+            </ul>
+        </li>
+    </ul>
+</div>*@
+<div id="cssmenu">
+    <div id="menu-button">Menu</div>
+    <ul>
+        <li class="has-sub">
+            <span class="submenu-button"></span>
+            <a href="#" data-original-title="" title=""><i class="glyphicon glyphicon-save-file"></i>File</a>
+            <ul>
+                <li><a href="#" data-original-title="" title="">CRT File Generate</a></li>
+                <li><a href="#" data-original-title="" title="">Blank</a></li>
+            </ul>
+        </li>
+        <li>
+            <i class="fa fa-file-excel-o" style="padding-top: 15px;margin-bottom: 5px;"></i>
+            @Html.ActionLink("WinFos File", "Index", "WinFosFileUpload", new { area = "" }, new { @style = "padding-top: 4px !important;" })
+        </li>
+        <li class="has-sub">
+            <span class="submenu-button"></span>
+            <a href="#" data-original-title="" title=""><i class="fa fa-users"></i>Customer</a>
+            <ul>
+                <li>@Html.ActionLink("Individual", "Index", "IndividualInformation", new { area = "" }, null)</li>
+                <li class="has-sub">
+                    <span class="submenu-button"></span><a href="#" data-original-title="" title="">Corporate </a>
+                    <ul> 
+                        <li>@Html.ActionLink("Business", "Index", "BusinessInformation", new { area = "" }, null)</li>
+                        <li>@Html.ActionLink("Director", "Index", "DirectorInformation", new { area = "" }, null)</li>
+                        
+                    </ul>
+                </li>
+                <li>@Html.ActionLink("Account Update", "Index", "CustomerInformationEntry", new { area = "" }, null)</li>
+            </ul>
+        </li>
+        <li class="has-sub">
+            <span class="submenu-button"></span>
+            <a href="#" data-original-title="" title=""><i class="fa fa-bar-chart-o"></i>Report</a>
+            <ul>
+                <li><a href="#" data-original-title="" title="">Customer Info</a></li>
+                <li><a href="#" data-original-title="" title="">Account Info</a></li>
+                <li><a href="#" data-original-title="" title="">Transaction Info</a></li>
+            </ul>
+        </li>
+        <li class="has-sub">
+            <span class="submenu-button"></span>
+            <a href="#" data-original-title="" title=""><i class="fa fa-info-circle"></i>My Info</a>
+            <ul>
+                <li><a href="#" data-original-title="" title="">Update Info</a></li>
+                <li><a href="#" data-original-title="" title="">Change Password</a></li>
+            </ul>
+        </li>
+        <li class="has-sub">
+            <span class="submenu-button"></span>
+            <a href="#" data-original-title="" title=""><i class="fa fa-info-circle"></i>Administrator</a>
+            <ul>
+                <li><a href="#" data-original-title="" title="">New User</a></li>
+                <li><a href="#" data-original-title="" title="">User Manage</a></li>
+                <li><a href="#" data-original-title="" title="">Branch Setup</a></li>
+            </ul>
+        </li>
+        @*<li>
+                <a href="#" data-original-title="" title="">
+                    <i class="fa fa-align-justify"></i>
+                    Forms
+                </a>
+            </li>
+            
+            <li class="has-sub">
+                <span class="submenu-button"></span>
+                <a href="#" data-original-title="" title=""><i class="fa fa-flask"></i>UI Elements</a>
+                <ul>
+                    <li><a href="#" data-original-title="" title="">UI Elements</a></li>
+                    <li><a href="#" data-original-title="" title="">Panels</a></li>
+                    <li><a href="#" data-original-title="" title="">Notifications</a></li>
+                    <li><a href="#" data-original-title="" title="">Icons</a></li>
+                </ul>
+            </li>
+            <li class="has-sub">
+                <span class="submenu-button"></span>
+                <a href="#" data-original-title="" title=""><i class="fa fa-dashboard"></i>Extras</a>
+                <ul>
+                    <li class="has-sub">
+                        <span class="submenu-button"></span><a href="#" data-original-title="" title="">Blog</a>
+                        <ul>
+                            <li><a href="blog.html" data-original-title="" title="">Blog</a></li>
+                            <li><a href="blog-full-page.html" data-original-title="" title="">Blog Full Page</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="edit-profile.html" data-original-title="" title="">Edit Profile</a></li>
+                    <li><a href="invoice.html" data-original-title="" title="">Invoice</a></li>
+                    <li><a href="default.html" data-original-title="" title="">default</a></li>
+                    <li class="has-sub">
+                        <span class="submenu-button"></span><a href="#" data-original-title="" title="">Submenu</a>
+                        <ul>
+                            <li><a href="#" data-original-title="" title="">Sub Product</a></li>
+                            <li><a href="#" data-original-title="" title="">Sub Product</a></li>
+                            <li><a href="#" data-original-title="" title="">Sub Product</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="login.html" data-original-title="" title="">Login</a></li>
+                    <li><a href="help.html" data-original-title="" title="">Help</a></li>
+                    <li><a href="404.html" data-original-title="" title="">404</a></li>
+                    <li><a href="500.html" data-original-title="" title="">500</a></li>
+                </ul>
+            </li>
+            <li class="has-sub">
+                <span class="submenu-button"></span>
+                <a href="#" data-original-title="" title=""><i class="fa fa-table"></i>Tables</a>
+                <ul>
+                    <li><a href="tables.html" data-original-title="" title="">Tables</a></li>
+                    <li><a href="pricing.html" data-original-title="" title="">Pricing Plan</a></li>
+                    <li><a href="timeline.html" data-original-title="" title="">Timeline</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="media.html" data-original-title="" title="">
+                    <i class="fa fa-picture-o"></i>
+                    Media
+                </a>
+            </li>
+            <li class="hidden-sm">
+                <a href="calendar.html" data-original-title="" title="">
+                    <i class="fa fa-calendar"></i>
+                    Calendar
+                </a>
+            </li>
+            <li class="hidden-sm">
+                <a href="typography.html" data-original-title="" title="">
+                    <i class="fa fa-font"></i>
+                    Typography
+                </a>
+            </li>*@
+    </ul>
+</div>

@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="cibLatestModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CODE_CONTRACT_TYPE">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="70" FixedLength="true" Unicode="false" />
+    <Property Name="type" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CODE_COUNTRY">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="70" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CODE_LEGALFORM">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CODE_OWNER_DOCUMENT_TYPE">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="70" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CODE_SECTORTYPE">
+    <Key>
+      <PropertyRef Name="sectorId" />
+    </Key>
+    <Property Name="sectorId" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CODE_SHAREHOLDER_TYPE">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="70" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CONTRACT_DETAILS">
+    <Key>
+      <PropertyRef Name="accountingPeriod" />
+      <PropertyRef Name="fiContCode" />
+    </Key>
+    <Property Name="accountingPeriod" Type="String" MaxLength="8" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="contractNature" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="fiContCode" Type="String" MaxLength="16" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="fiSubCode" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="sanctionLimit" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="totOutstandingAmount" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="totalDisAmount" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="instalmentNo" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="paymentPeriodicity" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="paymentMethod" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="InstalmentAmount" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="nextInstalmentExpDate" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="nextInstalmentExpAmount" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="remainingInstalmentNo" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="remainingAmount" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="overdueNotPaidNo" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="overdueNotPaidAmount" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="noOfDaysPaymentDelay" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="leasedGoodType" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="leasedGoodValue" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="regNo" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+    <Property Name="manufactureDate" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="dueForRecovery" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="recoveryDuringPeriod" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="cumRecovery" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="lawsuiteDate" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="classificationDate" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="rescheduledTimesNo" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="lastRescheduleDate" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="ecoPurposeCode" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="sme" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="enterpriseType" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="createDate" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="upadateDate" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CONTRACT_GENERAL_INFO">
+    <Key>
+      <PropertyRef Name="accountingPeriod" />
+      <PropertyRef Name="fiContCode" />
+    </Key>
+    <Property Name="accountingPeriod" Type="String" MaxLength="8" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="recType" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="contractNature" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="fiCode" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="branch" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="fiSubCode" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="fiContCode" Type="String" MaxLength="16" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="contType" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="contPhase" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="contStatus" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="curr" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="contStartDate" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="contRequestDate" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="contPlannedEndDate" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="contActualEndDate" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="defaultStatus" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="lastPaymentDate" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="isSubsidized" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="isPreFinanced" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="isReOrganized" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="thirdPartyGuaranteeType" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="SecurityType" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="thirdPartyGuaranteeAmount" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="SecurityAmount" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="classificationbasis" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="filler" Type="String" MaxLength="126" FixedLength="true" Unicode="false" />
+    <Property Name="createDate" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="updateDate" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="isGuaranted" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="hasCoBorrower" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="isRejected" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="LINK_SUBJECT_CONTRACT">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="recType" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="fiCode" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="branch" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="linkType" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="fiSubjectCodeBorrower" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="fiSubjectCodeLinked" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="fiContCode" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="filler" Type="String" MaxLength="543" FixedLength="true" Unicode="false" />
+    <Property Name="createDate" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="updateDate" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="accountingPeriod" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="LINK_SUBJECT_SUBJECT">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="recType" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="fiCode" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="branch" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="fiSubCodeBusiness" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="role" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="fiSubCodeOwner" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="filler" Type="String" MaxLength="1059" FixedLength="true" Unicode="false" />
+    <Property Name="link_O_CODE" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="createDate" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="updateDate" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="accountingPeriod" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SUBJECT_INFORMATION">
+    <Key>
+      <PropertyRef Name="fiSubCode" />
+    </Key>
+    <Property Name="accountingPeriod" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="recType" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="fiCode" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="branch" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="fiSubCode" Type="String" MaxLength="16" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="title" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="subName" Type="String" MaxLength="70" FixedLength="true" Unicode="false" />
+    <Property Name="tradeName" Type="String" MaxLength="130" FixedLength="true" Unicode="false" />
+    <Property Name="sectorType" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="sectorCode" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="TIN" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="parAdd" Type="String" MaxLength="100" FixedLength="true" Unicode="false" />
+    <Property Name="parPost" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="parDist" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="parCountry" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="presentAdd" Type="String" MaxLength="100" FixedLength="true" Unicode="false" />
+    <Property Name="presentPost" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="presentDist" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="presentCountry" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="phone" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+    <Property Name="legalForm" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="owTitle" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="owName" Type="String" MaxLength="70" FixedLength="true" Unicode="false" />
+    <Property Name="fatherTitle" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="fatherName" Type="String" MaxLength="70" FixedLength="true" Unicode="false" />
+    <Property Name="motherTitle" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="mothrName" Type="String" MaxLength="70" FixedLength="true" Unicode="false" />
+    <Property Name="husTitle" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="husName" Type="String" MaxLength="70" FixedLength="true" Unicode="false" />
+    <Property Name="gender" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="owBirthDate" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="owBirthPlace" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="owBirthCountry" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="isNIDAvailable" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="owTIN" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="FactoryAdd" Type="String" MaxLength="100" FixedLength="true" Unicode="false" />
+    <Property Name="FactoryPost" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="FactoryDist" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="FactoryCountry" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="owDocType" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="owDocNo" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="owDocIssueDate" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="owDocIssueCountry" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="createDate" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="updateDate" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="isImportedFromDBF" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="isBorrower" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="isOwner" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="isGuarantor" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="isCoBorrower" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="isRejected" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="NID" Type="String" MaxLength="17" FixedLength="true" Unicode="false" />
+    <Property Name="businessAdd" Type="String" MaxLength="100" FixedLength="true" Unicode="false" />
+    <Property Name="businessPost" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="businessDist" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="businessCountry" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="rjscNumber" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="rjscDate" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="crgScore" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="creditRating" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CODE_CONTRACT_PHASE">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CODE_CONTRACT_STATUS">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CODE_CURRENCY">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CODE_ECO_PURPOSE_CODE">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CODE_ENTERPRISE_TYPE">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CODE_INSTALMENT_TYPE">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CODE_LEASED_GOODS_TYPE">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CODE_NEW_OR_USED_GOODS_FLAG">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CODE_PAYMENT_METHOD">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CODE_PAYMENT_PERIODICITY">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="noOfDays" Type="Int32" />
+  </EntityType>
+  <EntityType Name="CODE_PERSONAL_GUARANTEE_TYPE">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="70" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CODE_PREFINANCE_LOAN_FLAG">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CODE_REAL_GUARANTEE_TYPE">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="80" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CODE_REORGANIZED_CREDIT_FLAG">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CODE_SUBSIDIZED_CREDIT_FLAG">
+    <Key>
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="value" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ERROR_REPORTED">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ErrorFile" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="FISubjectCode" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="FISecondarySubjectCode" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="FIContractCode" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="ErrorType" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="ErrorCode" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="WrongValue" Type="String" MaxLength="100" FixedLength="true" Unicode="false" />
+    <Property Name="ErrorDescription" Type="String" MaxLength="250" FixedLength="true" Unicode="false" />
+    <Property Name="AccountingPeriod" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="CreateDate" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="UpdateDate" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="FILLER">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="SubjectHeader" Type="String" MaxLength="1077" FixedLength="true" Unicode="false" />
+    <Property Name="SubjectPersonal" Type="String" MaxLength="199" FixedLength="true" Unicode="false" />
+    <Property Name="SubjectIndividual" Type="String" MaxLength="584" FixedLength="true" Unicode="false" />
+    <Property Name="SubjectCompany" Type="String" MaxLength="584" FixedLength="true" Unicode="false" />
+    <Property Name="LinkSubjectOwner" Type="String" MaxLength="1058" FixedLength="true" Unicode="false" />
+    <Property Name="SubjectFooter" Type="String" MaxLength="1073" FixedLength="true" Unicode="false" />
+    <Property Name="ContractHeader" Type="String" MaxLength="577" FixedLength="true" Unicode="false" />
+    <Property Name="ContractGeneral" Type="String" MaxLength="127" FixedLength="true" Unicode="false" />
+    <Property Name="ContractInstalment" Type="String" MaxLength="108" FixedLength="true" Unicode="false" />
+    <Property Name="ContractCard" Type="String" MaxLength="172" FixedLength="true" Unicode="false" />
+    <Property Name="ContractNonInstlment" Type="String" MaxLength="250" FixedLength="true" Unicode="false" />
+    <Property Name="ContractSubInfo" Type="String" MaxLength="567" FixedLength="true" Unicode="false" />
+    <Property Name="LinkContractSubject" Type="String" MaxLength="543" FixedLength="true" Unicode="false" />
+    <Property Name="ContractFooter" Type="String" MaxLength="573" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="OWNER_INFO">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="owenerId" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="ownedComapy" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="role" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="createDate" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="updateDate" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="cibLatestEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CODE_CONTRACT_TYPE" EntityType="Self.CODE_CONTRACT_TYPE" />
+    <EntitySet Name="CODE_COUNTRY" EntityType="Self.CODE_COUNTRY" />
+    <EntitySet Name="CODE_LEGALFORM" EntityType="Self.CODE_LEGALFORM" />
+    <EntitySet Name="CODE_OWNER_DOCUMENT_TYPE" EntityType="Self.CODE_OWNER_DOCUMENT_TYPE" />
+    <EntitySet Name="CODE_SECTORTYPE" EntityType="Self.CODE_SECTORTYPE" />
+    <EntitySet Name="CODE_SHAREHOLDER_TYPE" EntityType="Self.CODE_SHAREHOLDER_TYPE" />
+    <EntitySet Name="CONTRACT_DETAILS" EntityType="Self.CONTRACT_DETAILS" />
+    <EntitySet Name="CONTRACT_GENERAL_INFO" EntityType="Self.CONTRACT_GENERAL_INFO" />
+    <EntitySet Name="LINK_SUBJECT_CONTRACT" EntityType="Self.LINK_SUBJECT_CONTRACT" />
+    <EntitySet Name="LINK_SUBJECT_SUBJECT" EntityType="Self.LINK_SUBJECT_SUBJECT" />
+    <EntitySet Name="SUBJECT_INFORMATION" EntityType="Self.SUBJECT_INFORMATION" />
+    <EntitySet Name="CODE_CONTRACT_PHASE" EntityType="Self.CODE_CONTRACT_PHASE" />
+    <EntitySet Name="CODE_CONTRACT_STATUS" EntityType="Self.CODE_CONTRACT_STATUS" />
+    <EntitySet Name="CODE_CURRENCY" EntityType="Self.CODE_CURRENCY" />
+    <EntitySet Name="CODE_ECO_PURPOSE_CODE" EntityType="Self.CODE_ECO_PURPOSE_CODE" />
+    <EntitySet Name="CODE_ENTERPRISE_TYPE" EntityType="Self.CODE_ENTERPRISE_TYPE" />
+    <EntitySet Name="CODE_INSTALMENT_TYPE" EntityType="Self.CODE_INSTALMENT_TYPE" />
+    <EntitySet Name="CODE_LEASED_GOODS_TYPE" EntityType="Self.CODE_LEASED_GOODS_TYPE" />
+    <EntitySet Name="CODE_NEW_OR_USED_GOODS_FLAG" EntityType="Self.CODE_NEW_OR_USED_GOODS_FLAG" />
+    <EntitySet Name="CODE_PAYMENT_METHOD" EntityType="Self.CODE_PAYMENT_METHOD" />
+    <EntitySet Name="CODE_PAYMENT_PERIODICITY" EntityType="Self.CODE_PAYMENT_PERIODICITY" />
+    <EntitySet Name="CODE_PERSONAL_GUARANTEE_TYPE" EntityType="Self.CODE_PERSONAL_GUARANTEE_TYPE" />
+    <EntitySet Name="CODE_PREFINANCE_LOAN_FLAG" EntityType="Self.CODE_PREFINANCE_LOAN_FLAG" />
+    <EntitySet Name="CODE_REAL_GUARANTEE_TYPE" EntityType="Self.CODE_REAL_GUARANTEE_TYPE" />
+    <EntitySet Name="CODE_REORGANIZED_CREDIT_FLAG" EntityType="Self.CODE_REORGANIZED_CREDIT_FLAG" />
+    <EntitySet Name="CODE_SUBSIDIZED_CREDIT_FLAG" EntityType="Self.CODE_SUBSIDIZED_CREDIT_FLAG" />
+    <EntitySet Name="ERROR_REPORTED" EntityType="Self.ERROR_REPORTED" />
+    <EntitySet Name="FILLERs" EntityType="Self.FILLER" />
+    <EntitySet Name="OWNER_INFO" EntityType="Self.OWNER_INFO" />
+  </EntityContainer>
+</Schema>

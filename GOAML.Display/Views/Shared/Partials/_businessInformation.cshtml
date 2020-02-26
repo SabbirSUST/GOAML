@@ -1,0 +1,87 @@
+﻿<script>
+    var infoFormControl = {
+        'IsSingle': true,
+        'ControlStr': 'tentity<prop>t_entity_id^Name^Commercial_name^Incorporation_legal_form_id^incorporation_number^Business^Email^url^incorporation_state^incorporation_country_code^incorporation_date^business_closed^date_business_closed^tax_numebr^tax_registeration_number^branchId'
+    };
+    var controls = {
+        'tentity': ['t_person_id', 'Name', 'Commercial_name', 'Incorporation_legal_form_id', 'incorporation_number', 'Business', 'Email', 'url', 'incorporation_state', 'incorporation_country_code', 'incorporation_date', 'business_closed', 'date_business_closed', 'tax_numebr', 'tax_registeration_number', 'branchId'
+        ],
+        'taddress': [
+             't_address_id', 'Address_type_id', 'Address', 'Town_id', 'City_id', 'Zip', 'country_code_id', 'State_id', 't_person_my_client_id'
+        ],
+        'tphone': [
+             't_phone_id', 'tph_contact_type_id', 'tph_communication_type_id', 'tph_country_prefix', 'tph_number', 'tph_extension', 'comments', 't_person_my_client_id'
+        ],
+        'tpersonIdentification': [
+             't_person_identification_id', 'type_id', 'number', 'issue_date', 'expiry_date', 'issued_by', 'issue_country_id', 'comments', 't_person_my_client_id'
+        ]
+    };
+    var infoValidate = { 'IsChecked': false, 'validateStr': "" };
+    var infoUrl = "BusinessInformation/SaveBusinessInformation";
+    var redirectUrl = "Index";
+</script>
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="panel panel-default">
+            <div class="panel-body tentity">
+                <div class="row">
+                    <div class="col-sm-2">@Html.Label("CIF NO")</div>
+                    <div class="col-sm-4"><input type="text" name="CifSearchBox" id="CifSearchBox" class="form-control" value="" style="display: inline-block !important;" /><button id="CifSearchBtn" name="CifSearchBtn" class="btn btn-default CifSearchBtn" onclick="GetBusinessInformation('CifSearchBox', controls);" style="margin-left: -39px !important; position: absolute !important;"><i class="fa fa-search"></i></button></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">NAME</div>
+                    <div class="col-sm-4">
+                        <input type="text" name="Name" id="Name" class="form-control" value="" style="display: inline-block !important;" />
+                        <input type="hidden" id="t_entity_id" name="t_entity_id" class="t_entity_id" />
+                        <input type="hidden" id="branchId" name="branchId" class="branchId" />
+                    </div>
+                    <div class="col-sm-2">COMMERCIAL NAME</div>
+                    <div class="col-sm-4">
+                        <input type="text" name="Commercial_name" id="Commercial_name" class="form-control" value="" style="display: inline-block !important;" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">LEGAL FORM</div>
+                    <div class="col-sm-4">@Html.DropDownList("Incorporation_legal_form_id", new SelectList(@ViewBag.LegalFormTypes, "value", "description"), "Select One", new { @class = "form-control" }) </div>
+                    <div class="col-sm-2">INCORPORATION NO</div>
+                    <div class="col-sm-4"><input type="text" name="incorporation_number" id="incorporation_number" class="form-control" value="" style="display: inline-block !important;" /> </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">INCORPORATION STATE</div>
+                    <div class="col-sm-4"><input type="text" name="incorporation_state" id="incorporation_state" class="form-control" value="" style="display: inline-block !important;" /> </div>
+                    <div class="col-sm-2">INCORPORATION COUNTRY</div>
+                    <div class="col-sm-4">@Html.DropDownList("incorporation_country_code", new SelectList(@ViewBag.Country, "Value", "description"), "Select One", new { @class = "form-control" }) </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">INCORPORATION DATE</div>
+                    <div class="col-sm-4"><input type="text" name="incorporation_date" id="incorporation_date" class="form-control" value="" style="display: inline-block !important;" /> </div>
+                    <div class="col-sm-2">BUSINESS NATURE</div>
+                    <div class="col-sm-4"><input type="text" name="Business" id="Business" class="form-control" value="" style="display: inline-block !important;" /> </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">EMAIL</div>
+                    <div class="col-sm-4"><input type="text" name="Email" id="Email" class="form-control" value="" style="display: inline-block !important;" /> </div>
+                    <div class="col-sm-2">URL</div>
+                    <div class="col-sm-4"><input type="text" name="url" id="url" class="form-control" value="" style="display: inline-block !important;" /> </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">BUSINESS CLOSED</div>
+                    <div class="col-sm-4">@Html.DropDownList("business_closed", new SelectList(@ViewBag.YesNoList, "Value", "Text"), "Select One", new { @class = "form-control" }) </div>
+                    <div class="col-sm-2">CLOSED DATE</div>
+                    <div class="col-sm-4"><input type="text" name="date_business_closed" id="date_business_closed" class="form-control" value="" style="display: inline-block !important;" /> </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">TAX NUMBER</div>
+                    <div class="col-sm-4"><input type="text" name="tax_numebr" id="tax_numebr" class="form-control" value="" style="display: inline-block !important;" /> </div>
+                    <div class="col-sm-2">TAX REG NUMBER</div>
+                    <div class="col-sm-4"><input type="text" name="tax_registeration_number" id="tax_registeration_number" class="form-control" value="" style="display: inline-block !important;" /> </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">&nbsp;</div>
+                    <div class="col-sm-4"><button name="Save" class="btn btn-default submitBtn" onclick="business_submit(infoFormControl, infoValidate, infoUrl, controls);">SAVE</button> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

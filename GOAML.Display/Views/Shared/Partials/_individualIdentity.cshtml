@@ -1,0 +1,76 @@
+﻿
+<script>
+    var identificationFormControl = {
+        'IsSingle': true,
+        'ControlStr': 'TpersonIdentification<prop>t_person_identification_id^type_id^number^issue_date^expiry_date^issued_by^issue_country_id^comments^t_person_my_client_id'
+    };
+
+    var identificationValidate = { 'IsChecked': false, 'validateStr': "" };
+    var identificationUrl = "IndividualInformation/SaveIndividualIdentificaiton";
+    var redirectUrl = "Index";
+</script>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="panel panel-default" id="clientlist">
+            <div class="panel-body TpersonIdentification">
+                <div>
+                    <div class="row">
+                        <div class="col-sm-2">IDENTIFIER TYPE</div>
+                        <div class="col-sm-4">
+                            @Html.DropDownList("type_id", new SelectList(@ViewBag.IdentificationTypes, "Value", "description"), "Select One", new { @class = "form-control" })
+                            <input type="hidden" name="t_person_identification_id" id="t_person_identification_id" class="t_person_identification_id" value="" />
+                            <input type="hidden" name="t_person_my_client_id" id="t_person_my_client_id" class="t_person_my_client_id" value="" />
+                        </div>
+                        <div class="col-sm-2">NUMBER</div>
+                        <div class="col-sm-4"><input type="text" name="Number" id="number" class="form-control" value="" style="display: inline-block !important;" /> </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2">ISSUED DATE</div>
+                        <div class="col-sm-4"><input type="text" name="IssuedDate" id="issue_date" class="form-control" value="" style="display: inline-block !important;" /> </div>
+                        <div class="col-sm-2">EXPIRE DATE</div>
+                        <div class="col-sm-4"><input type="text" name="ExpireDate" id="expiry_date" class="form-control" value="" style="display: inline-block !important;" /> </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2">ISSUED BY</div>
+                        <div class="col-sm-4"><input type="text" name="IssuedBy" id="issued_by" class="form-control" value="" style="display: inline-block !important;" /> </div>
+                        <div class="col-sm-2">ISSUED COUNTRY</div>
+                        <div class="col-sm-4">
+                            @Html.DropDownList("issue_country_id", new SelectList(@ViewBag.Country, "Value", "description"), "Select One", new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2">COMMENTS</div>
+                        <div class="col-sm-4"><textarea name="Comments" id="comments" class="form-control"></textarea> </div>
+                        @*<div class="col-sm-2">ID</div>
+                            <div class="col-sm-4"><input type="text" name="Id" id="DIId" class="form-control" value="" style="display: inline-block !important;" /> </div>*@
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">&nbsp;</div>
+                    <div class="col-sm-4">
+                        <button name="Save" class="btn btn-default submitBtn" onclick="individual_submit(identificationFormControl, identificationValidate, identificationUrl, controls);">Save</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-11">
+                    <table class="table table-striped table-responsive table-hover table-bordered">
+                        <thead>
+                            <tr>
+                                <th>IDENTIFIER TYPE</th>
+                                <th>NUMBER</th>
+                                <th>ISSUED DATE</th>
+                                <th>EXPIRE DATE</th>
+                                <th>ISSUED BY</th>
+                                <th>ISSUED COUNTRY</th>
+                            </tr>
+                        </thead>
+                        <tbody class="TpersonIdentification-table"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

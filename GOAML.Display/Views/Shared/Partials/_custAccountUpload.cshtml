@@ -1,0 +1,28 @@
+﻿<script>
+    var accUpload = {
+        'ControlStr': 'taccountMyClients<prop>^Branch^^personal_account_type_id^Account^account_name^^^^status_code_id^^^t_entity_id^^^^^t_person_Id^entityCode^'
+    };
+    var accUploadUrl = 'WinFosFileUpload/CustomerAccountUpdate';
+</script>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="panel panel-default" id="clientlist">
+            <div class="panel-body">
+                @using (Html.BeginForm("CustomerAccountUpdate", "WinFosFileUpload", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    <div class="row" style="margin-left: 0px !important">
+                        <div class="col-sm-4 input-group">
+                            <span class="input-group-btn">
+                                <span class="btn btn-primary btn-file">Browse&hellip;<input type="file" name="file" id="myfile" multiple /></span>
+                            </span>
+                            <input type="text" class="form-control" id="file-name" readonly>
+                        </div>
+                        <div class="col-sm-4">
+                            <button name="Submit" class="btn btn-info" id="Submit" onclick=" file_submit('myfile', accUploadUrl, accUpload); ">Save</button>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
